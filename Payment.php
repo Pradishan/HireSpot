@@ -33,6 +33,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             .active-quicklink:hover{
                 color: blue !important;
             }
+            .bg-darkgray{
+                background-color: #D9D9D9 !important;
+            }
         </style>
         <nav class="navbar navbar-expand-lg bg-white fixed-top" >
             <div class="container">
@@ -288,251 +291,186 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li>
                     </ul>
                 </div>
+
+
             </div>
         </div>
     </nav>
     <!--main content-->
-    <div class="container-fluid">
+    <!-- login  -->
+    <div
+        class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
+        >
+        <!-- form  -->
         <div class="row">
-            <!--left side--> 
-            <div class="col-12 col-lg-3 ">
-                <div class="d-none d-xxl-block h-100 fixed-top overflow-hidden scrallbar ms-4"
-                     style="max-width: 360px;width: 100%;z-index: 4;padding-top: 56px;">
-                        <div class="bg-white rounded mx-4 px-4 mt-4 ">
-                            <div class=" d-flex flex-column align-items-center justify-content-cente ">
-                                <!--avatar-->
-                                <dvi class="mt-4 p-3 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <a class="navbar-brand " href="#" type="button" > <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 "
-                                                                                       style="width: 200px; height: 200px; object-fit: cover" data-bs-toggle="tooltip" data-bs-title=" See your profile" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" /></a>
-                                </dvi>  
-                                <!--profile content-->
 
-                                <!--name-->
-                                <h3 class="text-center m-0">Name</h3>
-                                <!--discription-->
-                                <p class="text-muted text-center m-0">Tech enthusiast | Graphic Designer | Web Designer | Developer</p>
-                                <!--conatact details--> 
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <i class="fa fa-envelope fs-7 me-1 mb-3 " ></i>
-                                    <p class="">name@gmail.com</p>
-                                </div>        
-                            </div>
-                            <!--preview profile--> 
-                            <input type="submit" value="Preview Profile" class="btn btn-outline-primary w-100 " />
-
-                            <hr>
-                            <!--Education-->
-                            <div class="d-flex flex-column ">
-                                <h4>Education</h4>
-                                <p class="fw-bold m-0">B.Sc. - computer science</p>
-                                <p class="text-muted m-0">Uva Wellassa University, Sri Lanka, Graduated 2025</p>
-                            </div>
-
-                            <hr>
-                            <!--skills-->
-                            <div class="d-flex flex-column pb-5 ">
-                                <h4>Skills</h4>
-                                <!--skill 1-->
-                                <p class="fw-bold m-0">Java</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 85%"></div>
-                                </div>
-                                <!--skill 2-->
-                                <p class="fw-bold m-0">Html</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 95%"></div>
-                                </div>
-                                <!--skill 3-->
-                                <p class="fw-bold m-0">JavaScript</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 75%"></div>
-                                </div>
-                                <!--skill 4-->
-                                <p class="fw-bold m-0">css</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 70%"></div>
-                                </div>
-                                <!--skill 5-->
-                                <p class="fw-bold m-0">c</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 80%"></div>
-                                </div>
-
-                            </div>
+            <div class="col" style="max-width: 48rem; width: 100%">
+                <div class="bg-white shadow rounded p-4 input-group-lg pb-2">
+                    <h1 class="">Subscribe</h1>
+                    <!--name-->
+                    <div class="d-flex">
+                        <div class="input-group  me-2">
+                            <span class="input-group-text bg-darkgray my-2" id="basic-addon1" ><i class="fa-solid fa-user"></i></span>
+                            <input
+                                type="text"
+                                class="form-control my-2  border-0"
+                                placeholder="Firstname"
+                                style="background-color: #F4F4F4"
+                                />
                         </div>
+                        <div class="ms-2 input-group ms-2">
+                            <span class="input-group-text bg-darkgray my-2" id="basic-addon1" ><i class="fa-solid fa-user"></i></span>
+                            <input
+                                type="text"
+                                class="form-control my-2  border-0"
+                                placeholder="Lastname"
+                                style="background-color: #F4F4F4"
+                                />
+                        </div>
+
+                    </div>
+                    <!--contact details-->
+                    <div class="d-flex">
+                        <div class="input-group  me-2">
+                            <span class="input-group-text bg-darkgray my-2" id="basic-addon1" ><i class="fa-solid fa-envelope"></i></span>
+                            <input
+                                type="email"
+                                class="form-control my-2  border-0"
+                                placeholder="Email"
+                                style="background-color: #F4F4F4"
+                                />
+                        </div>
+                        <div class="ms-2 input-group ms-2">
+                            <span class="input-group-text bg-darkgray my-2" id="basic-addon1" ><i class="fa-solid fa-mobile"></i></span>
+                            <input
+                                type="text"
+                                class="form-control my-2  border-0"
+                                placeholder="Contact Number"
+                                style="background-color: #F4F4F4"
+                                />
+                        </div>
+
+                    </div>
+                    <!--payment method-->
+                    <h3 class="">Payment method</h3>
+                    <!--payment button-->
+                    <div class="d-flex">
+                        <div class="btn-group w-100 " role="group" aria-label="Vertical radio toggle button group">
+                            <input type="radio" class="btn-check " name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="vbtn-radio1">Credit  / Debit card</label>
+                            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="vbtn-radio2">Paybal</label>
+                        </div>
+                    </div>
+                    <div class="d-flex input-group my-2">
+                        <span class="input-group-text" id="basic-addon1" style="background-color: #D9D9D9 !important"><i class="fa-regular fa-credit-card"></i></span>
+                        <input
+                            type="text"
+                            class="form-control  border-0"
+                            placeholder="Card Number"
+                            style="background-color: #F4F4F4"
+                            />
+                    </div>
+                    <div class="d-flex">
+                        <div class="input-group  me-2">
+                            <input
+                                type="text"
+                                class="form-control my-2  border-0"
+                                placeholder="MM/YY"
+                                style="background-color: #F4F4F4"
+                                />
+                        </div>
+                        <div class="ms-2 input-group ms-2">
+                            <input
+                                type="text"
+                                class="form-control my-2  border-0"
+                                placeholder="cvc"
+                                style="background-color: #F4F4F4"
+                                />
+                        </div>
+                    </div>
+                    <div class="d-flex input-group my-2">
+                        <span class="input-group-text my-2" id="basic-addon1" style="background-color: #D9D9D9 !important"><i class="fa-solid fa-user"></i></span>
+                        <input
+                            type="text"
+                            class="form-control my-2 border-0"
+                            placeholder="Name of Card"
+                            style="background-color: #F4F4F4"
+                            />
+                    </div>
+                    <div class="d-flex input-group my-2">
+                        <span class="input-group-text my-2" id="basic-addon1" style="background-color: #D9D9D9 !important"><i class="fa-sharp fa-solid fa-location-dot"></i></span>
+                        <input
+                            type="text"
+                            class="form-control my-2 border-0"
+                            placeholder="Country"
+                            style="background-color: #F4F4F4"
+                            />
+                    </div>
                 </div>
             </div>
-            <!--main time line--> 
-            <div class="col-12 col-lg-6 pb-5">
-                <div class="d-flex justify-content-center flex-column w-100 mx-auto mt-3"
-                     style="padding-top: 56px;max-width: 680px;">
-                 <?php
-                    for ($i=0;$i<15;$i++){
-                 ?>
-                    <!--post 1-->
-                    <div class="bg-white shadow rounded mt-3 p-3" sy>
-                        <!--company-->
-                        <!-- autor -->
-                        <div class="d-flex justify-content-between p-2">
-                            <!-- avatar -->
-                            <div class="d-flex">
-                                <img src="https://source.unsplash.com/random/<?php echo $i; ?>4" alt="avatar" srcset="" class="rounded-circle me-3"
-                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                <div>
-                                    <p class="m-0 fw-bold">Sharoon</p>
-                                    <span class="text-muted fs-7">June 14 at 1:02PM</span>
-                                </div>
-                            </div>
-                            <!-- edit -->
-                            <i class="fas fa-ellipsis-h" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                               id="post1meun"></i>
-                            <!-- edit menu -->
-                            <ul class="dropdown-menu border-0 shadow" aria-labelledby="post1meun">
-                                <li class="d-flex align-items-center">
-                                    <a href="#" class="dropdown-item d-flex align-items-center justify-content-around fs-7">Edit Post</a>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <a href="#" class="dropdown-item d-flex align-items-center justify-content-around fs-7">Delete
-                                        Post</a>
-                                </li>
-                            </ul>
+            <div class="col " style="max-width: 20rem; width: 100%">
+                <div class="bg-white  rounded p-4 input-group-lg">
+                    <h2 class="">MERBERSHIP</h2>
+                    <div class="d-flex justify-content-between align-items-center mt-4 mb-0">
+                        <div class="">
+                            <p class="fs-5 mb-0">Subscription</p>
+                            <p class="text-muted  mb-0">Billed yearly</p>
                         </div>
-
-                        <div class=" p-2 ">
-                            <!--content-->
-                            <div class="pt-2">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, voluptates ea aliquam dignissimos
-                                    minus, eius praesentium adipisci tempora voluptate veritatis qui est, officiis totam enim?</p>
-                            </div>
-                            <!--post image-->
-                            <img src="https://source.unsplash.com/random/<?php echo $i; ?>7" alt="post" class="img-fluid" style="object-fit: cover">
-                            <!--apply btn-->
-                            <div class="d-flex justify-content-center pt-3">
-                                <input type="submit" value="Apply now"  class="btn btn-outline-primary w-100"/>
-                            </div>
+                        <p class="fs-5">500LKR</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">      
+                        <p class="fs-5">Discount</p>
+                        <p class="fs-5">100LKR</p>
+                    </div>
+                    <h5 class="mt-3">Apply Discount Code</h5>
+                    <input
+                        type="text"
+                        class="form-control my-3 me-2 border-0"
+                        placeholder="code"
+                        style="background-color: #F4F4F4"
+                        />
+                    <div class="d-flex justify-content-between align-items-center">      
+                        <p class="fs-5">Total</p>
+                        <p class="fs-5">400LKR</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">      
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label " for="flexCheckDefault">
+                                I agree the <span class="text-primary">terms and conditions </span>
+                                and the<span class="text-primary"> Automatic Renewal Terms </span>above
+                            </label>
                         </div>
                     </div>
-                           <?php
-                    }
-                 ?>
+                    <input type="submit" value="Pay" class="btn btn-primary w-100 mt-3"/>
                 </div>
             </div>
-            <!--right side--> 
-            <div class="col-12 col-lg-3">
-                <div class="d-none d-xxl-block h-100 fixed-top  end-0 overflow-hidden scrallbar me-5"
-                     style="min-width: 360px;width: 100px;z-index: 4;padding-top: 56px;left: initial !important;">
-                    <div class="p-3 mt-4">
-                        <!--advertesement slider-->
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://source.unsplash.com/random/10" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://source.unsplash.com/random/8" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://source.unsplash.com/random/9" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <h4 class="ms-3">Applications</h4>
-                    <!--Applications Status-->
-                    <div class="">
-                        <!--job-1-->
-                        <div class="bg-white rounded d-flex align-items-center justify-content-between p-3 m-3">
-                            <div class="d-flex">
-                                <!--avatar of company--> 
-                                <img src="https://source.unsplash.com/random/11" alt="avatar" class="rounded me-2 "style="width: 48px; height: 48px; object-fit: cover" />
-                                <!--job-->
-                                <div class="">
-                                    <p class="fw-bold mb-0">Software Engeneer</p>
-                                    <p class="text-muted mb-0">  <span class="fw-bold">@</span>googler</p>
-                                </div>
-                            </div>
-                            <!--status-->
-                            <div class="alert alert-primary m-0 p-1 ms-1" role="alert">
-                                Waiting
-                            </div>
-                        </div>
-                        <!--job-2-->
-                        <div class="bg-white rounded d-flex align-items-center justify-content-between p-3 m-3">
-                            <div class="d-flex">
-                                <!--avatar of company--> 
-                                <img src="https://source.unsplash.com/random/12" alt="avatar" class="rounded me-2 "style="width: 48px; height: 48px; object-fit: cover" />
-                                <!--job-->
-                                <div class="">
-                                    <p class="fw-bold mb-0">Software Engeneer</p>
-                                    <p class="text-muted mb-0">  <span class="fw-bold">@</span>microsoft</p>
-                                </div>
-                            </div>
-                            <!--status-->
-                            <div class="alert alert-danger m-0 p-1 ms-1" role="alert">
-                                Rejected
-                            </div>
-                        </div>
-                        <!--job-3-->
-                        <div class="bg-white rounded d-flex align-items-center justify-content-between p-3 m-3">
-                            <div class="d-flex">
-                                <!--avatar of company--> 
-                                <img src="https://source.unsplash.com/random/13" alt="avatar" class="rounded me-2 "style="width: 48px; height: 48px; object-fit: cover" />
-                                <!--job-->
-                                <div class="">
-                                    <p class="fw-bold mb-0">Software Engeneer</p>
-                                    <p class="text-muted mb-0">  <span class="fw-bold">@</span>open AI</p>
-                                </div>
-                            </div>
-                            <!--status-->
-                            <div class="alert alert-success m-0 p-1 ms-1" role="alert">
-                                Selected
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!--footer-->
-                    <div class="d-flex flex-column align-items-center justify-content-cente ">
-                        <!--quick link-->
-                        <p class="mb-0 fs-7 ">
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a> |
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
-                        </p>
-                        <!--copyrights-->
-                        <div class="d-flex">
-                            <a class=" " href="#"><img src="img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2"/></a>
-                            <p class="fs-7">&copy; 2023</p>
-                        </div>
-                    </div>
-                    
+            <!--footer-->
+            <div class="d-flex flex-column align-items-center justify-content-cente mt-3">
+                <!--quick link-->
+                <p class="mb-0 fs-7 ">
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a> |
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
+                </p>
+                <!--copyrights-->
+                <div class="d-flex">
+                    <a class=" " href="#"><img src="img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2"/></a>
+                    <p class="fs-7">&copy; 2023</p>
                 </div>
             </div>
-        </div>
-    </div>
 
 
-    <!--bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <!--main js-->
-    <script src="./mainjs.js"></script>
-    <script>
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-    </script>
-</body>
-</html>
+            <!--bootstrap-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+            <!--main js-->
+            <script src="mainjs.js"></script>
+            <script>
+                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+            </script>
+            </body>
+            </html>
