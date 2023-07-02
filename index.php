@@ -48,10 +48,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <!--search-->
+                          <!--search-->
                             <form class="d-flex" role="search">
-                                <input class="form-control me-2 border-0" type="search" placeholder="Search" aria-label="Search" style="border-radius: 50px;background-color: #F4F4F4" size="50px">
+                                <input class="form-control me-2 border-0" list="datalistOptions" id="exampleDataList" type="search" placeholder="Search" aria-label="Search" style="border-radius: 50px;background-color: #F4F4F4" size="50px">
                                 <button class="btn btn-outline-primary " type="submit" style="border-radius: 50px;"><i class="fa fa-magnifying-glass " ></i></button>
+                                <datalist id="datalistOptions" class="bg-white text-muted">
+                                    <option value="Software Engeneer">
+                                    <option value="Data Scientist">
+                                    <option value="QA Engeneer">
+                                    <option value="HR">
+                                    <option value="Developer">
+                                </datalist>
                             </form>
 
                         </li>
