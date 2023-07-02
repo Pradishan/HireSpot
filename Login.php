@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>HireSpot | pay</title>
+        <title>HireSpot | login</title>
         <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <!--fontawesom-->
@@ -33,10 +33,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             .active-quicklink:hover{
                 color: blue !important;
             }
-            .bg-darkgray{
-                background-color: #D9D9D9 !important;
-            }
         </style>
+        <!--navication bar-->
         <nav class="navbar navbar-expand-lg bg-white fixed-top" >
             <div class="container">
 
@@ -299,155 +297,249 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <!--main content-->
     <!-- login  -->
     <div
-        class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
-        >
-        <!-- form  -->
-        <div class="row">
-
-            <div class="col" style="max-width: 48rem; width: 100%">
-                <div class="bg-white shadow rounded p-4 input-group-lg pb-2">
-                    <h1 class="">Subscribe</h1>
-                    <!--name-->
-                    <div class="d-flex">
-                        <div class="input-group  me-2">
-                            <span class="input-group-text bg-darkgray my-2" id="basic-addon1" ><i class="fa-solid fa-user"></i></span>
-                            <input
-                                type="text"
-                                class="form-control my-2  border-0"
-                                placeholder="Firstname"
-                                style="background-color: #F4F4F4"
-                                />
-                        </div>
-                        <div class="ms-2 input-group ms-2">
-                            <span class="input-group-text bg-darkgray my-2" id="basic-addon1" ><i class="fa-solid fa-user"></i></span>
-                            <input
-                                type="text"
-                                class="form-control my-2  border-0"
-                                placeholder="Lastname"
-                                style="background-color: #F4F4F4"
-                                />
-                        </div>
-
-                    </div>
-                    <!--contact details-->
-                    <div class="d-flex">
-                        <div class="input-group  me-2">
-                            <span class="input-group-text bg-darkgray my-2" id="basic-addon1" ><i class="fa-solid fa-envelope"></i></span>
-                            <input
-                                type="email"
-                                class="form-control my-2  border-0"
-                                placeholder="Email"
-                                style="background-color: #F4F4F4"
-                                />
-                        </div>
-                        <div class="ms-2 input-group ms-2">
-                            <span class="input-group-text bg-darkgray my-2" id="basic-addon1" ><i class="fa-solid fa-mobile"></i></span>
-                            <input
-                                type="text"
-                                class="form-control my-2  border-0"
-                                placeholder="Contact Number"
-                                style="background-color: #F4F4F4"
-                                />
-                        </div>
-
-                    </div>
-                    <!--payment method-->
-                    <h3 class="">Payment method</h3>
-                    <!--payment button-->
-                    <div class="d-flex">
-                        <div class="btn-group w-100 " role="group" aria-label="Vertical radio toggle button group">
-                            <input type="radio" class="btn-check " name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary" for="vbtn-radio1">Credit  / Debit card</label>
-                            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="vbtn-radio2">Paybal</label>
-                        </div>
-                    </div>
-                    <div class="d-flex input-group my-2">
-                        <span class="input-group-text" id="basic-addon1" style="background-color: #D9D9D9 !important"><i class="fa-regular fa-credit-card"></i></span>
-                        <input
-                            type="text"
-                            class="form-control  border-0"
-                            placeholder="Card Number"
-                            style="background-color: #F4F4F4"
-                            />
-                    </div>
-                    <div class="d-flex">
-                        <div class="input-group  me-2">
-                            <input
-                                type="text"
-                                class="form-control my-2  border-0"
-                                placeholder="MM/YY"
-                                style="background-color: #F4F4F4"
-                                />
-                        </div>
-                        <div class="ms-2 input-group ms-2">
-                            <input
-                                type="text"
-                                class="form-control my-2  border-0"
-                                placeholder="cvc"
-                                style="background-color: #F4F4F4"
-                                />
-                        </div>
-                    </div>
-                    <div class="d-flex input-group my-2">
-                        <span class="input-group-text my-2" id="basic-addon1" style="background-color: #D9D9D9 !important"><i class="fa-solid fa-user"></i></span>
-                        <input
-                            type="text"
-                            class="form-control my-2 border-0"
-                            placeholder="Name of Card"
-                            style="background-color: #F4F4F4"
-                            />
-                    </div>
-                    <div class="d-flex input-group my-2">
-                        <span class="input-group-text my-2" id="basic-addon1" style="background-color: #D9D9D9 !important"><i class="fa-sharp fa-solid fa-location-dot"></i></span>
-                        <input
-                            type="text"
-                            class="form-control my-2 border-0"
-                            placeholder="Country"
-                            style="background-color: #F4F4F4"
-                            />
-                    </div>
+      class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
+    >
+      <!-- heading -->
+      <div class="text-center text-lg-center mt-lg-5 pt-lg-5">
+        <img src="img/logo.png" width="688px" height="216px" alt="HireSpot"/>
+        <p class="w-75 mx-auto ma-lg-0 fs-4">
+         Unleash your potential, embrace the extraordinary!
+        </p>
+      </div>
+      <!-- form  -->
+      <div style="max-width: 28rem; width: 100%">
+        <div class="bg-white shadow rounded p-3 input-group-lg">
+          <h1 class="text-center">Log in</h1>
+          <div class="form-floating my-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"   style="background-color: #F4F4F4">
+              <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating my-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password"   style="background-color: #F4F4F4">
+              <label for="floatingPassword">Password</label>
+          </div>
+          <a href="./index.php">
+            <button
+              class="btn btn-primary my-3 w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              login
+            </button>
+          </a>
+          <a href="#" class="text-decoration-none text-center">
+            <p>Forgotten password?</p>
+          </a>
+          <!-- create from modal -->
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="">
+                    <h1 class="modal-title fs-2" id="exampleModalLabel">
+                      sing up
+                    </h1>
+                    <span class="text-muted fs-7"
+                      >Join with us to discover somehting</span
+                    >
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-            </div>
-            <div class="col " style="max-width: 20rem; width: 100%">
-                <div class="bg-white  rounded p-4 input-group-lg">
-                    <h2 class="">MERBERSHIP</h2>
-                    <div class="d-flex justify-content-between align-items-center mt-4 mb-0">
-                        <div class="">
-                            <p class="fs-5 mb-0">Subscription</p>
-                            <p class="text-muted  mb-0">Billed yearly</p>
-                        </div>
-                        <p class="fs-5">500LKR</p>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">      
-                        <p class="fs-5">Discount</p>
-                        <p class="fs-5">100LKR</p>
-                    </div>
-                    <h5 class="mt-3">Apply Discount Code</h5>
-                    <input
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col">
+                      <input
                         type="text"
-                        class="form-control my-3 me-2 border-0"
-                        placeholder="code"
-                        style="background-color: #F4F4F4"
-                        />
-                    <div class="d-flex justify-content-between align-items-center">      
-                        <p class="fs-5">Total</p>
-                        <p class="fs-5">400LKR</p>
+                        name=""
+                        id=""
+                        class="form-control"
+                        placeholder="first name"
+                      />
                     </div>
-                    <div class="d-flex justify-content-between align-items-center">      
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label " for="flexCheckDefault">
-                                I agree the <span class="text-primary">terms and conditions </span>
-                                and the<span class="text-primary"> Automatic Renewal Terms </span>above
-                            </label>
-                        </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="form-control"
+                        placeholder="last name"
+                      />
                     </div>
-                    <input type="submit" value="Pay" class="btn btn-primary w-100 mt-3"/>
-                </div>
-            </div>
+                  </div>
+                  <input
+                    type="email"
+                    name=""
+                    class="form-control my-3"
+                    placeholder="Email"
+                    id=""
+                  />
+                  <input
+                    type="password"
+                    name=""
+                    class="form-control my-3"
+                    placeholder="password"
+                    id=""
+                  />
 
-            <!-- footer  -->
+                  <div class="row my-3">
+                    <span class="text-muted fs-7">
+                      Date of Birth
+                      <i
+                        type="button"
+                        class="fa-solid fa-circle-question"
+                        data-bs-container="body"
+                        data-bs-toggle="popover"
+                        data-bs-placement="right"
+                        data-bs-content="Right popover"
+                      ></i>
+                    </span>
+                    <div class="col">
+                      <select name="" id="" class="form-select">
+                        <option value="1">one</option>
+                        <option value="2">two</option>
+                        <option value="3">three</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select name="" id="" class="form-select">
+                        <option value="1">one</option>
+                        <option value="2">two</option>
+                        <option value="3">three</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select name="" id="" class="form-select">
+                        <option value="1">one</option>
+                        <option value="2">two</option>
+                        <option value="3">three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row my-3 jus">
+                    <span class="text-muted fs-7">
+                      Gender
+                      <i
+                        type="button"
+                        class="fa-solid fa-circle-question"
+                        data-bs-container="body"
+                        data-bs-toggle="popover"
+                        data-bs-placement="right"
+                        data-bs-content="Right popover"
+                      ></i>
+                    </span>
+                    <div class="col">
+                      <div class="">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                          checked
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Female
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault2"
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          Coustom
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-none" id="selectGender">
+                    <select name="" id="" class="form-select">
+                      <option value="1">one</option>
+                      <option value="2">two</option>
+                      <option value="3">three</option>
+                    </select>
+                    <div class="my-3">
+                      <span class="text-muted"
+                        >Your pronoun is visible to everyone.</span
+                      >
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="form-control"
+                        placeholder="Gender (optional)"
+                      />
+                    </div>
+                  </div>
+                  <div class="">
+                    <span class="text-muted fs-7"
+                      >Lorem ipsum dolor, sit amet consectetur
+                      adipisicing.</span
+                    >
+                  </div>
+                  <div class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary my-3"
+                      data-bs-dismiss="modal"
+                    >
+                      Sing up
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="text-center my-4">
+            <button
+              class="btn btn-outline-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Create new Account
+            </button>
+          </div>
+        </div>
+        <div class="text-center my-5 pb-5">
+          <p>
+             Stay focused, stay motivated, and conquer your dream job.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer  -->
     <footer class="bg-white p-4 text-muted fixed-bottom">
       <div class="container">
 
@@ -471,14 +563,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       </div>
     </footer>
 
-            <!--bootstrap-->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-            <!--main js-->
-            <script src="mainjs.js"></script>
-            <script>
-                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-            </script>
-            
-        </body>
-            </html>
+
+
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <!--main js-->
+    <script src="mainjs.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    </script>
+</body>
+</html>
