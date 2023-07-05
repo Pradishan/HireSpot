@@ -303,7 +303,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <div class="text-center text-lg-center mt-lg-5 pt-lg-5">
         <img src="img/logo.png" width="688px" height="216px" alt="HireSpot"/>
         <p class="w-75 mx-auto ma-lg-0 fs-4">
-         Unleash your potential, embrace the extraordinary!
+         Unleash your potential, embrace the extraordinary! test
         </p>
       </div>
       <!-- form  -->
