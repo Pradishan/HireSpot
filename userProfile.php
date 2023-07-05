@@ -6,13 +6,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>HireSpot</title>
+        <title>HireSpot | My Profile</title>
         <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <!--fontawesom-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--main css-->
         <link rel="stylesheet" href="maincss.css"/>
+        <link rel="stylesheet" href="UserProfile.css"/>
 
     </head>
     <body>
@@ -32,6 +33,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             }
             .active-quicklink:hover{
                 color: blue !important;
+            }
+            .bg-darkgray{
+                background-color: #D9D9D9 !important;
             }
         </style>
         <nav class="navbar navbar-expand-lg bg-white fixed-top" >
@@ -298,248 +302,196 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             </div>
         </div>
     </nav>
-    <!--main content-->
-    <div class="container-fluid">
-        <div class="row">
-            <!--left side--> 
-            <div class="col-12 col-lg-3 ">
-                <div class="d-none d-xxl-block h-100 fixed-top overflow-hidden scrallbar ms-4"
-                     style="max-width: 360px;width: 100%;z-index: 4;padding-top: 56px;">
-                        <div class="bg-white rounded mx-4 px-4 mt-4 ">
-                            <div class=" d-flex flex-column align-items-center justify-content-cente ">
-                                <!--avatar-->
-                                <dvi class="mt-4 p-3 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <a class="navbar-brand " href="#" type="button" > <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 "
-                                                                                       style="width: 200px; height: 200px; object-fit: cover" data-bs-toggle="tooltip" data-bs-title=" See your profile" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" /></a>
-                                </dvi>  
-                                <!--profile content-->
+        
 
-                                <!--name-->
-                                <h3 class="text-center m-0">Name</h3>
-                                <!--discription-->
-                                <p class="text-muted text-center m-0">Tech enthusiast | Graphic Designer | Web Designer | Developer</p>
-                                <!--conatact details--> 
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <i class="fa fa-envelope fs-7 me-1 mb-3 " ></i>
-                                    <p class="">name@gmail.com</p>
-                                </div>        
-                            </div>
-                            <!--preview profile--> 
-                            <a href="./userProfile.php"><input type="submit" value="Preview Profile" class="btn btn-outline-primary w-100 " /></a>
 
-                            <hr>
-                            <!--Education-->
-                            <div class="d-flex flex-column ">
-                                <h4>Education</h4>
-                                <p class="fw-bold m-0">B.Sc. - computer science</p>
-                                <p class="text-muted m-0">Uva Wellassa University, Sri Lanka, Graduated 2025</p>
-                            </div>
-
-                            <hr>
-                            <!--skills-->
-                            <div class="d-flex flex-column pb-5 ">
-                                <h4>Skills</h4>
-                                <!--skill 1-->
-                                <p class="fw-bold m-0">Java</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 85%"></div>
-                                </div>
-                                <!--skill 2-->
-                                <p class="fw-bold m-0">Html</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 95%"></div>
-                                </div>
-                                <!--skill 3-->
-                                <p class="fw-bold m-0">JavaScript</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 75%"></div>
-                                </div>
-                                <!--skill 4-->
-                                <p class="fw-bold m-0">css</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 70%"></div>
-                                </div>
-                                <!--skill 5-->
-                                <p class="fw-bold m-0">c</p>
-                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 80%"></div>
-                                </div>
-
-                            </div>
-                        </div>
+    <div class="container pt-5">
+    <div class="main-body">
+    
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+              <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            </ol>
+          </nav>
+          <!-- /Breadcrumb -->
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4>Migara Thiyunuwan</h4>
+                      <p class="text-secondary mb-1">Full Stack Developer</p>
+                      <p class="text-muted font-size-sm">Nittambuwa, Gampaha, Sri Lanka</p>
+                      <button class="btn btn-primary">Follow</button>
+                      <button class="btn btn-outline-primary">Message</button>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+                    <span class="text-secondary">https://bootdey.com</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
+                    <span class="text-secondary">bootdey</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
+                    <span class="text-secondary">@bootdey</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram mr-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
+                    <span class="text-secondary">bootdey</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook mr-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
+                    <span class="text-secondary">bootdey</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <!--main time line--> 
-            <div class="col-12 col-lg-6 pb-5">
-                <div class="d-flex justify-content-center flex-column w-100 mx-auto mt-3"
-                     style="padding-top: 56px;max-width: 680px;">
-                 <?php
-                    for ($i=0;$i<15;$i++){
-                 ?>
-                    <!--post 1-->
-                    <div class="bg-white shadow rounded mt-3 p-3" sy>
-                        <!--company-->
-                        <!-- autor -->
-                        <div class="d-flex justify-content-between p-2">
-                            <!-- avatar -->
-                            <div class="d-flex">
-                                <img src="https://source.unsplash.com/random/<?php echo $i; ?>4" alt="avatar" srcset="" class="rounded-circle me-3"
-                                     style="width: 38px; height: 38px; object-fit: cover" />
-                                <div>
-                                    <p class="m-0 fw-bold">Sharoon</p>
-                                    <span class="text-muted fs-7">June 14 at 1:02PM</span>
-                                </div>
-                            </div>
-                            <!-- edit -->
-                            <i class="fas fa-ellipsis-h" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                               id="post1meun"></i>
-                            <!-- edit menu -->
-                            <ul class="dropdown-menu border-0 shadow" aria-labelledby="post1meun">
-                                <li class="d-flex align-items-center">
-                                    <a href="#" class="dropdown-item d-flex align-items-center justify-content-around fs-7">Edit Post</a>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <a href="#" class="dropdown-item d-flex align-items-center justify-content-around fs-7">Delete
-                                        Post</a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Migara Thiyunuwan
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      migarathiyunuwan@gmail.com
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      033 22 124 23
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Mobile</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    +94 77 141 6968
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      No. 58/1, Waragoda, Aththanagalla
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-info " target="__blank" href="./editUser.php">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                        <div class=" p-2 ">
-                            <!--content-->
-                            <div class="pt-2">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, voluptates ea aliquam dignissimos
-                                    minus, eius praesentium adipisci tempora voluptate veritatis qui est, officiis totam enim?</p>
-                            </div>
-                            <!--post image-->
-                            <img src="https://source.unsplash.com/random/<?php echo $i; ?>7" alt="post" class="img-fluid" style="object-fit: cover">
-                            <!--apply btn-->
-                            <div class="d-flex justify-content-center pt-3">
-                                <input type="submit" value="Apply now"  class="btn btn-outline-primary w-100"/>
-                            </div>
-                        </div>
+              <div class="row gutters-sm">
+                <div class="col-sm-6 mb-3">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Skills</i>XYZ</h6>
+                      <small>HTML</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>JAVA</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>C++</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>JS</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>CSS</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
                     </div>
-                           <?php
-                    }
-                 ?>
+                  </div>
                 </div>
-            </div>
-            <!--right side--> 
-            <div class="col-12 col-lg-3">
-                <div class="d-none d-xxl-block h-100 fixed-top  end-0 overflow-hidden scrallbar me-5"
-                     style="min-width: 360px;width: 100px;z-index: 4;padding-top: 56px;left: initial !important;">
-                    <div class="p-3 mt-4">
-                        <!--advertesement slider-->
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://source.unsplash.com/random/10" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://source.unsplash.com/random/8" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://source.unsplash.com/random/9" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                <div class="col-sm-6 mb-3">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
+                      <small>Web Design</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Website Markup</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>One Page</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Mobile Template</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Backend API</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
                     </div>
-                    <h4 class="ms-3">Applications</h4>
-                    <!--Applications Status-->
-                    <div class="">
-                        <!--job-1-->
-                        <div class="bg-white rounded d-flex align-items-center justify-content-between p-3 m-3">
-                            <div class="d-flex">
-                                <!--avatar of company--> 
-                                <img src="https://source.unsplash.com/random/11" alt="avatar" class="rounded me-2 "style="width: 48px; height: 48px; object-fit: cover" />
-                                <!--job-->
-                                <div class="">
-                                    <p class="fw-bold mb-0">Software Engeneer</p>
-                                    <p class="text-muted mb-0">  <span class="fw-bold">@</span>googler</p>
-                                </div>
-                            </div>
-                            <!--status-->
-                            <div class="alert alert-primary m-0 p-1 ms-1" role="alert">
-                                Waiting
-                            </div>
-                        </div>
-                        <!--job-2-->
-                        <div class="bg-white rounded d-flex align-items-center justify-content-between p-3 m-3">
-                            <div class="d-flex">
-                                <!--avatar of company--> 
-                                <img src="https://source.unsplash.com/random/12" alt="avatar" class="rounded me-2 "style="width: 48px; height: 48px; object-fit: cover" />
-                                <!--job-->
-                                <div class="">
-                                    <p class="fw-bold mb-0">Software Engeneer</p>
-                                    <p class="text-muted mb-0">  <span class="fw-bold">@</span>microsoft</p>
-                                </div>
-                            </div>
-                            <!--status-->
-                            <div class="alert alert-danger m-0 p-1 ms-1" role="alert">
-                                Rejected
-                            </div>
-                        </div>
-                        <!--job-3-->
-                        <div class="bg-white rounded d-flex align-items-center justify-content-between p-3 m-3">
-                            <div class="d-flex">
-                                <!--avatar of company--> 
-                                <img src="https://source.unsplash.com/random/13" alt="avatar" class="rounded me-2 "style="width: 48px; height: 48px; object-fit: cover" />
-                                <!--job-->
-                                <div class="">
-                                    <p class="fw-bold mb-0">Software Engeneer</p>
-                                    <p class="text-muted mb-0">  <span class="fw-bold">@</span>open AI</p>
-                                </div>
-                            </div>
-                            <!--status-->
-                            <div class="alert alert-success m-0 p-1 ms-1" role="alert">
-                                Selected
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!--footer-->
-                    <div class="d-flex flex-column align-items-center justify-content-cente ">
-                        <!--quick link-->
-                        <p class="mb-0 fs-7 ">
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a> |
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
-                            <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
-                        </p>
-                        <!--copyrights-->
-                        <div class="d-flex">
-                            <a class=" " href="#"><img src="img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2"/></a>
-                            <p class="fs-7">&copy; 2023</p>
-                        </div>
-                    </div>
-                    
+                  </div>
                 </div>
+              </div>
+
+
+
             </div>
+          </div>
+
         </div>
     </div>
+    
 
 
-    <!--bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <!--main js-->
-    <script src="./mainjs.js"></script>
-    <script>
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-    </script>
+
 </body>
-</html>
+    <!--main content-->
+ <!--bootstrap-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+            <!--main js-->
+            <script src="mainjs.js"></script>
+            <script>
+                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+            </script>
+    </body>
+            </html>
