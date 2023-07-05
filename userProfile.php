@@ -326,7 +326,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>Migara Thiyunuwan</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
+                      <p class="text-secondary mb-1">Software Engineer</p>
                       <p class="text-muted font-size-sm">Nittambuwa, Gampaha, Sri Lanka</p>
                       <button class="btn btn-primary">Follow</button>
                       <button class="btn btn-outline-primary">Message</button>
