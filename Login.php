@@ -407,23 +407,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     </span>
                     <div class="col">
                       <select name="" id="" class="form-select">
-                        <option value="1">one</option>
-                        <option value="2">two</option>
-                        <option value="3">three</option>
+                      <?php
+                        $startYear = 1950;
+                        $endYear = 2022;
+
+                        for ($i = 1; $i <= 72; $i++) {
+                            $year = $startYear + $i - 1;
+                            echo '<option value="' . $i . '">' . $year . '</option><br>';
+                        }
+                      ?>
                       </select>
                     </div>
                     <div class="col">
                       <select name="" id="" class="form-select">
-                        <option value="1">one</option>
-                        <option value="2">two</option>
-                        <option value="3">three</option>
+                      <option value="1">January</option><br>
+                        <option value="2">February</option><br>
+                        <option value="3">March</option><br>
+                        <option value="4">April</option><br>
+                        <option value="5">May</option><br>
+                        <option value="6">June</option><br>
+                        <option value="7">July</option><br>
+                        <option value="8">August</option><br>
+                        <option value="9">September</option><br>
+                        <option value="10">October</option><br>
+                        <option value="11">Novermber</option><br>
+                        <option value="12">December</option><br>
                       </select>
                     </div>
                     <div class="col">
                       <select name="" id="" class="form-select">
-                        <option value="1">one</option>
-                        <option value="2">two</option>
-                        <option value="3">three</option>
+                      <?php
+                        for ($i = 1; $i <= 31; $i++) {
+                            echo '<option value="' . $i . '">' . $i. '</option>';
+                        }
+                      ?>
                       </select>
                     </div>
                   </div>
