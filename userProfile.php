@@ -322,48 +322,51 @@
       </div>
       </div>
       </div>
-      <div class="card mt-3"> 
-      <div
-         class="modal fade"
-         id="exampleModal"
-         tabindex="-1"
-         aria-labelledby="exampleModalLabel"
-         aria-hidden="true"
-         >
-      <div class="modal-dialog">
-      <div class="modal-content">
-      <div class="modal-header">
-      <div class="">
-      <h1 class="modal-title fs-2" id="exampleModalLabel">
-      upload Resume
-      </h1>
-      </div>
-      <button
-         type="button"
-         class="btn-close"
-         data-bs-dismiss="modal"
-         aria-label="Close"
-         ></button>
-      </div>
-      <div class="modal-body">
-      <div class="text-center">
-      <form action=" <?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
-      <label for="myfile" >Select a file:</label>
-      <input type="file"  id="myFile" name="myFile"><br>
-      <input type="submit" class="btn btn-outline-primary my-3" value="Upload" />
-      </form>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class="text-center my-4">
-      <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Upload Your Resume
-      </button>
-      </div> 
-     
-      </div>
+         <div class="card mt-3"> 
+            <div
+               class="modal fade"
+               id="exampleModal"
+               tabindex="-1"
+               aria-labelledby="exampleModalLabel"
+               aria-hidden="true"
+               >
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <div class="">
+                              <h1 class="modal-title fs-2" id="exampleModalLabel">
+                                 upload Resume
+                              </h1>
+                           </div>
+                           <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                              >
+                           </button>
+                        </div>
+                        <div class="modal-body">
+                           <div class="text-center">
+                              <form action=" <?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+                                 <label for="myfile" >Select a file:</label>
+                                 <input type="file"  id="myFile" name="myFile"><br>
+                                 <input type="submit" class="btn btn-outline-primary my-3" value="Upload" />
+                              </form>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+
+            <div class="text-center my-4">
+               <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Upload Your Resume
+               </button>
+            </div> 
+      
+         </div>
       </div>
       <div class="col-md-8">
       <div class="card mb-3">
@@ -470,6 +473,7 @@
       </div>
       </div>
       </div>
+
       
       </div>
       <!--main content-->
