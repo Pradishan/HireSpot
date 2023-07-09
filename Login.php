@@ -378,6 +378,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                       />
                     </div>
                   </div>
+
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control my-3"
+                    placeholder="Username"
+                    id=""
+                  />
                   <input
                     type="email"
                     name=""
@@ -385,6 +393,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     placeholder="Email"
                     id=""
                   />
+
+                  <input
+                    type="tel"
+                    name=""
+                    class="form-control my-3"
+                    placeholder="Phone No"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                    id=""
+                  />
+
                   <input
                     type="password"
                     name=""
@@ -392,6 +410,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     placeholder="password"
                     id=""
                   />
+                  
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control my-3"
+                    placeholder="Address"
+                    id=""
+                  />
+
+                  <textarea class="form-control my-3" id="description" name="description" placeholder="About me" oninput="countWords()" maxlength="200"></textarea>
+                  
 
                   <div class="row my-3">
                     <span class="text-muted fs-7">
