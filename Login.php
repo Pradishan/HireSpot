@@ -14,6 +14,54 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <!--main css-->
         <link rel="stylesheet" href="maincss.css"/>
 
+        <script>
+    function addEducationField() {
+      var container = document.getElementById("educationContainer");
+
+      // Create new div for the education information
+      var newDiv = document.createElement("div");
+      newDiv.classList.add("input-group", "mb-3");
+
+      // Create institute input field
+      var instituteSpan = document.createElement("span");
+      instituteSpan.classList.add("input-group-text");
+      instituteSpan.textContent = "Institute";
+
+      var instituteInput = document.createElement("input");
+      instituteInput.type = "text";
+      instituteInput.classList.add("form-control");
+      instituteInput.setAttribute("aria-label", "Sizing example input");
+      instituteInput.setAttribute("aria-describedby", "inputGroup-sizing-default");
+
+      // Append institute elements to the new div
+      newDiv.appendChild(instituteSpan);
+      newDiv.appendChild(instituteInput);
+
+      // Create education level input field
+      var levelSpan = document.createElement("span");
+      levelSpan.classList.add("input-group-text");
+      levelSpan.textContent = "Edu. Level";
+
+      var levelInput = document.createElement("input");
+      levelInput.type = "text";
+      levelInput.classList.add("form-control");
+      levelInput.setAttribute("aria-label", "Sizing example input");
+      levelInput.setAttribute("aria-describedby", "inputGroup-sizing-sm");
+
+      // Create a new div for the education level input field
+      var levelDiv = document.createElement("div");
+      levelDiv.classList.add("input-group", "input-group-sm", "mb-3");
+      levelDiv.appendChild(levelSpan);
+      levelDiv.appendChild(levelInput);
+
+      // Append the education level div to the main div
+      newDiv.appendChild(levelDiv);
+
+      // Append the new div to the container
+      container.appendChild(newDiv);
+    }
+  </script>
+
     </head>
     <body>
         <style>
@@ -419,6 +467,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     id=""
                   />
 
+                  
+                  <!-- <label>Education Information:</label>
+                    <div class="form-control my-3" id="educationContainer">
+                      <input type="text"  name="education[]" placeholder="Enter your education information">
+                    </div>
+                    <button type="button" onclick="addEducationField()">Add Education Field</button>
+                    <br> -->
+
+                    <div >
+                    <label class="text-muted fs-7" >Education Information:</label>
+                      <div id="educationContainer" >
+                        <div class="input-group mb-3" > 
+                          <span class="input-group-text" style="height: 40px; margin-top: 15px; " id="inputGroup-sizing-sm">Institute</span>
+                          <input type="text" class="form-control my-3"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group input-group-sm mb-3; " >
+                          <span class="input-group-text" style="height: 40px; margin-top: 15px; " id="inputGroup-sizing-sm">Edu. Level</span>
+                          <input type="text" class="form-control my-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                      </div>
+                      <button  type="button" class="btn btn-outline-primary my-3" onclick="addEducationField()">Add new</button>
+
+                      <br>
+                  </div>
+
+                  
                   <textarea class="form-control my-3" id="description" name="description" placeholder="About me" oninput="countWords()" maxlength="200"></textarea>
                   
 
