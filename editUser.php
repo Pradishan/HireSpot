@@ -32,7 +32,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     /* Customize the track */
     input[type="range"]::-webkit-slider-runnable-track {
       width: 100%;
-      height: 10px;
+      height: 5px;
       cursor: pointer;
       background: #2196F3;
     }
@@ -403,21 +403,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       </div>
       </div>
       <div class="pt-2">
-      <h6 class="mb-0" style="padding-bottom: 10px;">About Me</h6>
+      <h6 class="mb-0" style="padding-bottom: 0px;">About Me</h6>
       <!-- <p>Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative 
       solutions and staying at the forefront of the industry. Let's connect and create something amazing together.</p> -->
       </div>
       <div class="mt-3" >
-      <textarea class="form-control" id="myTextArea" name="message" rows="10" cols="35"   placeholder="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative solutions and staying at the forefront of the industry. Let's connect and create something amazing together."></textarea>
+      <textarea class="form-control" id="myTextArea" name="message" rows="11" cols="35"   placeholder="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative solutions and staying at the forefront of the industry. Let's connect and create something amazing together."></textarea>
 									<!-- <input type="text" class="form-control" value="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative 
       solutions and staying at the forefront of the industry. Let's connect and create something amazing together."> -->
 
-      <div class="row" style="margin-top: 10px;">
+                            <!-- <div class="row" style="margin-top: 10px;">
 								<div class="col-sm-3"></div>
 								<div class="col-sm-9 text-secondary">
 									<input type="button" class="btn btn-primary px-4" value="Save">
 								</div>
-							</div>
+							</div> -->
 	  </div>
       </div>
       </div>
@@ -484,76 +484,136 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 									<!-- <input type="text" class="form-control" value="John Doe"> -->
 								</div>
 							</div>
-							<div class="row">
+							<!-- <div class="row">
 								<div class="col-sm-3"></div>
 								<div class="col-sm-9 text-secondary">
 									<input type="button" class="btn btn-primary px-4" value="Save ">
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="d-flex align-items-center mb-3">Skills</h5>
+					<div class="row gutters-sm" >
+                        <div class="col-sm-6 mb-3">
+                            <div class="col-sm-12" style="display :flex; width:860px"> 
+                                <div class="card h-100" style="width: 4000px; margin-right: 10px">
+                                    <div class="card-body">
+                                        <h5 class="d-flex align-items-center mb-3"><b>Skills</b></h5>
 
-                                    <div >
                                         <form>
-                                            <label for="myRangeSlider">HTML:-</label>
-                                            <output for="myRangeSlider" id="sliderValue">50  </output> 
-                                            <input type="range" id="myRangeSlider" name="value" min="0" max="100" step="1">
+                                            <label for="rangeSlider1"><b>HTML:</b></label>
+                                            <output for="rangeSlider1" class="sliderValue">50</output>
+                                            <input type="range" id="rangeSlider1" class="custom-range" name="value1" min="0" max="100" step="1">
+                                            
+
+                                            <label for="rangeSlider2"><b>JAVA :</b></label>
+                                            <output for="rangeSlider2" class="sliderValue">50</output>
+                                            <input type="range" id="rangeSlider2" class="custom-range" name="value2" min="0" max="100" step="1">
+                                            
+
+                                            <label for="rangeSlider3"><b>C++ :</b></label>
+                                            <output for="rangeSlider3" class="sliderValue">50</output>
+                                            <input type="range" id="rangeSlider3" class="custom-range" name="value3" min="0" max="100" step="1">
+                                            
+
+                                            <label for="rangeSlider4"><b>Java Script :</b></label>
+                                            <output for="rangeSlider4" class="sliderValue">50</output>
+                                            <input type="range" id="rangeSlider4" class="custom-range" name="value4" min="0" max="100" step="1">
+                                            
+
+                                            <label for="rangeSlider5"><b>CSS :</b></label>
+                                            <output for="rangeSlider5" class="sliderValue">50</output>
+                                            <input type="range" id="rangeSlider5" class="custom-range" name="value5" min="0" max="100" step="1">
                                             
                                         </form>
                                         
                                         <script>
-                                            const rangeSlider = document.getElementById("myRangeSlider");
-                                            const output = document.getElementById("sliderValue");
+                                            const sliders = document.querySelectorAll(".custom-range");
+                                            const outputs = document.querySelectorAll(".sliderValue");
 
-                                            output.innerHTML = rangeSlider.value; // Display the default slider value
+                                            sliders.forEach((slider, index) => {
+                                            outputs[index].innerHTML = slider.value; // Display the default slider value
 
-                                            rangeSlider.oninput = function() {
-                                            output.innerHTML = this.value; // Update the output value as the slider changes
+                                            slider.oninput = function() {
+                                                outputs[index].innerHTML = this.value; // Update the output value as the slider changes
                                             };
+                                            });
                                         </script>
+                                        
                                     </div>
-
                                     
+                                </div>
 
+                                <div class="card h-max" style="width: 4000px;">
+                                    <div class="card-body" >
+                                        <h5 class="d-flex align-items-center mb-3" ><b>Education</b></h5>
+
+                                         <div >
+                                            
+                                            <div id="educationContainer" >
+                                            <label class="text-muted fs-7" >Add Your Education Institute</label>
+                                                <div class="input-group mb-3" > 
+                                                <span class="input-group-text" style="height: 40px; margin-top: 15px; " id="inputGroup-sizing-sm">Institute</span>
+                                                <input type="text" class="form-control my-3"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                                </div>
+                                                <label class="text-muted fs-7" >Add Your Education Level</label>
+                                                <div class="input-group input-group-sm mb-3; " >
+                                                <span class="input-group-text" style="height: 40px; margin-top: 15px; " id="inputGroup-sizing-sm">Edu. Level</span>
+                                                <input type="text" class="form-control my-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                                </div>
+                                            </div>
+                                            <!-- <button  type="button" class="btn btn-outline-primary my-3" onclick="addEducationField()">Add</button> -->
+
+                                            <br>
+                                        </div> 
+                                        
+                                        <script>
+                                            const sliders = document.querySelectorAll(".custom-range");
+                                            const outputs = document.querySelectorAll(".sliderValue");
+
+                                            sliders.forEach((slider, index) => {
+                                            outputs[index].innerHTML = slider.value; // Display the default slider value
+
+                                            slider.oninput = function() {
+                                                outputs[index].innerHTML = this.value; // Update the output value as the slider changes
+                                            };
+                                            });
+                                        </script> 
+                                        
+                                    </div>
                                     
+                                </div>
 
-									<!-- <p>Web Design</p>
-									<div class="progress mb-3" style="height: 5px">
-									<div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-									<p>Website Markup</p>
-									<div class="progress mb-3" style="height: 5px">
-										<div class="progress-bar bg-danger" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-									<p>One Page</p>
-									<div class="progress mb-3" style="height: 5px">
-										<div class="progress-bar bg-success" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-									<p>Mobile Template</p>
-									<div class="progress mb-3" style="height: 5px">
-										<div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
-									<p>Backend API</p>
-									<div class="progress" style="height: 5px">
-										<div class="progress-bar bg-info" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-									</div> -->
-
-
-
-								</div>
-							</div>
-						</div>
+                                
+                             </div> 
+                        </div>
 					</div>
+
+
+
+                    
+
+
 				</div>
 			</div>
 		</div>
 	</div>
+                    
+                        <div class="card" style="margin-left: 110px; margin-right:110px" >
+                        <div class="card-body"  >
+                                
+                                <div class="row mb-3" style="justify-content:space-around"> 
+                                    <div class="col-sm-3" style="width: 50%;" >
+                                        <h6 class="mb-0">By pressing "Update" button, You can update your profile details. </h6>
+                                    </div>
+                                    <div class="col-sm-3" style="width: 50%;" >
+                                    <a class="btn btn-info "   target="__blank" href="./editUser.php">Update</a>
+                                    </div>
 
+                                   
+							    </div>       
+                        </div>
+                        </div>
+                        
 
 
 </body>
