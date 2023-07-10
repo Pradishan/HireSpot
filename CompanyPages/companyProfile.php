@@ -166,15 +166,93 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   </div>
   
   <!--main content-->
-  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;">
+  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;z-index: 5;">
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Admin</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Users</li>
+              <li class="breadcrumb-item"><a href="#">Company Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Profile</li>
           </ol>
       </nav>
       
-        <h1>User</h1>
+ 
+      <div class="mx-1 bg-white rounded " style="max-height: 200px">
+          <div class="bg-white rounded p-3">
+              <img src="https://source.unsplash.com/random/1" alt="story post" srcset="" class="card-img-top"
+                   style="min-height: 125px;object-fit: cover;max-height: 200px;" />
+              <div class="d-flex align-items-center justify-content-left position-relative " style="min-height: 65px;">
+                  <div class="position-absolute top-0 translate-middle" style="padding-left: 20rem" >
+                      <img src="https://source.unsplash.com/random/5" alt="avatar" width="200px" height="200px" class="rounded-circle me-2 bg-white rounded-circle p-1">
+                  </div>
+                  <div class="d-flex justify-content-between"  style="margin-left: 16rem">
+                      <div class="mx-3">
+                          <h1>Company name</h1>
+                          <p class="text-muted"><i class="fa-solid fa-location-dot me-2"></i>Srilanka | Colombo-10</p>
+                      </div>
+                      <div class="">
+                          <button type="button" class="btn btn-outline-primary my-3" data-bs-toggle="modal" data-bs-target="#postModal" >Add post <i class="fa-sharp fa-solid fa-plus"></i> </button>
+                          <!-- Modal -->
+                          <div class="modal fade shadow" id="postModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
+                              <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h1 class="modal-title fs-5" id="exampleModalLabel">Job post</h1>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <div class="form-floating">
+                                              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                              <label for="floatingTextarea2">Description about the job</label>
+                                          </div>
+                                          <div class="mb-1">
+                                              <label for="formFile" class="form-label fs-5 my-2">Upload your Flyer</label>
+                                              <input class="form-control" type="file" id="formFile">
+                                          </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-primary w-100">Post</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!--about-->
+      <div class="bg-white rounded p-3 " style="margin-top: 9rem">
+          <h2 class="mx-4">About</h2>
+          <p class="mx-4 text-muted">Aut tempora facilis saepe eligendi aperiam. Possimus sunt facilis atque iure, minima dolor totam porro nisi ipsa laborum dolores neque assumenda deleniti numquam sed? Atque ullam vitae porro, odio vero impedit voluptatem fugiat id voluptate? Sed sequi eum quam saepe. Sequi quisquam commodi quos tempore cupiditate debitis tempora nemo dolorum eius, odio ullam deserunt. Cumque error possimus ab facere asperiores nobis cum sapiente soluta! Asperiores autem ullam, natus similique ducimus vero accusamus deserunt incidunt! Maxime ipsum, deleniti accusamus dolor excepturi sapiente minima repellat in ut corrupti voluptatum voluptatibus facere fugiat nesciunt nobis vitae harum quae eum ab! Modi quibusdam aspernatur possimus laudantium quia quisquam, facilis exercitationem molestiae doloribus. Inventore qui temporibus explicabo est aperiam veritatis nobis quidem eligendi. Vero itaque reiciendis quia deleniti in, rerum saepe, iste adipisci porro corrupti error. Sequi optio voluptatem ex debitis assumenda ut dolorum nihil et atque illum asperiores aliquid, quos alias in mollitia consectetur excepturi natus hic! Perspiciatis fuga facilis animi reprehenderit, maxime magni similique quis id soluta. Dignissimos corporis voluptate sint consequuntur?
+           </p>
+          
+      </div>
+      
+      <!--emloyee-->
+      <div class="bg-white rounded p-3 mt-3">
+          <h2 class="mx-4">119,031 employees</h2>  
+      </div>
+      
+      <!--footer-->
+           <div class="container  mt-5">
+
+        <!-- action -->
+           <div class="d-flex flex-column align-items-center justify-content-cente mt-3">
+                <!--quick link-->
+                <p class="mb-0 fs-7 ">
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a> |
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
+                    <a href="#"class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
+                </p>
+                <!--copyrights-->
+                <div class="d-flex">
+                    <a class=" " href="#"><img src="./../img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2"/></a>
+                    <p class="fs-7">&copy; 2023</p>
+                </div>
+            </div>
+      </div>
  
   </div>
         </div>

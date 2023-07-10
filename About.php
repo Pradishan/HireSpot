@@ -101,7 +101,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
          <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="first-slide img-fluid w-100 " src="./img/bg.png" alt="First slide" style="300px" >
+                <img class="first-slide img-fluid w-100 " src="./img/bg.png" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption text-left" tyle="color: blue;">
                         <h1><img src="img/logo.png"height="400px" alt="HireSpot"/></h1>
