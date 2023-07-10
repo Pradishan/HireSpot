@@ -42,7 +42,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand " href="#"><img src="img/logo.png" width="137px" height="43px" alt="HireSpot"/></a>
+            <a class="navbar-brand " href="./index.php"><img src="img/logo.png" width="137px" height="43px" alt="HireSpot"/></a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                <ul class="navbar-nav">
                   <li class="nav-item">
@@ -270,12 +270,12 @@
             </div>
             </a></li>
             <!--settings-->
-            <li><a class="dropdown-item" href="#">
+            <!-- <li><a class="dropdown-item" href="#">
             <div class="d-flex align-items-center me-2">
             <i class="fas fa-cog justify-content-center fs-5"></i>
             <p class="m-0 ms-2">Settings</p>
             </div>
-            </a></li>
+            </a></li> -->
             <hr>
             <!--logout-->
             <li><a class="dropdown-item" href="./Login.php">
@@ -419,7 +419,7 @@
          <hr>
          <div class="row">
             <div class="col-sm-12">
-            <a class="btn btn-info " target="__blank" href="./editUser.php">Edit</a>
+            <a class="btn btn-info "  href="./editUser.php" >Edit</a>
             </div>
          </div>
       </div>

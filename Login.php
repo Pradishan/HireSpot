@@ -368,10 +368,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     </div>
                   </div>
                   <div class="">
-                    <span class="text-muted fs-7"
+                    <!-- <span class="text-muted fs-7"
                       >Lorem ipsum dolor, sit amet consectetur
-                      adipisicing.</span
-                    >
+                      adipisicing.</span -->
+                    
                   </div>
                   <div class="text-center">
                     <button
