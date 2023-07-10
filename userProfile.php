@@ -390,88 +390,89 @@
       </div>
       </div>
       <hr>
-      <div class="row">
-      <div class="col-sm-3">
-      <h6 class="mb-0">Phone</h6>
-      </div>
-      <div class="col-sm-9 text-secondary">
-      033 22 124 23
-      </div>
-      </div>
-      <hr>
-      <div class="row">
-      <div class="col-sm-3">
-      <h6 class="mb-0">Mobile</h6>
-      </div>
-      <div class="col-sm-9 text-secondary">
-      +94 77 141 6968
-      </div>
-      </div>
-      <hr>
-      <div class="row">
-      <div class="col-sm-3">
-      <h6 class="mb-0">Address</h6>
-      </div>
-      <div class="col-sm-9 text-secondary">
-      No. 58/1, Waragoda, Aththanagalla
-      </div>
-      </div>
-      <hr>
-      <div class="row">
-      <div class="col-sm-12">
-      <a class="btn btn-info " target="__blank" href="./editUser.php">Edit</a>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class="row gutters-sm">
-      <div class="col-sm-6 mb-3">
-      <div class="card h-100">
-      <div class="card-body">
-      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Skills</i>XYZ</h6>
-      <small>HTML</small>
-      <div class="progress mb-3" style="height: 5px">
-      <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <small>JAVA</small>
-      <div class="progress mb-3" style="height: 5px">
-      <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <small>C++</small>
-      <div class="progress mb-3" style="height: 5px">
-      <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <small>JS</small>
-      <div class="progress mb-3" style="height: 5px">
-      <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <small>CSS</small>
-      <div class="progress mb-3" style="height: 5px">
-      <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+         <div class="row">
+            <div class="col-sm-3">
+            <h6 class="mb-0">Phone</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+            033 22 124 23
+            </div>
+         </div>
+         <hr>
+         <div class="row">
+            <div class="col-sm-3">
+            <h6 class="mb-0">Mobile</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+            +94 77 141 6968
+            </div>
+         </div>
+         <hr>
+         <div class="row">
+            <div class="col-sm-3">
+            <h6 class="mb-0">Address</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+            No. 58/1, Waragoda, Aththanagalla
+            </div>
+         </div>
+         <hr>
+         <div class="row">
+            <div class="col-sm-12">
+            <a class="btn btn-info " target="__blank" href="./editUser.php">Edit</a>
+            </div>
+         </div>
       </div>
       </div>
-      </div>
-      </div>
-      <div class="col-sm-6 mb-3">
-      <div class="card h-100">
-      <div class="card-body">
-      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Education</i>XYZ</h6>
-      <div class="d-flex flex-column " style="padding-bottom: 10px;">
-      <p class="fw-bold m-0">(BSc) in Computer Science and Technology</p>
-      <p class="text-muted m-0">Uva Wellassa University, Sri Lanka, Graduated 2025</p>
-      </div>
-      <div class="d-flex flex-column " style="padding-bottom: 10px;">
-      <p class="fw-bold m-0">Dip.in Information Technology</p>
-      <p class="text-muted m-0">ESOFT Metro Campus, Sri Lanka, Graduated 2021</p>
-      </div>
-      <div class="d-flex flex-column " style="padding-bottom: 10px;">
-      <p class="fw-bold m-0">Dip.in English Language & Literature</p>
-      <p class="text-muted m-0">Aquinas College of Higher Studies, Sri Lanka, Graduated 2019</p>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
+      
+         <div class="row gutters-sm">
+            <div class="col-sm-6 mb-3">
+               <div class="card h-100">
+                  <div class="card-body">
+                     <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Skills</i>XYZ</h6>
+                     <small>HTML</small>
+                     <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <small>JAVA</small>
+                     <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <small>C++</small>
+                     <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <small>JS</small>
+                     <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <small>CSS</small>
+                     <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+               <div class="card h-100">
+                  <div class="card-body">
+                     <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Education</i>XYZ</h6>
+                        <div class="d-flex flex-column " style="padding-bottom: 10px;">
+                        <p class="fw-bold m-0">(BSc) in Computer Science and Technology</p>
+                        <p class="text-muted m-0">Uva Wellassa University, Sri Lanka, Graduated 2025</p>
+                        </div>
+                        <div class="d-flex flex-column " style="padding-bottom: 10px;">
+                        <p class="fw-bold m-0">Dip.in Information Technology</p>
+                        <p class="text-muted m-0">ESOFT Metro Campus, Sri Lanka, Graduated 2021</p>
+                        </div>
+                        <div class="d-flex flex-column " style="padding-bottom: 10px;">
+                        <p class="fw-bold m-0">Dip.in English Language & Literature</p>
+                        <p class="text-muted m-0">Aquinas College of Higher Studies, Sri Lanka, Graduated 2019</p>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
 
       
