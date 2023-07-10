@@ -364,7 +364,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <div class="d-flex">
                         <div class="btn-group w-100 " role="group" aria-label="Vertical radio toggle button group">
                             <input type="radio" class="btn-check " name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary" for="vbtn-radio1">Credit  / Debit card</label>
+                            <label class="btn btn-outline-primary " for="vbtn-radio1">Credit  / Debit card</label>
                             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
                             <label class="btn btn-outline-primary" for="vbtn-radio2">Paybal</label>
                         </div>

@@ -309,7 +309,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
 
         <!--side nav bar-->
-     <body data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">   
+     <div class ="fixed-top" data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">   
          <!--svg images-->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -340,8 +340,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <!--large nav bar-->
   <div class="d-flex flex-column flex-shrink-0 p-3 bg-white d-none d-lg-block vh-100" style="width: 280px;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">Sidebar</span>
+         <img src="img/logo only.png" height="43px" alt="HireSpot"/></use></svg>
+      <span class="fs-4"></span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
@@ -394,7 +394,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <!--small nav bar-->
   <div class="d-flex flex-column flex-shrink-0 bg-white d-lg-none d-block  vh-100" style="width: 4.5rem;">
     <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
-      <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <img src="img/logo only.png" height="43px" alt="HireSpot"/>
+        </use></svg>
       <span class="visually-hidden">Icon-only</span>
     </a>
     <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
@@ -438,7 +439,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </div>
   </div>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+</main> 
 <!-- <section class="section"> -->
     <div class="container" style="padding-top: 90px;" style="padding-right  : 0px;" !important>
         <div class="justify-content-center row">
@@ -755,10 +756,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </div>
 <!-- </section> -->
 
-</main> 
-
-
-    
 
 
 </body>
