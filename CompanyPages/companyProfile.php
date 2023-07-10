@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>HireSpot | Admin </title>
+        <title>HireSpot | Company </title>
         <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <!--fontawesom-->
@@ -102,19 +102,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                       <li class="nav-item">
                           <a href="./adminUser.php" class="nav-link active" aria-current="page">
                               <i class="fa-solid fa-user"></i>
-                              Users
+                              Profile
                           </a>
                       </li>
                       <li>
                           <a href="./adminCompanies.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-building"></i>
-                              Companies
+                              Applications
                           </a>
                       </li>
                       <li>
                           <a href="./adminPosts.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-address-card"></i>
-                              Posts
+                              Post
                           </a>
                       </li>
                   </ul>

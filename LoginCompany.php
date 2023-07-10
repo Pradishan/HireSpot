@@ -113,7 +113,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
               <input type="password" class="form-control" id="floatingPassword" placeholder="Password"   style="background-color: #F4F4F4">
               <label for="floatingPassword">Password</label>
           </div>
-          <a href="./index.php">
+          <a href="./CompanyPages/companyProfile.php">
             <button
               class="btn btn-primary my-3 w-100"
               data-bs-toggle="modal"
