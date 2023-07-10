@@ -83,8 +83,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
                 <!--profile--> 
                 <dvi>
-                    <a class="navbar-brand " href="./Login.php" type="button" > <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 "
-                                                                                     style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip" data-bs-title=" See your profile" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" />Log in</a>
+                              <div class="dropdown">
+                      <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="https://source.unsplash.com/random/5" alt="avatar" width="32" height="32" class="rounded-circle me-2">
+                          <span class="fs-4">Log in as</span>
+                      </a>
+                      <ul class="dropdown-menu shadow">
+                          <li><a class="dropdown-item" href="./Login.php">Job seeker</a></li>
+                          <li><a class="dropdown-item" href="./LoginCompany.php">Company</a></li>
+                      </ul>
+                  </div>
                 </dvi>                                                                       
             </div>
         </div>

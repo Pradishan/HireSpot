@@ -167,7 +167,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   </div>
   
   <!--main content-->
-  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;">
+  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;z-index: 5">
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Admin</a></li>
