@@ -13,10 +13,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--main css-->
         <link rel="stylesheet" href="maincss.css"/>
-        <link rel="stylesheet" href="../adminPages/adminUser.css"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
 
     </head>
     <body>
@@ -176,109 +172,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   
   <!--main content-->
    <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;">  
-
-    <!-- <div class="container mt-5 pt-1" id="page-content">
-    <div class="padding">
-        <div class="row container d-flex justify-content-center" >
-
-            <div class="col-lg-8 grid-margin stretch-card"  > -->
-              <div class="card" >
-                <div class="card-body">
-                  <h4 class="card-title">Basic Table</h4>
-                  <p class="card-description">
-                    Basic table with card
-                  </p>
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>Name</th>
-                          <th>Post Description</th>
-                          <th>Content</th>
-                          <th>Date</th>
-                          <th>Time</th>
-                          <th>Email</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>USER001</td>
-                          <td>W.R.Nimal Karunathilake</td>
-                          <td>Manager</td>
-                          <td>Graduate</td>
-                          <td>20 May 2023</td>
-                          <td>15:35:21</td>
-                          <td>nimalkaruna2977@gmail.com</td>
-                          <td class="p-1"><button class="btn btn-success" style="width: 40px; height:30px ;">View</button> </td>
-                          <td class="p-1"><button class="btn btn-primary" style="width: 40px; height:30px ;">Edit</button> </td>
-                          <td class="p-1"><button class="btn btn-danger" style="width: 40px; height:30px ;">Delete</button> </td>
-                        </tr>
-                        <tr>
-                          <td>Marlo Sanki</td>
-                          <td>53425532</td>
-                          <td>15 May 2015</td>
-                          <td><label class="badge badge-warning">In progress</label></td>
-                          <td>Dave</td>
-                          <td>53275535</td>
-                          <td>20 May 2017</td>
-                          <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
-                        <tr>
-                          <td>John ryte</td>
-                          <td>53275533</td>
-                          <td>14 May 2017</td>
-                          <td><label class="badge badge-info">Fixed</label></td>
-                          <td>Dave</td>
-                          <td>53275535</td>
-                          <td>20 May 2017</td>
-                          <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
-                        <tr>
-                          <td>Peter mark</td>
-                          <td>53275534</td>
-                          <td>16 May 2017</td>
-                          <td><label class="badge badge-success">Completed</label></td>
-                          <td>Dave</td>
-                          <td>53275535</td>
-                          <td>20 May 2017</td>
-                          <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
-                        <tr>
-                          <td>Dave</td>
-                          <td>53275535</td>
-                          <td>20 May 2017</td>
-                          <td><label class="badge badge-warning">In progress</label></td>
-                          <td>Dave</td>
-                          <td>53275535</td>
-                          <td>20 May 2017</td>
-                          <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
-                        
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            <!-- </div>
-            
-            </div>
-              </div>
-            </div> -->
-
-
-
-
-      <!-- <nav aria-label="breadcrumb">
+       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Admin</a></li>
               <li class="breadcrumb-item active" aria-current="page">Users</li>
           </ol>
       </nav>
       
-        <h1>User</h1> -->
- 
+        <h1>Users</h1> 
+        <table class="table table-hover bg-white rounded">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">D.O.B</th>
+      <th scope="col">Phone number</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">U001</th>
+      <td>pradee</td>
+      <td>sharoon</td>
+      <td>shasha@mdo.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+                    <button class="btn btn-success mx-1 p-1" >View</button>
+                    <button class="btn btn-primary mx-1 p-1" >Edit</button>
+                    <button class="btn btn-danger mx-1 p-1" >Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
   </div>
         </div> 
     </body>
