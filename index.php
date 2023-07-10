@@ -264,12 +264,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <!--profile--> 
                 <div class="dropdown ">
                     <dvi class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a class="navbar-brand " href="#" type="button" > <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 "
+                        <a class="navbar-brand " href="" type="button" > <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 "
                                                                                style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip" data-bs-title=" See your profile" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" /></a>
                     </dvi>                                                                       
                     <ul class="dropdown-menu border-0 shadow">
                         <!--avatar-->
-                        <li><a class="dropdown-item" href="#">
+                        <li><a class="dropdown-item" href="./userProfile.php">
                                 <div class="d-flex align-items-center">
                                     <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 "style="width: 48px; height: 48px; object-fit: cover" />
                                     <div class="d-flex flex-column mt-3 p-0">
@@ -279,12 +279,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                 </div>
                             </a></li>
                         <!--settings-->
-                        <li><a class="dropdown-item" href="#">
+                        <!-- <li><a class="dropdown-item" href="#">
                                 <div class="d-flex align-items-center me-2">
                                     <i class="fas fa-cog justify-content-center fs-5"></i>
                                     <p class="m-0 ms-2">Settings</p>
                                 </div>
-                            </a></li>
+                            </a></li> -->
                         <hr>
                         <!--logout-->
                         <li><a class="dropdown-item" href="./Login.php">
