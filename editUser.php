@@ -15,6 +15,46 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <link rel="stylesheet" href="maincss.css"/>
         <link rel="stylesheet" href="editUser.css"/>
 
+
+        <style>
+    /* Customize the range slider */
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 20px;
+      background: #ffffff;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    /* Customize the track */
+    input[type="range"]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 10px;
+      cursor: pointer;
+      background: #2196F3;
+    }
+
+    /* Customize the thumb (handle) */
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+    }
+
+    /* Modify the thumb on hover */
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background: #0d6efd;
+    }
+  </style>
+
     </head>
     <body>
         <style>
@@ -312,7 +352,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 		<div class="main-body">
 			<div class="row">
 				<div class="col-lg-4">
-					<div class="card">
+					<!-- <div class="card">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
 								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
@@ -347,9 +387,48 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 									<span class="text-secondary">bootdey</span>
 								</li>
 							</ul>
-						</div>
+						</div> -->
+
+                        <div class="card">
+      <div class="card-body">
+      <div class="d-flex flex-column align-items-center text-center">
+      <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+      <div class="mt-3">
+      <h4>Migara Thiyunuwan</h4>
+      <p class="text-secondary mb-1"><b>Software Engineer</b></p>
+      <p class="text-muted text-center m-0">Tech enthusiast | Graphic Designer | Web Designer | Developer</p>
+      <p class="text-muted font-size-sm">Nittambuwa, Gampaha, Sri Lanka</p>
+      <!-- <button class="btn btn-primary">Follow</button>
+         <button class="btn btn-outline-primary">Message</button> -->
+      </div>
+      </div>
+      <div class="pt-2">
+      <h6 class="mb-0" style="padding-bottom: 10px;">About Me</h6>
+      <!-- <p>Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative 
+      solutions and staying at the forefront of the industry. Let's connect and create something amazing together.</p> -->
+      </div>
+      <div class="mt-3" >
+      <textarea class="form-control" id="myTextArea" name="message" rows="10" cols="35"   placeholder="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative solutions and staying at the forefront of the industry. Let's connect and create something amazing together."></textarea>
+									<!-- <input type="text" class="form-control" value="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative 
+      solutions and staying at the forefront of the industry. Let's connect and create something amazing together."> -->
+
+      <div class="row" style="margin-top: 10px;">
+								<div class="col-sm-3"></div>
+								<div class="col-sm-9 text-secondary">
+									<input type="button" class="btn btn-primary px-4" value="Save">
+								</div>
+							</div>
+	  </div>
+      </div>
+      </div>
+         <div class="card mt-3"> 
+            
 					</div>
-				</div>
+				</div> 
+
+
+
+                
 				<div class="col-lg-8">
 					<div class="card">
 						<div class="card-body">
@@ -408,7 +487,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 							<div class="row">
 								<div class="col-sm-3"></div>
 								<div class="col-sm-9 text-secondary">
-									<input type="button" class="btn btn-primary px-4" value="Save Changes">
+									<input type="button" class="btn btn-primary px-4" value="Save ">
 								</div>
 							</div>
 						</div>
@@ -417,10 +496,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
-									<h5 class="d-flex align-items-center mb-3">Project Status</h5>
-									<p>Web Design</p>
+									<h5 class="d-flex align-items-center mb-3">Skills</h5>
+
+                                    <div >
+                                        <form>
+                                            <label for="myRangeSlider">HTML:-</label>
+                                            <output for="myRangeSlider" id="sliderValue">50  </output> 
+                                            <input type="range" id="myRangeSlider" name="value" min="0" max="100" step="1">
+                                            
+                                        </form>
+                                        
+                                        <script>
+                                            const rangeSlider = document.getElementById("myRangeSlider");
+                                            const output = document.getElementById("sliderValue");
+
+                                            output.innerHTML = rangeSlider.value; // Display the default slider value
+
+                                            rangeSlider.oninput = function() {
+                                            output.innerHTML = this.value; // Update the output value as the slider changes
+                                            };
+                                        </script>
+                                    </div>
+
+                                    
+
+                                    
+
+									<!-- <p>Web Design</p>
 									<div class="progress mb-3" style="height: 5px">
-										<div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 									<p>Website Markup</p>
 									<div class="progress mb-3" style="height: 5px">
@@ -437,7 +541,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 									<p>Backend API</p>
 									<div class="progress" style="height: 5px">
 										<div class="progress-bar bg-info" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-									</div>
+									</div> -->
+
+
+
 								</div>
 							</div>
 						</div>
