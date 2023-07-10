@@ -91,7 +91,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   <!--side nav bar-->
   <div class="col-1 col-lg-2 d-block sidebar ">
       <div class=" h-100 fixed-top overflow-hidden"
-           style="padding-top: 56px;min-width: 20rem;z-index: 4">
+           style="padding-top: 56px;min-width: 20rem;z-index: 4;">
               <!--large nav bar-->
               <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white " style="max-width: 20rem">
                   <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -167,7 +167,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   </div>
   
   <!--main content-->
-  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;">
+  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px; z-index:5">  
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Admin</a></li>
@@ -176,6 +176,261 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       </nav>
       
         <h1>Companies</h1>
+        <table class="table table-hover bg-white rounded">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Registered Date</th>
+      <th scope="col">Contact number</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">C001</th>
+      <td>SimCentric Technologies</td>
+      <td>simcttechnologies@gmail.com</td>
+      <td>31 Aug 2000</td>
+      <td>+94112270004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    </tbody>
+</table>
+    
+    
  
   </div>
         </div>

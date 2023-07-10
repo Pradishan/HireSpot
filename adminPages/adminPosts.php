@@ -91,7 +91,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   <!--side nav bar-->
   <div class="col-1 col-lg-2 d-block sidebar ">
       <div class=" h-100 fixed-top overflow-hidden"
-           style="padding-top: 56px;min-width: 20rem;z-index: 4">
+           style="padding-top: 56px;min-width: 20rem;z-index: 4;">
               <!--large nav bar-->
               <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white " style="max-width: 20rem">
                   <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -176,6 +176,251 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       </nav>
       
         <h1>Posts</h1>
+        <table class="table table-hover bg-white rounded">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Company</th>
+      <th scope="col">Posted Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    
+    </tbody>
+</table>
+
  
   </div>
         </div>
