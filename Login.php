@@ -114,11 +114,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
               <label for="floatingPassword">Password</label>
           </div>
           <a href="./index.php">
-            <button
-              class="btn btn-primary my-3 w-100"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
+            <button class="btn btn-primary my-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
               login
             </button>
           </a>
