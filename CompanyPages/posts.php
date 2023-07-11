@@ -73,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li>
                         <hr>
                         <!--logout-->
-                        <li><a class="dropdown-item" href="./../Admin.php">
+                        <li><a class="dropdown-item" href="./../LoginCompany.php">
                                 <div class="d-flex align-items-center me-2">
                                     <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                     <p class="m-0 ms-2">Log out</p>
@@ -101,21 +101,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                   <hr>
                   <ul class="nav nav-pills flex-column mb-auto">
                       <li class="nav-item">
-                          <a href="./adminUser.php" class="nav-link link-body-emphasis">
+                          <a href="./companyProfile.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-user"></i>
-                              Users
+                              Profile
                           </a>
                       </li>
                       <li>
-                          <a href="./adminCompanies.php" class="nav-link active" aria-current="page">
+                          <a href="./posts.php" class="nav-link active" aria-current="page">
                               <i class="fa-solid fa-building"></i>
-                              Companies
+                              Posts
                           </a>
                       </li>
                       <li>
-                          <a href="./adminPosts.php" class="nav-link link-body-emphasis">
+                          <a href="./application.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-address-card"></i>
-                              Posts
+                              Applications
                           </a>
                       </li>
                   </ul>
@@ -167,16 +167,231 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   </div>
   
   <!--main content-->
-  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;">
+  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px; z-index:5">  
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Admin</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Companies</li>
+              <li class="breadcrumb-item"><a href="#">Company</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Posts</li>
           </ol>
       </nav>
       
-        <h1>Companies</h1>
- 
+        <h1>Posts</h1>
+        <table class="table table-hover bg-white rounded">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Category</th>
+      <th scope="col">Recieved Applications</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+
+
+    
+  </tbody>
+</table>
+
   </div>
         </div>
     </body>

@@ -45,7 +45,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./About.php">About</a>
                         </li>
                         <li class="nav-item">
                           <!--search-->
@@ -53,6 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                 <input class="form-control me-2 border-0" list="datalistOptions" id="exampleDataList" type="search" placeholder="Search" aria-label="Search" style="border-radius: 50px;background-color: #F4F4F4" size="50px">
                                 <button class="btn btn-outline-primary " type="submit" style="border-radius: 50px;"><i class="fa fa-magnifying-glass " ></i></button>
                                 <datalist id="datalistOptions" class="bg-white text-muted">
+                                    <option value="Web Designer">
                                     <option value="Software Engeneer">
                                     <option value="Data Scientist">
                                     <option value="QA Engeneer">
@@ -63,7 +67,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-none d-lg-block" href="#">JOB Search</a>
+                            <a class="nav-link d-none d-lg-block" href="./Vacancies.php">JOB Search</a>
                         </li>
                     </ul>
                 </div>

@@ -366,7 +366,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             <input type="radio" class="btn-check " name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
                             <label class="btn btn-outline-primary " for="vbtn-radio1">Credit  / Debit card</label>
                             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="vbtn-radio2">Paybal</label>
+                            <label class="btn btn-outline-primary" for="vbtn-radio2">Paypal</label>
                         </div>
                     </div>
                     <div class="d-flex input-group my-2">
@@ -450,7 +450,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </label>
                         </div>
                     </div>
-                    <input type="submit" value="Pay" class="btn btn-primary w-100 mt-3"/>
+                    <a href="./CompanyPages/companyProfile.php"><input type="submit" value="Pay" class="btn btn-primary w-100 mt-3"/></a>
                 </div>
             </div>
 
