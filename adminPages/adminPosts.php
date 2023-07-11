@@ -196,8 +196,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
     <tr>
@@ -208,8 +243,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
     <tr>
@@ -220,8 +254,41 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+      <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
     <tr>
@@ -232,8 +299,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
     <tr>
@@ -244,8 +310,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
     <tr>
@@ -256,8 +345,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
     <tr>
@@ -268,8 +392,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
     <tr>
@@ -280,8 +403,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacany for Fullstack Developer</td>
+      <td>SimCentric Technologies</td>
+      <td>31 Aug 2022</td>
+      <td>09:38:04</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
     <tr>
@@ -292,130 +438,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>09:38:04</td>
       <td class="d-flex align-items-center p-1">
       <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
-      </td>
-    </tr>
+    
+
+   
 
     
     </tbody>

@@ -73,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li>
                         <hr>
                         <!--logout-->
-                        <li><a class="dropdown-item" href="./../Admin.php">
+                        <li><a class="dropdown-item" href="./../LoginCompany.php">
                                 <div class="d-flex align-items-center me-2">
                                     <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                     <p class="m-0 ms-2">Log out</p>
@@ -100,21 +100,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                   <hr>
                   <ul class="nav nav-pills flex-column mb-auto">
                       <li class="nav-item">
-                          <a href="./adminUser.php" class="nav-link active" aria-current="page">
+                          <a href="./companyProfile.php" class="nav-link active" aria-current="page">
                               <i class="fa-solid fa-user"></i>
                               Profile
                           </a>
                       </li>
                       <li>
-                          <a href="./adminCompanies.php" class="nav-link link-body-emphasis">
+                          <a href="./posts.php"class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-building"></i>
-                              Applications
+                              Posts
                           </a>
                       </li>
                       <li>
-                          <a href="./adminPosts.php" class="nav-link link-body-emphasis">
+                          <a href="./application.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-address-card"></i>
-                              Post
+                              Applications
                           </a>
                       </li>
                   </ul>

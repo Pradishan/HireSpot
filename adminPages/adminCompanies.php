@@ -195,11 +195,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -207,11 +206,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -219,11 +217,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -231,11 +228,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -243,11 +239,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -255,11 +250,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -267,11 +261,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -279,11 +272,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -291,11 +283,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -303,11 +294,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -315,11 +305,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -327,11 +316,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -339,11 +327,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -351,11 +338,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -363,11 +349,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -375,11 +360,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -387,11 +371,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -399,11 +382,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -411,11 +393,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
-
     <tr>
       <th scope="row">C001</th>
       <td>SimCentric Technologies</td>
@@ -423,10 +404,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <td>31 Aug 2000</td>
       <td>+94112270004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
+
+    
     </tbody>
 </table>
     

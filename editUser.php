@@ -402,7 +402,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
          <button class="btn btn-outline-primary">Message</button> -->
       </div>
       </div>
-      <div class="pt-2">
+      <div class="pt-4">
       <h6 class="mb-0" style="padding-bottom: 0px;">About Me</h6>
       <!-- <p>Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative 
       solutions and staying at the forefront of the industry. Let's connect and create something amazing together.</p> -->
@@ -578,6 +578,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                             };
                                             });
                                         </script> 
+                                        <div class="col-sm-3" style="width: 50%;" >
+                                    <a class="btn btn-info"    href="./userProfile.php">Update all Details</a>
+                                    </div>
                                         
                                     </div>
                                     
@@ -598,21 +601,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 		</div>
 	</div>
                     
-                        <div class="card" style="margin-left: 110px; margin-right:110px" >
-                        <div class="card-body"  >
+                         <!-- <div class="card" style="margin-left: 110px; margin-right:110px; justify-content-center" >
+                        <div class="card-body" style="justify-content: center;" >
                                 
-                                <div class="row mb-3" style="justify-content:space-around"> 
-                                    <div class="col-sm-3" style="width: 50%;" >
-                                        <h6 class="mb-0">By pressing "Update" button, You can update your profile details. </h6>
-                                    </div>
-                                    <div class="col-sm-3" style="width: 50%;" >
+                                <div class="row mb-3" style="justify-content: center;"> 
+                                    
+                                    <div class="col-sm-3" style="width: 50%; " >
                                     <a class="btn btn-info "    href="./userProfile.php">Update</a>
                                     </div>
 
                                    
 							    </div>       
                         </div>
-                        </div>
+                        </div>  -->
                         
 
 

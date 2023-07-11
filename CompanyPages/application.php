@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>HireSpot | Admin </title>
+        <title>HireSpot | Company </title>
         <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <!--fontawesom-->
@@ -36,13 +36,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             .bg-darkgray{
                 background-color: #D9D9D9 !important;
             }
-
-
-
         </style>
-
-        
-      <!--navbar-->
+          <!--navbar-->
         <nav class="navbar navbar-expand-lg bg-white fixed-top">
             <div class="container">
                 <div>
@@ -78,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li>
                         <hr>
                         <!--logout-->
-                        <li><a class="dropdown-item" href="./../Admin.php">
+                        <li><a class="dropdown-item" href="./../LoginCompany.php">
                                 <div class="d-flex align-items-center me-2">
                                     <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                     <p class="m-0 ms-2">Log out</p>
@@ -91,11 +86,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             </div>
         </div>
     </nav>
+        
         <div class="row">      
   <!--side nav bar-->
   <div class="col-1 col-lg-2 d-block sidebar ">
       <div class=" h-100 fixed-top overflow-hidden"
-           style="padding-top: 56px;min-width: 20rem;z-index: 4;">
+           style="padding-top: 56px;min-width: 20rem;z-index: 4">
               <!--large nav bar-->
               <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white " style="max-width: 20rem">
                   <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -105,21 +101,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                   <hr>
                   <ul class="nav nav-pills flex-column mb-auto">
                       <li class="nav-item">
-                          <a href="./adminUser.php" class="nav-link active" aria-current="page">
+                          <a href="./companyProfile.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-user"></i>
-                              Users
+                              Profile
                           </a>
                       </li>
                       <li>
-                          <a href="./adminCompanies.php" class="nav-link link-body-emphasis">
+                          <a href="./posts.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-building"></i>
-                              Companies
+                              Posts
                           </a>
                       </li>
                       <li>
-                          <a href="./adminPosts.php" class="nav-link link-body-emphasis">
+                          <a href="./application.php" class="nav-link active" aria-current="page">
                               <i class="fa-solid fa-address-card"></i>
-                              Posts
+                              Applications
                           </a>
                       </li>
                   </ul>
@@ -142,17 +138,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                   </a>
                   <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                       <li class="nav-item">
-                          <a href="adminUser.php" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                          <a href="./adminUser.php" class="nav-link  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
                               <i class="fa-solid fa-user"></i>
                           </a>
                       </li>
                       <li>
-                          <a href="./adminCompanies.php" class="nav-link  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                          <a href="./adminCompanies.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
                               <i class="fa-solid fa-building"></i>
                           </a>
                       </li>
                       <li>
-                          <a href="./adminUser.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                          <a href="./adminPosts.php" class="nav-link active py-3 border-bottom rounded-0"  aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
                               <i class="fa-solid fa-address-card"></i>
                           </a>
                       </li>
@@ -171,286 +167,291 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   </div>
   
   <!--main content-->
-   <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px; z-index:5">  
-       <nav aria-label="breadcrumb">
+  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px; z-index:5">  
+      <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Admin</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Users</li>
+              <li class="breadcrumb-item"><a href="#">Company</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Applications</li>
           </ol>
       </nav>
       
-        <h1>Users</h1> 
+        <h1>Applications</h1>
+ 
         <table class="table table-hover bg-white rounded">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Username</th>
-      <th scope="col">Email</th>
-      <th scope="col">D.O.B</th>
-      <th scope="col">Phone number</th>
+      <th scope="col">Post Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Applicant Name</th>
+      <th scope="col">Applicant Contact Number</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
       <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
     <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
       <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
     <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
       <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
     <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
       <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
     <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
       <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
+
     <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
       <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
+
     <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
       <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
+
     <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
       <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">U001</th>
-      <td>pradee</td>
-      <td>sharoon</td>
-      <td>shasha@mdo.com</td>
-      <td>31 Aug 2000</td>
-      <td>+94704470004</td>
-      <td class="d-flex align-items-center p-1">
-      <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
+
+
     
   </tbody>
 </table>
 
   </div>
-        </div> 
+        </div>
     </body>
     <!--bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

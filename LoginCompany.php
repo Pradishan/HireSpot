@@ -104,7 +104,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <!-- form  -->
       <div style="max-width: 28rem; width: 100%">
         <div class="bg-white shadow rounded p-3 input-group-lg">
-          <h1 class="text-center">Log in</h1>
+          <h1 class="text-center"> Company Log in</h1>
           <div class="form-floating my-3">
               <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"   style="background-color: #F4F4F4">
               <label for="floatingInput">Company Name</label>
@@ -154,7 +154,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 </div>
                 <div class="modal-body">
                   <div class="row">
-                    <div class="col">
+                    <!-- <div class="col">
                       <input
                         type="text"
                         name=""
@@ -171,14 +171,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         class="form-control"
                         placeholder="last name"
                       />
-                    </div>
+                    </div> -->
                   </div>
 
                   <input
                     type="text"
                     name=""
                     class="form-control my-3"
-                    placeholder="Username"
+                    placeholder="Company Name"
+                    id=""
+                  />
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control my-3"
+                    placeholder="Main Category"
                     id=""
                   />
                   <input
@@ -222,7 +229,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <button type="button" onclick="addEducationField()">Add Education Field</button>
                     <br> -->
 
-                    <div >
+                    <!-- <div >
                     <label class="text-muted fs-7" >Education Information:</label>
                       <div id="educationContainer" >
                         <div class="input-group mb-3" > 
@@ -237,116 +244,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                       <button  type="button" class="btn btn-outline-primary my-3" onclick="addEducationField()">Add new</button>
 
                       <br>
-                  </div>
+                  </div> -->
 
                   
-                  <textarea class="form-control my-3" id="description" name="description" placeholder="About me" oninput="countWords()" maxlength="200"></textarea>
+                  <textarea class="form-control my-3" id="description" name="description" placeholder="Description" oninput="countWords()" maxlength="200"></textarea>
                   
 
-                  <div class="row my-3">
-                    <span class="text-muted fs-7">
-                      Date of Birth
-                      <i
-                        type="button"
-                        class="fa-solid fa-circle-question"
-                        data-bs-container="body"
-                        data-bs-toggle="popover"
-                        data-bs-placement="right"
-                        data-bs-content="Right popover"
-                      ></i>
-                    </span>
-                    <div class="col">
-                      <select name="" id="" class="form-select">
-                      <?php
-                        $startYear = 1950;
-                        $endYear = 2022;
-
-                        for ($i = 1; $i <= 72; $i++) {
-                            $year = $startYear + $i - 1;
-                            echo '<option value="' . $i . '">' . $year . '</option><br>';
-                        }
-                      ?>
-                      </select>
-                    </div>
-                    <div class="col">
-                      <select name="" id="" class="form-select">
-                      <option value="1">January</option><br>
-                        <option value="2">February</option><br>
-                        <option value="3">March</option><br>
-                        <option value="4">April</option><br>
-                        <option value="5">May</option><br>
-                        <option value="6">June</option><br>
-                        <option value="7">July</option><br>
-                        <option value="8">August</option><br>
-                        <option value="9">September</option><br>
-                        <option value="10">October</option><br>
-                        <option value="11">Novermber</option><br>
-                        <option value="12">December</option><br>
-                      </select>
-                    </div>
-                    <div class="col">
-                      <select name="" id="" class="form-select">
-                      <?php
-                        for ($i = 1; $i <= 31; $i++) {
-                            echo '<option value="' . $i . '">' . $i. '</option>';
-                        }
-                      ?>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row my-3 jus">
-                    <span class="text-muted fs-7">
-                      Gender
-                      <i
-                        type="button"
-                        class="fa-solid fa-circle-question"
-                        data-bs-container="body"
-                        data-bs-toggle="popover"
-                        data-bs-placement="right"
-                        data-bs-content="Right popover"
-                      ></i>
-                    </span>
-                    <div class="col">
-                      <div class="">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Male
-                        </label>
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault1"
-                          checked
-                        />
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Female
-                        </label>
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault2"
-                        />
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="">
-                        <label class="form-check-label" for="flexRadioDefault3">
-                          Coustom
-                        </label>
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault3"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  
+                 
 
                   <div class="d-none" id="selectGender">
                     <select name="" id="" class="form-select">
@@ -374,6 +279,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     
                   </div>
                   <div class="text-center">
+                  <a href="./Payment.php">
                     <button
                       type="button"
                       class="btn btn-outline-primary my-3"
@@ -381,6 +287,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     >
                       Sing up
                     </button>
+                  </a>
                   </div>
                 </div>
               </div>
