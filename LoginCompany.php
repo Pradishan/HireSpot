@@ -139,7 +139,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <div class="modal-header">
                   <div class="">
                     <h1 class="modal-title fs-2" id="exampleModalLabel">
-                      sing up
+                      sign up
                     </h1>
                     <span class="text-muted fs-7"
                       >Join with us to discover somehting</span
