@@ -6,13 +6,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>HireSpot | Admin </title>
+        <title>HireSpot | Company </title>
         <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <!--fontawesom-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--main css-->
-        <link rel="stylesheet" href="maincss.css"/>
+        <link rel="stylesheet" href="../../css/maincss.css"/>
 
     </head>
     <body>
@@ -37,7 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 background-color: #D9D9D9 !important;
             }
         </style>
-        <!--navbar-->
+          <!--navbar-->
         <nav class="navbar navbar-expand-lg bg-white fixed-top">
             <div class="container">
                 <div>
@@ -47,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <!--logo-->
-                            <img src="./../img/logo.png" width="137px" height="43px" alt="HireSpot"/>
+                            <img src="../../img/logo.png" width="137px" height="43px" alt="HireSpot"/>
                         </li>
                     </ul>
                 </div>
@@ -73,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li>
                         <hr>
                         <!--logout-->
-                        <li><a class="dropdown-item" href="./../LoginCompany.php">
+                        <li><a class="dropdown-item" href="../LoginCompany.php">
                                 <div class="d-flex align-items-center me-2">
                                     <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                     <p class="m-0 ms-2">Log out</p>
@@ -95,7 +95,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
               <!--large nav bar-->
               <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white " style="max-width: 20rem">
                   <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                      <img src="./../img/logo.png" height="43px" alt="HireSpot"/>
+                      <img src="../../img/logo.png" height="43px" alt="HireSpot"/>
                       <span class="fs-4"> </span>
                   </a>
                   <hr>
@@ -107,13 +107,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                           </a>
                       </li>
                       <li>
-                          <a href="./posts.php" class="nav-link active" aria-current="page">
+                          <a href="./posts.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-building"></i>
                               Posts
                           </a>
                       </li>
                       <li>
-                          <a href="./application.php" class="nav-link link-body-emphasis">
+                          <a href="./application.php" class="nav-link active" aria-current="page">
                               <i class="fa-solid fa-address-card"></i>
                               Applications
                           </a>
@@ -126,7 +126,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                           <strong>name</strong>
                       </a>
                       <ul class="dropdown-menu text-small shadow">
-                          <li><a class="dropdown-item" href="./../Admin.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
+                          <li><a class="dropdown-item" href="../LoginCompany.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
                       </ul>
                   </div>
               </div>
@@ -138,17 +138,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                   </a>
                   <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                       <li class="nav-item">
-                          <a href="./adminUser.php" class="nav-link  py-3 border-bottom rounded-0"data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                          <a href="./adminUser.php" class="nav-link  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
                               <i class="fa-solid fa-user"></i>
                           </a>
                       </li>
                       <li>
-                          <a href="./adminPosts.php" class="nav-link active py-3 border-bottom rounded-0"  aria-current="page"  data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                          <a href="./adminCompanies.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
                               <i class="fa-solid fa-building"></i>
                           </a>
                       </li>
                       <li>
-                          <a href="./adminPosts.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                          <a href="./adminPosts.php" class="nav-link active py-3 border-bottom rounded-0"  aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
                               <i class="fa-solid fa-address-card"></i>
                           </a>
                       </li>
@@ -159,7 +159,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                           <img src="https://source.unsplash.com/random/5" alt="avatar" width="32" height="32" class="rounded-circle me-2">
                       </a>
                       <ul class="dropdown-menu text-small shadow">
-                          <li><a class="dropdown-item" href="./../Admin.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
+                          <li><a class="dropdown-item" href="../LoginCompany.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
                       </ul>
                   </div>
               </div>
@@ -171,221 +171,279 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Company</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Posts</li>
+              <li class="breadcrumb-item active" aria-current="page">Applications</li>
           </ol>
       </nav>
       
-        <h1>Posts</h1>
+        <h1>Applications</h1>
+ 
         <table class="table table-hover bg-white rounded">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Title</th>
+      <th scope="col">Post Title</th>
       <th scope="col">Date</th>
-      <th scope="col">Category</th>
-      <th scope="col">Recieved Applications</th>
+      <th scope="col">Applicant Name</th>
+      <th scope="col">Applicant Contact Number</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
 
     <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
 
     <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
       <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacancy for Manager</td>
-      <td>31 Aug 2000</td>
-      <td>Human Resource</td>
-      <td>
-      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
-      </td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
       </td>
     </tr>
 
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">A001</th>
+      <td>Vacancy for Software Engineer</td>
+      <td>31 Aug 2000</td>
+      <td>R.W. Nimal Perera</td>
+      <td>+94704470004</td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-primary mx-1 p-1" >Download CV</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Accept</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Reject</button> </a>
+      </td>
+    </tr>
 
 
     
