@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <!--fontawesom-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--main css-->
-        <link rel="stylesheet" href="maincss.css"/>
+        <link rel="stylesheet" href="../../css/maincss.css"/>
 
     </head>
     <body>
@@ -37,7 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 background-color: #D9D9D9 !important;
             }
         </style>
-          <!--navbar-->
+        <!--navbar-->
         <nav class="navbar navbar-expand-lg bg-white fixed-top">
             <div class="container">
                 <div>
@@ -47,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <!--logo-->
-                            <img src="./../img/logo.png" width="137px" height="43px" alt="HireSpot"/>
+                            <img src="../../img/logo.png" width="137px" height="43px" alt="HireSpot"/>
                         </li>
                     </ul>
                 </div>
@@ -73,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li>
                         <hr>
                         <!--logout-->
-                        <li><a class="dropdown-item" href="./../Admin.php">
+                        <li><a class="dropdown-item" href="../LoginCompany.php">
                                 <div class="d-flex align-items-center me-2">
                                     <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                     <p class="m-0 ms-2">Log out</p>
@@ -91,31 +91,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   <!--side nav bar-->
   <div class="col-1 col-lg-2 d-block sidebar ">
       <div class=" h-100 fixed-top overflow-hidden"
-           style="padding-top: 56px;min-width: 20rem;z-index: 4;">
+           style="padding-top: 56px;min-width: 20rem;z-index: 4">
               <!--large nav bar-->
               <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white " style="max-width: 20rem">
                   <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                      <img src="./../img/logo.png" height="43px" alt="HireSpot"/>
+                      <img src="../../img/logo.png" height="43px" alt="HireSpot"/>
                       <span class="fs-4"> </span>
                   </a>
                   <hr>
                   <ul class="nav nav-pills flex-column mb-auto">
                       <li class="nav-item">
-                          <a href="./adminUser.php" class="nav-link link-body-emphasis">
+                          <a href="./companyProfile.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-user"></i>
-                              Users
+                              Profile
                           </a>
                       </li>
                       <li>
-                          <a href="./adminCompanies.php" class="nav-link link-body-emphasis">
+                          <a href="./posts.php" class="nav-link active" aria-current="page">
                               <i class="fa-solid fa-building"></i>
-                              Companies
+                              Posts
                           </a>
                       </li>
                       <li>
-                          <a href="./adminPosts.php" class="nav-link active" aria-current="page">
+                          <a href="./application.php" class="nav-link link-body-emphasis">
                               <i class="fa-solid fa-address-card"></i>
-                              Posts
+                              Applications
                           </a>
                       </li>
                   </ul>
@@ -126,7 +126,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                           <strong>name</strong>
                       </a>
                       <ul class="dropdown-menu text-small shadow">
-                          <li><a class="dropdown-item" href="./../Admin.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
+                          <li><a class="dropdown-item" href="../LoginCompany.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
                       </ul>
                   </div>
               </div>
@@ -138,17 +138,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                   </a>
                   <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                       <li class="nav-item">
-                          <a href="./adminUser.php" class="nav-link  py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                          <a href="./adminUser.php" class="nav-link  py-3 border-bottom rounded-0"data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
                               <i class="fa-solid fa-user"></i>
                           </a>
                       </li>
                       <li>
-                          <a href="./adminCompanies.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                          <a href="./adminPosts.php" class="nav-link active py-3 border-bottom rounded-0"  aria-current="page"  data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
                               <i class="fa-solid fa-building"></i>
                           </a>
                       </li>
                       <li>
-                          <a href="./adminPosts.php" class="nav-link active py-3 border-bottom rounded-0"  aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                          <a href="./adminPosts.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
                               <i class="fa-solid fa-address-card"></i>
                           </a>
                       </li>
@@ -159,7 +159,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                           <img src="https://source.unsplash.com/random/5" alt="avatar" width="32" height="32" class="rounded-circle me-2">
                       </a>
                       <ul class="dropdown-menu text-small shadow">
-                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
+                          <li><a class="dropdown-item" href="../LoginCompany.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
                       </ul>
                   </div>
               </div>
@@ -167,10 +167,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   </div>
   
   <!--main content-->
-  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;z-index: 5">
+  <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px; z-index:5">  
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Admin</a></li>
+              <li class="breadcrumb-item"><a href="#">Company</a></li>
               <li class="breadcrumb-item active" aria-current="page">Posts</li>
           </ol>
       </nav>
@@ -181,275 +181,217 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Title</th>
-      <th scope="col">Company</th>
-      <th scope="col">Posted Date</th>
-      <th scope="col">Time</th>
+      <th scope="col">Date</th>
+      <th scope="col">Category</th>
+      <th scope="col">Recieved Applications</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
 
     <tr>
       <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
 
     <tr>
       <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
       <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
+      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">P001</th>
+      <td>Vacancy for Manager</td>
+      <td>31 Aug 2000</td>
+      <td>Human Resource</td>
+      <td>
+      <a href="./application.php"> <button class="btn btn-primary mx-1 p-1" >View Applications</button> </a>
+      </td>
+      <td class="d-flex align-items-center p-1">
+      <a href=""> <button class="btn btn-success mx-1 p-1" >Edit</button> </a>
       <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
       </td>
     </tr>
 
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-      <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
 
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">P001</th>
-      <td>Vacany for Fullstack Developer</td>
-      <td>SimCentric Technologies</td>
-      <td>31 Aug 2022</td>
-      <td>09:38:04</td>
-      <td class="d-flex align-items-center p-1">
-      <a href=""> <button class="btn btn-primary mx-1 p-1" >View</button> </a>
-      <a href=""><button class="btn btn-danger mx-1 p-1" >Delete</button> </a>
-      </td>
-    </tr>
-    
-
-   
 
     
-    </tbody>
+  </tbody>
 </table>
 
- 
   </div>
         </div>
     </body>

@@ -14,53 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <!--main css-->
         <link rel="stylesheet" href="maincss.css"/>
 
-        <script>
-    function addEducationField() {
-      var container = document.getElementById("educationContainer");
-
-      // Create new div for the education information
-      var newDiv = document.createElement("div");
-      newDiv.classList.add("input-group", "mb-3");
-
-      // Create institute input field
-      var instituteSpan = document.createElement("span");
-      instituteSpan.classList.add("input-group-text");
-      instituteSpan.textContent = "Institute";
-
-      var instituteInput = document.createElement("input");
-      instituteInput.type = "text";
-      instituteInput.classList.add("form-control");
-      instituteInput.setAttribute("aria-label", "Sizing example input");
-      instituteInput.setAttribute("aria-describedby", "inputGroup-sizing-default");
-
-      // Append institute elements to the new div
-      newDiv.appendChild(instituteSpan);
-      newDiv.appendChild(instituteInput);
-
-      // Create education level input field
-      var levelSpan = document.createElement("span");
-      levelSpan.classList.add("input-group-text");
-      levelSpan.textContent = "Edu. Level";
-
-      var levelInput = document.createElement("input");
-      levelInput.type = "text";
-      levelInput.classList.add("form-control");
-      levelInput.setAttribute("aria-label", "Sizing example input");
-      levelInput.setAttribute("aria-describedby", "inputGroup-sizing-sm");
-
-      // Create a new div for the education level input field
-      var levelDiv = document.createElement("div");
-      levelDiv.classList.add("input-group", "input-group-sm", "mb-3");
-      levelDiv.appendChild(levelSpan);
-      levelDiv.appendChild(levelInput);
-
-      // Append the education level div to the main div
-      newDiv.appendChild(levelDiv);
-
-      // Append the new div to the container
-      container.appendChild(newDiv);
-    }
-  </script>
+        
 
     </head>
     <body>
@@ -83,7 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <nav class="navbar navbar-expand-lg bg-white fixed-top d-flex justify-content-cente">
             <div class="container ">
                             <!--logo-->
-                            <img src="img/logo.png" width="137px" height="43px" alt="HireSpot"/>
+                            <img src="../img/logo.png" width="137px" height="43px" alt="HireSpot"/>
                 </div>
             </div>
         </div>
@@ -96,7 +50,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         >
       <!-- heading -->
       <div class="text-center text-lg-center mt-lg-5 pt-lg-5">
-        <img src="img/logo.png" width="688px" height="216px" alt="HireSpot"/>
+        <img src="../img/logo.png" width="688px" height="216px" alt="HireSpot"/>
         <p class="w-75 mx-auto ma-lg-0 fs-4">
          Unleash your potential, embrace the extraordinary! test
         </p>
@@ -104,16 +58,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <!-- form  -->
       <div style="max-width: 28rem; width: 100%">
         <div class="bg-white shadow rounded p-3 input-group-lg">
-          <h1 class="text-center"> Company Log in</h1>
+          <h1 class="text-center">Log in</h1>
           <div class="form-floating my-3">
               <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"   style="background-color: #F4F4F4">
-              <label for="floatingInput">Company Name</label>
+              <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating my-3">
               <input type="password" class="form-control" id="floatingPassword" placeholder="Password"   style="background-color: #F4F4F4">
               <label for="floatingPassword">Password</label>
           </div>
-          <a href="./CompanyPages/companyProfile.php">
+          <a href="./index.php">
             <button
               class="btn btn-primary my-3 w-100"
               data-bs-toggle="modal"
@@ -139,7 +93,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <div class="modal-header">
                   <div class="">
                     <h1 class="modal-title fs-2" id="exampleModalLabel">
-                      sign up
+                      sing up
                     </h1>
                     <span class="text-muted fs-7"
                       >Join with us to discover somehting</span
@@ -154,7 +108,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 </div>
                 <div class="modal-body">
                   <div class="row">
-                    <!-- <div class="col">
+                    <div class="col">
                       <input
                         type="text"
                         name=""
@@ -171,21 +125,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         class="form-control"
                         placeholder="last name"
                       />
-                    </div> -->
+                    </div>
                   </div>
 
                   <input
                     type="text"
                     name=""
                     class="form-control my-3"
-                    placeholder="Company Name"
-                    id=""
-                  />
-                  <input
-                    type="text"
-                    name=""
-                    class="form-control my-3"
-                    placeholder="Main Category"
+                    placeholder="Username"
                     id=""
                   />
                   <input
@@ -229,7 +176,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <button type="button" onclick="addEducationField()">Add Education Field</button>
                     <br> -->
 
-                    <!-- <div >
+                    <div >
                     <label class="text-muted fs-7" >Education Information:</label>
                       <div id="educationContainer" >
                         <div class="input-group mb-3" > 
@@ -244,14 +191,116 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                       <button  type="button" class="btn btn-outline-primary my-3" onclick="addEducationField()">Add new</button>
 
                       <br>
-                  </div> -->
+                  </div>
 
                   
-                  <textarea class="form-control my-3" id="description" name="description" placeholder="Description" oninput="countWords()" maxlength="200"></textarea>
+                  <textarea class="form-control my-3" id="description" name="description" placeholder="About me" oninput="countWords()" maxlength="200"></textarea>
                   
 
-                  
-                 
+                  <div class="row my-3">
+                    <span class="text-muted fs-7">
+                      Date of Birth
+                      <i
+                        type="button"
+                        class="fa-solid fa-circle-question"
+                        data-bs-container="body"
+                        data-bs-toggle="popover"
+                        data-bs-placement="right"
+                        data-bs-content="Right popover"
+                      ></i>
+                    </span>
+                    <div class="col">
+                      <select name="" id="" class="form-select">
+                      <?php
+                        $startYear = 1950;
+                        $endYear = 2022;
+
+                        for ($i = 1; $i <= 72; $i++) {
+                            $year = $startYear + $i - 1;
+                            echo '<option value="' . $i . '">' . $year . '</option><br>';
+                        }
+                      ?>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select name="" id="" class="form-select">
+                      <option value="1">January</option><br>
+                        <option value="2">February</option><br>
+                        <option value="3">March</option><br>
+                        <option value="4">April</option><br>
+                        <option value="5">May</option><br>
+                        <option value="6">June</option><br>
+                        <option value="7">July</option><br>
+                        <option value="8">August</option><br>
+                        <option value="9">September</option><br>
+                        <option value="10">October</option><br>
+                        <option value="11">Novermber</option><br>
+                        <option value="12">December</option><br>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <select name="" id="" class="form-select">
+                      <?php
+                        for ($i = 1; $i <= 31; $i++) {
+                            echo '<option value="' . $i . '">' . $i. '</option>';
+                        }
+                      ?>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row my-3 jus">
+                    <span class="text-muted fs-7">
+                      Gender
+                      <i
+                        type="button"
+                        class="fa-solid fa-circle-question"
+                        data-bs-container="body"
+                        data-bs-toggle="popover"
+                        data-bs-placement="right"
+                        data-bs-content="Right popover"
+                      ></i>
+                    </span>
+                    <div class="col">
+                      <div class="">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                          checked
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Female
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault2"
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          Coustom
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault3"
+                        />
+                      </div>
+                    </div>
+                  </div>
 
                   <div class="d-none" id="selectGender">
                     <select name="" id="" class="form-select">
@@ -279,7 +328,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     
                   </div>
                   <div class="text-center">
-                  <a href="./Payment.php">
                     <button
                       type="button"
                       class="btn btn-outline-primary my-3"
@@ -287,7 +335,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     >
                       Sing up
                     </button>
-                  </a>
                   </div>
                 </div>
               </div>

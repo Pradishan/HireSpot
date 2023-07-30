@@ -16,7 +16,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--main css-->
-    <link rel="stylesheet" href="maincss.css" />
+    <link rel="stylesheet" href="../css/maincss.css" />
 
 </head>
 
@@ -50,12 +50,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand " href="#"><img src="img/logo.png" width="137px" height="43px" alt="HireSpot" /></a>
+            <a class="navbar-brand " href="../index.php"><img src="../img/logo.png" width="137px" height="43px" alt="HireSpot" /></a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <!--search-->
@@ -301,7 +301,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 </dvi>
                 <ul class="dropdown-menu border-0 shadow">
                     <!--avatar-->
-                    <li><a class="dropdown-item" href="./userProfile.php">
+                    <li><a class="dropdown-item" href="../pages/userProfile.php">
                             <div class="d-flex align-items-center">
                                 <img src="https://source.unsplash.com/random/5" alt="avatar"
                                     class="rounded-circle me-2 " style="width: 48px; height: 48px; object-fit: cover" />
@@ -320,7 +320,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li> -->
                     <hr>
                     <!--logout-->
-                    <li><a class="dropdown-item" href="./Login.php">
+                    <li><a class="dropdown-item" href="../pages/Login.php">
                             <div class="d-flex align-items-center me-2">
                                 <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                 <p class="m-0 ms-2">Log out</p>
@@ -363,7 +363,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </div>
                         </div>
                         <!--preview profile-->
-                        <a href="./userProfile.php"><input type="submit" value="Preview Profile"
+                        <a href="../pages/userProfile.php"><input type="submit" value="Preview Profile"
                                 class="btn btn-outline-primary w-100 " /></a>
 
                         <hr>

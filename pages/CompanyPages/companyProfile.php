@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <!--fontawesom-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--main css-->
-        <link rel="stylesheet" href="maincss.css"/>
+        <link rel="stylesheet" href="../../css/maincss.css"/>
 
     </head>
     <body>
@@ -47,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <!--logo-->
-                            <img src="./../img/logo.png" width="137px" height="43px" alt="HireSpot"/>
+                            <img src="../../img/logo.png" width="137px" height="43px" alt="HireSpot"/>
                         </li>
                     </ul>
                 </div>
@@ -73,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li>
                         <hr>
                         <!--logout-->
-                        <li><a class="dropdown-item" href="./../LoginCompany.php">
+                        <li><a class="dropdown-item" href="../LoginCompany.php">
                                 <div class="d-flex align-items-center me-2">
                                     <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                     <p class="m-0 ms-2">Log out</p>
@@ -94,7 +94,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
               <!--large nav bar-->
               <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white " style="max-width: 20rem">
                   <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                      <img src="./../img/logo.png" height="43px" alt="HireSpot"/>
+                      <img src="../../img/logo.png" height="43px" alt="HireSpot"/>
                       <span class="fs-4"> </span>
                   </a>
                   <hr>
@@ -125,7 +125,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                           <strong>name</strong>
                       </a>
                       <ul class="dropdown-menu text-small shadow">
-                          <li><a class="dropdown-item" href="./../Admin.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
+                          <li><a class="dropdown-item" href="../LoginCompany.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
                       </ul>
                   </div>
               </div>
@@ -158,7 +158,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                           <img src="https://source.unsplash.com/random/5" alt="avatar" width="32" height="32" class="rounded-circle me-2">
                       </a>
                       <ul class="dropdown-menu text-small shadow">
-                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
+                          <li><a class="dropdown-item" href="../LoginCompany.php"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
                       </ul>
                   </div>
               </div>

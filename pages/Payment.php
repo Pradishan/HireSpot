@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <!--fontawesom-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--main css-->
-        <link rel="stylesheet" href="maincss.css"/>
+        <link rel="stylesheet" href="../css/maincss.css"/>
 
     </head>
     <body>
@@ -450,7 +450,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </label>
                         </div>
                     </div>
-                    <a href="./CompanyPages/companyProfile.php"><input type="submit" value="Pay" class="btn btn-primary w-100 mt-3"/></a>
+                    <a href="../CompanyPages/companyProfile.php"><input type="submit" value="Pay" class="btn btn-primary w-100 mt-3"/></a>
                 </div>
             </div>
 

@@ -16,56 +16,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--main css-->
-  <link rel="stylesheet" href="maincss.css" />
+  <link rel="stylesheet" href="../css/maincss.css" />
 
-  <script>
-    function addEducationField ()
-    {
-      var container = document.getElementById( "educationContainer" );
 
-      // Create new div for the education information
-      var newDiv = document.createElement( "div" );
-      newDiv.classList.add( "input-group", "mb-3" );
-
-      // Create institute input field
-      var instituteSpan = document.createElement( "span" );
-      instituteSpan.classList.add( "input-group-text" );
-      instituteSpan.textContent = "Institute";
-
-      var instituteInput = document.createElement( "input" );
-      instituteInput.type = "text";
-      instituteInput.classList.add( "form-control" );
-      instituteInput.setAttribute( "aria-label", "Sizing example input" );
-      instituteInput.setAttribute( "aria-describedby", "inputGroup-sizing-default" );
-
-      // Append institute elements to the new div
-      newDiv.appendChild( instituteSpan );
-      newDiv.appendChild( instituteInput );
-
-      // Create education level input field
-      var levelSpan = document.createElement( "span" );
-      levelSpan.classList.add( "input-group-text" );
-      levelSpan.textContent = "Edu. Level";
-
-      var levelInput = document.createElement( "input" );
-      levelInput.type = "text";
-      levelInput.classList.add( "form-control" );
-      levelInput.setAttribute( "aria-label", "Sizing example input" );
-      levelInput.setAttribute( "aria-describedby", "inputGroup-sizing-sm" );
-
-      // Create a new div for the education level input field
-      var levelDiv = document.createElement( "div" );
-      levelDiv.classList.add( "input-group", "input-group-sm", "mb-3" );
-      levelDiv.appendChild( levelSpan );
-      levelDiv.appendChild( levelInput );
-
-      // Append the education level div to the main div
-      newDiv.appendChild( levelDiv );
-
-      // Append the new div to the container
-      container.appendChild( newDiv );
-    }
-  </script>
 
 </head>
 
@@ -92,7 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   <nav class="navbar navbar-expand-lg bg-white fixed-top d-flex justify-content-cente">
     <div class="container ">
       <!--logo-->
-      <a href="index.html"><img src="img/logo.png" width="137px" height="43px" alt="HireSpot"/></a>
+      <a href="../index.php"><img src="../img/logo.png" width="137px" height="43px" alt="HireSpot"/></a>
     </div>
     </div>
     </div>
@@ -110,6 +63,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <div style="max-width: 28rem; width: 100%">
       <div class="bg-white shadow rounded p-3 input-group-lg">
         <h1 class="text-center">Log in</h1>
+        <form action="#" method="POST">
         <div class="form-floating my-3">
           <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
             style="background-color: #F4F4F4">
@@ -120,11 +74,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             style="background-color: #F4F4F4">
           <label for="floatingPassword">Password</label>
         </div>
-        <a href="./feed.php">
-          <button class="btn btn-primary my-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       
+          <!-- <button class="btn btn-primary my-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
             login
-          </button>
-        </a>
+          </button> -->
+          <input type="submit" value="login" class="btn btn-primary my-3 w-100">
+        </form>
         <a href="#" class="text-decoration-none text-center">
           <p>Forgotten password?</p>
         </a>
