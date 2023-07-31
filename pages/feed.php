@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
--->
+<?php
+require_once './server/jobseeker.php';
+session_start();
+if (isset($_SESSION["seeker"])) {
+  // User is logged in, retrieve the user object
+  $seeker = $_SESSION["seeker"];
+  
+} else {
+  // Redirect the user to login.php if not logged in
+//   header("Location: ./login.php?error=3");
+//  exit();
+}
+?>
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../../img/logo only.png" type="image/x-icon">
     <title>HireSpot</title>
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -52,8 +59,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand " href="../index.php"><img src="../img/logo.png" width="137px" height="43px"
-                    alt="HireSpot" /></a>
+            <a class="navbar-brand " href="../index.php"><img src="../img/logo.png" width="137px" height="43px" alt="HireSpot" /></a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
 
@@ -309,7 +315,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                 <img src="https://source.unsplash.com/random/5" alt="avatar"
                                     class="rounded-circle me-2 " style="width: 48px; height: 48px; object-fit: cover" />
                                 <div class="d-flex flex-column mt-3 p-0">
-                                    <span class="fw-bold fs-6">Name</span>
+                                    <span class="fw-bold fs-6"> <?php echo $seeker->getUsername() ?></span>
                                     <p class="text-muted fs-7">see your profile</p>
                                 </div>
                             </div>
@@ -323,7 +329,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </a></li> -->
                     <hr>
                     <!--logout-->
-                    <li><a class="dropdown-item" href="../pages/Login.php">
+                    <li><a class="dropdown-item" href="./server/logout.php">
                             <div class="d-flex align-items-center me-2">
                                 <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                 <p class="m-0 ms-2">Log out</p>
@@ -355,14 +361,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             <!--profile content-->
 
                             <!--name-->
-                            <h3 class="text-center m-0">Name</h3>
+                            <h3 class="text-center m-0"><?php echo $seeker->getUsername() ?></h3>
                             <!--discription-->
                             <p class="text-muted text-center m-0">Tech enthusiast | Graphic Designer | Web Designer |
                                 Developer</p>
                             <!--conatact details-->
                             <div class="d-flex justify-content-center align-items-center">
                                 <i class="fa fa-envelope fs-7 me-1 mb-3 "></i>
-                                <p class="">name@gmail.com</p>
+                                <p class=""><?php echo $seeker->getEmail() ?></p>
                             </div>
                         </div>
                         <!--preview profile-->
