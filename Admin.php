@@ -7,11 +7,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
 <head>
   <meta charset="UTF-8">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="img/logo only.png" type="image/x-icon">
   <title>HireSpot | Admin</title>
   <!--bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <!--fontawesom-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--main css-->
   <link rel="stylesheet" href="./css/maincss.css" />
 
@@ -53,7 +58,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </div>
     </div>
   </nav <!-- login -->
-  <div class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5" style="padding-top: 10rem">
+  <div class="container d-flex flex-column flex-lg-row justify-content-evenly mt-3" style="padding-top: 10rem">
     <!-- heading -->
     <div class="text-center text-lg-center mt-lg-5 pt-lg-5">
       <img src="img/logo.png" width="688px" height="216px" alt="HireSpot" />
@@ -65,21 +70,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <div style="max-width: 28rem; width: 100%">
       <div class="bg-white shadow rounded p-3 input-group-lg">
         <h1 class="text-center">Admin Log in</h1>
-    <form action="#" method="POST">
-        <div class="form-floating my-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="background-color: #F4F4F4">
-          <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating my-3">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" style="background-color: #F4F4F4">
-          <label for="floatingPassword">Password</label>
-        </div>
-        
+        <form action="pages/adminPages/adminCompanies.php" method="POST">
+          <div class="form-floating my-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+              style="background-color: #F4F4F4">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating my-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+              style="background-color: #F4F4F4">
+            <label for="floatingPassword">Password</label>
+          </div>
+
           <!-- <button class="btn btn-primary my-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
             login
           </button> -->
           <input type="submit" value="Sing up" class="btn btn-primary my-3 w-100">
-       
+
         </form>
 
       </div>
@@ -118,12 +125,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   </footer>
 </body>
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <!--main js-->
 <script src="mainjs.js"></script>
 <script>
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  const tooltipTriggerList = document.querySelectorAll( '[data-bs-toggle="tooltip"]' );
+  const tooltipList = [ ...tooltipTriggerList ].map( tooltipTriggerEl => new bootstrap.Tooltip( tooltipTriggerEl ) );
 </script>
 </body>
 

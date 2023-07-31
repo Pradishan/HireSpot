@@ -7,6 +7,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
 <head>
     <meta charset="UTF-8">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../img/logo only.png" type="image/x-icon">
     <title>HireSpot</title>
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -50,7 +52,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand " href="../index.php"><img src="../img/logo.png" width="137px" height="43px" alt="HireSpot" /></a>
+            <a class="navbar-brand " href="../index.php"><img src="../img/logo.png" width="137px" height="43px"
+                    alt="HireSpot" /></a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
 

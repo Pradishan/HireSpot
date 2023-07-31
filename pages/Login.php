@@ -7,6 +7,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
 <head>
   <meta charset="UTF-8">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../img/logo only.png" type="image/x-icon">
   <title>HireSpot | login</title>
   <!--bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -45,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   <nav class="navbar navbar-expand-lg bg-white fixed-top d-flex justify-content-cente">
     <div class="container ">
       <!--logo-->
-      <a href="../index.php"><img src="../img/logo.png" width="137px" height="43px" alt="HireSpot"/></a>
+      <a href="../index.php"><img src="../img/logo.png" width="137px" height="43px" alt="HireSpot" /></a>
     </div>
     </div>
     </div>
@@ -64,17 +66,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
       <div class="bg-white shadow rounded p-3 input-group-lg">
         <h1 class="text-center">Log in</h1>
         <form action="#" method="POST">
-        <div class="form-floating my-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-            style="background-color: #F4F4F4">
-          <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating my-3">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-            style="background-color: #F4F4F4">
-          <label for="floatingPassword">Password</label>
-        </div>
-       
+          <div class="form-floating my-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+              style="background-color: #F4F4F4">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating my-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+              style="background-color: #F4F4F4">
+            <label for="floatingPassword">Password</label>
+          </div>
+
           <!-- <button class="btn btn-primary my-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
             login
           </button> -->

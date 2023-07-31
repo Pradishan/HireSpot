@@ -6,6 +6,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../../img/logo only.png" type="image/x-icon">
         <title>HireSpot | Admin </title>
         <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">

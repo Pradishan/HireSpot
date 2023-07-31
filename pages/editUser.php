@@ -7,11 +7,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
 <head>
     <meta charset="UTF-8">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../img/logo only.png" type="image/x-icon">
     <title>HireSpot | Edit Profile</title>
     <!--bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!--fontawesom-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--main css-->
     <link rel="stylesheet" href="../css/maincss.css" />
     <link rel="stylesheet" href="../css/editUser.css" />
@@ -88,10 +93,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
         <div class="container">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand " href="../pages/feed.php"><img src="../img/logo.png" width="137px" height="43px" alt="HireSpot" /></a>
+            <a class="navbar-brand " href="../pages/feed.php"><img src="../img/logo.png" width="137px" height="43px"
+                    alt="HireSpot" /></a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
 
@@ -101,8 +108,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <li class="nav-item">
                         <!--search-->
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2 border-0" list="datalistOptions" id="exampleDataList" type="search" placeholder="Search" aria-label="Search" style="border-radius: 50px;background-color: #F4F4F4" size="50px">
-                            <button class="btn btn-outline-primary " type="submit" style="border-radius: 50px;"><i class="fa fa-magnifying-glass "></i></button>
+                            <input class="form-control me-2 border-0" list="datalistOptions" id="exampleDataList"
+                                type="search" placeholder="Search" aria-label="Search"
+                                style="border-radius: 50px;background-color: #F4F4F4" size="50px">
+                            <button class="btn btn-outline-primary " type="submit" style="border-radius: 50px;"><i
+                                    class="fa fa-magnifying-glass "></i></button>
                             <datalist id="datalistOptions">
                                 <option value="Software Engeneer">
                                 <option value="Data Scientist">
@@ -121,15 +131,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="d-flex ">
                 <!--notification-->
                 <div class="dropdown ">
-                    <a class="navbar-brand" href="#" id="notify" style="width: 38px; height: 38px; object-fit: cover" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"><i class="fa-solid fa-bell" data-bs-toggle="tooltip" data-bs-title=" See your Notification" data-bs-placement="bottom" data-bs-title="Tooltip on bottom"></i></a>
+                    <a class="navbar-brand" href="#" id="notify" style="width: 38px; height: 38px; object-fit: cover"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"><i
+                            class="fa-solid fa-bell" data-bs-toggle="tooltip" data-bs-title=" See your Notification"
+                            data-bs-placement="bottom" data-bs-title="Tooltip on bottom"></i></a>
                     <!-- notification dropdown -->
-                    <ul class="dropdown-menu border-0 shadow p-3" aria-labelledby="notify" style="width: 26em; max-height: 600px;overflow-y: auto;">
+                    <ul class="dropdown-menu border-0 shadow p-3" aria-labelledby="notify"
+                        style="width: 26em; max-height: 600px;overflow-y: auto;">
                         <!-- header -->
                         <li class="p-1">
                             <div class="d-flex justify-content-between">
                                 <h2>Notification</h2>
                                 <!-- icon -->
-                                <i class="fa-solid fa-ellipsis fs-4 bg-gray rounded-circle p-3" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"></i>
+                                <i class="fa-solid fa-ellipsis fs-4 bg-gray rounded-circle p-3" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"></i>
                                 <!-- icon dd -->
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-item d-flex align-items-center" type="button">
@@ -159,11 +174,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         </div>
                         <!-- n1 -->
                         <li class="my-1 p-2">
-                            <a href="#" class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
+                            <a href="#"
+                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
                                 <div class="d-flex justify-content-evenly align-items-center">
                                     <!-- avatar -->
                                     <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar" class="rounded-circle me-2" style="width: 58px; height: 58px; object-fit: cover">
+                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
+                                            class="rounded-circle me-2"
+                                            style="width: 58px; height: 58px; object-fit: cover">
                                     </div>
                                     <!-- message -->
                                     <div class="">
@@ -179,11 +197,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         </li>
                         <!-- n1 -->
                         <li class="my-1 p-2">
-                            <a href="#" class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
+                            <a href="#"
+                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
                                 <div class="d-flex justify-content-evenly align-items-center">
                                     <!-- avatar -->
                                     <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar" class="rounded-circle me-2" style="width: 58px; height: 58px; object-fit: cover">
+                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
+                                            class="rounded-circle me-2"
+                                            style="width: 58px; height: 58px; object-fit: cover">
                                     </div>
                                     <!-- message -->
                                     <div class="">
@@ -199,11 +220,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         </li>
                         <!-- n2 -->
                         <li class="my-1 p-2">
-                            <a href="#" class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
+                            <a href="#"
+                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
                                 <div class="d-flex justify-content-evenly align-items-center">
                                     <!-- avatar -->
                                     <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar" class="rounded-circle me-2" style="width: 58px; height: 58px; object-fit: cover">
+                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
+                                            class="rounded-circle me-2"
+                                            style="width: 58px; height: 58px; object-fit: cover">
                                     </div>
                                     <!-- message -->
                                     <div class="">
@@ -219,11 +243,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         </li>
                         <!-- n3 -->
                         <li class="my-1 p-2">
-                            <a href="#" class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
+                            <a href="#"
+                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
                                 <div class="d-flex justify-content-evenly align-items-center">
                                     <!-- avatar -->
                                     <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar" class="rounded-circle me-2" style="width: 58px; height: 58px; object-fit: cover">
+                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
+                                            class="rounded-circle me-2"
+                                            style="width: 58px; height: 58px; object-fit: cover">
                                     </div>
                                     <!-- message -->
                                     <div class="">
@@ -239,11 +266,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         </li>
                         <!-- n4 -->
                         <li class="my-1 p-2">
-                            <a href="#" class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
+                            <a href="#"
+                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
                                 <div class="d-flex justify-content-evenly align-items-center">
                                     <!-- avatar -->
                                     <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar" class="rounded-circle me-2" style="width: 58px; height: 58px; object-fit: cover">
+                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
+                                            class="rounded-circle me-2"
+                                            style="width: 58px; height: 58px; object-fit: cover">
                                     </div>
                                     <!-- message -->
                                     <div class="">
@@ -259,11 +289,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         </li>
                         <!-- n5 -->
                         <li class="my-1 p-2">
-                            <a href="#" class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
+                            <a href="#"
+                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
                                 <div class="d-flex justify-content-evenly align-items-center">
                                     <!-- avatar -->
                                     <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar" class="rounded-circle me-2" style="width: 58px; height: 58px; object-fit: cover">
+                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
+                                            class="rounded-circle me-2"
+                                            style="width: 58px; height: 58px; object-fit: cover">
                                     </div>
                                     <!-- message -->
                                     <div class="">
@@ -279,11 +312,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         </li>
                         <!-- n6 -->
                         <li class="my-1 p-2">
-                            <a href="#" class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
+                            <a href="#"
+                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
                                 <div class="d-flex justify-content-evenly align-items-center">
                                     <!-- avatar -->
                                     <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar" class="rounded-circle me-2" style="width: 58px; height: 58px; object-fit: cover">
+                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
+                                            class="rounded-circle me-2"
+                                            style="width: 58px; height: 58px; object-fit: cover">
                                     </div>
                                     <!-- message -->
                                     <div class="">
@@ -304,19 +340,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <!--profile-->
             <div class="dropdown ">
                 <dvi class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <a class="navbar-brand " href="#" type="button"> <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 " style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip" data-bs-title=" See your profile" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" /></a>
+                    <a class="navbar-brand " href="#" type="button"> <img src="https://source.unsplash.com/random/5"
+                            alt="avatar" class="rounded-circle me-2 "
+                            style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip"
+                            data-bs-title=" See your profile" data-bs-placement="bottom"
+                            data-bs-title="Tooltip on bottom" /></a>
                 </dvi>
                 <ul class="dropdown-menu border-0 shadow">
                     <!--avatar-->
-                    <li><a  href="../pages/userProfile.php">
+                    <li><a href="../pages/userProfile.php">
                             <div class="d-flex align-items-center">
-                                <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 " style="width: 48px; height: 48px; object-fit: cover" />
-                                
+                                <img src="https://source.unsplash.com/random/5" alt="avatar"
+                                    class="rounded-circle me-2 " style="width: 48px; height: 48px; object-fit: cover" />
+
                                 <div class="d-flex flex-column mt-3 p-0">
                                     <span class="fw-bold fs-6">Name</span>
                                     <p class="text-muted fs-7">see your profile</p>
                                 </div>
-                                
+
                             </div>
                         </a></li>
                     <!--settings-->
@@ -350,50 +391,52 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="row">
                 <div class="col-lg-4">
                     <!-- <div class="card">
-						<div class="card-body">
-							<div class="d-flex flex-column align-items-center text-center">
-								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
-								<div class="mt-3">
-									<h4>John Doe</h4>
-									<p class="text-secondary mb-1">Full Stack Developer</p>
-									<p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-									<button class="btn btn-primary">Follow</button>
-									<button class="btn btn-outline-primary">Message</button>
-								</div>
-							</div>
-							<hr class="my-4">
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-									<h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe me-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
-									<span class="text-secondary">https://bootdey.com</span>
-								</li>
-								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-									<h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github me-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
-									<span class="text-secondary">bootdey</span>
-								</li>
-								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-									<h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter me-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
-									<span class="text-secondary">@bootdey</span>
-								</li>
-								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-									<h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram me-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
-									<span class="text-secondary">bootdey</span>
-								</li>
-								<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-									<h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook me-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
-									<span class="text-secondary">bootdey</span>
-								</li>
-							</ul>
-						</div> -->
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                                <div class="mt-3">
+                                    <h4>John Doe</h4>
+                                    <p class="text-secondary mb-1">Full Stack Developer</p>
+                                    <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                                    <button class="btn btn-primary">Follow</button>
+                                    <button class="btn btn-outline-primary">Message</button>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe me-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+                                    <span class="text-secondary">https://bootdey.com</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github me-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
+                                    <span class="text-secondary">bootdey</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter me-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
+                                    <span class="text-secondary">@bootdey</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram me-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
+                                    <span class="text-secondary">bootdey</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook me-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
+                                    <span class="text-secondary">bootdey</span>
+                                </li>
+                            </ul>
+                        </div> -->
 
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                                    class="rounded-circle" width="150">
                                 <div class="mt-3">
                                     <h4>Migara Thiyunuwan</h4>
                                     <p class="text-secondary mb-1"><b>Software Engineer</b></p>
-                                    <p class="text-muted text-center m-0">Tech enthusiast | Graphic Designer | Web Designer | Developer</p>
+                                    <p class="text-muted text-center m-0">Tech enthusiast | Graphic Designer | Web
+                                        Designer | Developer</p>
                                     <p class="text-muted font-size-sm">Nittambuwa, Gampaha, Sri Lanka</p>
                                     <!-- <button class="btn btn-primary">Follow</button>
          <button class="btn btn-outline-primary">Message</button> -->
@@ -404,19 +447,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                 <!-- <p>Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative 
       solutions and staying at the forefront of the industry. Let's connect and create something amazing together.</p> -->
                             </div>
-                            
-                                <div class="mt-3">
-                                    <textarea class="form-control" id="myTextArea" name="message" rows="11" cols="35" placeholder="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative solutions and staying at the forefront of the industry. Let's connect and create something amazing together."></textarea>
-                                    <!-- <input type="text" class="form-control" value="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative 
+
+                            <div class="mt-3">
+                                <textarea class="form-control" id="myTextArea" name="message" rows="11" cols="35"
+                                    placeholder="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative solutions and staying at the forefront of the industry. Let's connect and create something amazing together."></textarea>
+                                <!-- <input type="text" class="form-control" value="Skilled software engineer with expertise in problem-solving, development, and cross-functional collaboration. Committed to delivering innovative 
       solutions and staying at the forefront of the industry. Let's connect and create something amazing together."> -->
 
-                                    <!-- <div class="row" style="margin-top: 10px;">
-								<div class="col-sm-3"></div>
-								<div class="col-sm-9 text-secondary">
-									<input type="button" class="btn btn-primary px-4" value="Save">
-								</div>
-							</div> -->
+                                <!-- <div class="row" style="margin-top: 10px;">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="button" class="btn btn-primary px-4" value="Save">
                                 </div>
+                            </div> -->
+                            </div>
                         </div>
                     </div>
                     <div class="card mt-3">
@@ -476,18 +520,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     <input type="radio" id="male" name="gender" value="MALE">
-                                     <label for="html">Male</label>
-                                     <input type="radio" id="female" name="gender" value="FEMALE">
-                                     <label for="css">Female</label>
+                                    <label for="html">Male</label>
+                                    <input type="radio" id="female" name="gender" value="FEMALE">
+                                    <label for="css">Female</label>
                                     <!-- <input type="text" class="form-control" value="John Doe"> -->
                                 </div>
                             </div>
                             <!-- <div class="row">
-								<div class="col-sm-3"></div>
-								<div class="col-sm-9 text-secondary">
-									<input type="button" class="btn btn-primary px-4" value="Save ">
-								</div>
-							</div> -->
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="button" class="btn btn-primary px-4" value="Save ">
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="row gutters-sm">
@@ -500,27 +544,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
                                         <label for="rangeSlider1"><b>HTML:</b></label>
                                         <output for="rangeSlider1" class="sliderValue">50</output>
-                                        <input type="range" id="rangeSlider1" class="custom-range" name="value1" min="0" max="100" step="1">
+                                        <input type="range" id="rangeSlider1" class="custom-range" name="value1" min="0"
+                                            max="100" step="1">
 
 
                                         <label for="rangeSlider2"><b>JAVA :</b></label>
                                         <output for="rangeSlider2" class="sliderValue">50</output>
-                                        <input type="range" id="rangeSlider2" class="custom-range" name="value2" min="0" max="100" step="1">
+                                        <input type="range" id="rangeSlider2" class="custom-range" name="value2" min="0"
+                                            max="100" step="1">
 
 
                                         <label for="rangeSlider3"><b>C++ :</b></label>
                                         <output for="rangeSlider3" class="sliderValue">50</output>
-                                        <input type="range" id="rangeSlider3" class="custom-range" name="value3" min="0" max="100" step="1">
+                                        <input type="range" id="rangeSlider3" class="custom-range" name="value3" min="0"
+                                            max="100" step="1">
 
 
                                         <label for="rangeSlider4"><b>Java Script :</b></label>
                                         <output for="rangeSlider4" class="sliderValue">50</output>
-                                        <input type="range" id="rangeSlider4" class="custom-range" name="value4" min="0" max="100" step="1">
+                                        <input type="range" id="rangeSlider4" class="custom-range" name="value4" min="0"
+                                            max="100" step="1">
 
 
                                         <label for="rangeSlider5"><b>CSS :</b></label>
                                         <output for="rangeSlider5" class="sliderValue">50</output>
-                                        <input type="range" id="rangeSlider5" class="custom-range" name="value5" min="0" max="100" step="1">
+                                        <input type="range" id="rangeSlider5" class="custom-range" name="value5" min="0"
+                                            max="100" step="1">
 
 
 
@@ -550,39 +599,49 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                             <div id="educationContainer">
                                                 <label class="text-muted fs-7">Add Your Education Institute</label>
                                                 <div class="input-group mb-3">
-                                                    <span class="input-group-text" style="height: 40px; margin-top: 15px; " id="inputGroup-sizing-sm">Institute</span>
-                                                    <input type="text" class="form-control my-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                                    <span class="input-group-text"
+                                                        style="height: 40px; margin-top: 15px; "
+                                                        id="inputGroup-sizing-sm">Institute</span>
+                                                    <input type="text" class="form-control my-3"
+                                                        aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default">
                                                 </div>
                                                 <label class="text-muted fs-7">Add Your Education Level</label>
                                                 <div class="input-group input-group-sm mb-3; ">
-                                                    <span class="input-group-text" style="height: 40px; margin-top: 15px; " id="inputGroup-sizing-sm">Edu. Level</span>
-                                                    <input type="text" class="form-control my-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                                    <span class="input-group-text"
+                                                        style="height: 40px; margin-top: 15px; "
+                                                        id="inputGroup-sizing-sm">Edu. Level</span>
+                                                    <input type="text" class="form-control my-3"
+                                                        aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-sm">
                                                 </div>
                                             </div>
                                             <!-- <button  type="button" class="btn btn-outline-primary my-3" onclick="addEducationField()">Add</button> -->
 
                                             <br>
                                         </div>
-                                       
+
 
                                         <script>
-                                            const sliders = document.querySelectorAll(".custom-range");
-                                            const outputs = document.querySelectorAll(".sliderValue");
+                                            const sliders = document.querySelectorAll( ".custom-range" );
+                                            const outputs = document.querySelectorAll( ".sliderValue" );
 
-                                            sliders.forEach((slider, index) => {
-                                                outputs[index].innerHTML = slider.value; // Display the default slider value
+                                            sliders.forEach( ( slider, index ) =>
+                                            {
+                                                outputs[ index ].innerHTML = slider.value; // Display the default slider value
 
-                                                slider.oninput = function() {
-                                                    outputs[index].innerHTML = this.value; // Update the output value as the slider changes
+                                                slider.oninput = function ()
+                                                {
+                                                    outputs[ index ].innerHTML = this.value; // Update the output value as the slider changes
                                                 };
-                                            });
+                                            } );
                                         </script>
                                         <div class="col-sm-3" style="width: 50%;">
                                             <a class="btn btn-info" href="./userProfile.php">Update all Details</a>
                                         </div>
 
                                     </div>
-                                    
+
                                 </div>
 
 
@@ -610,7 +669,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                     </div>
 
                                    
-							    </div>       
+                                </div>       
                         </div>
                         </div>  -->
 
@@ -619,12 +678,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 </body>
 <!--main content-->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 <!--main js-->
 <script src="mainjs.js"></script>
 <script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    const tooltipTriggerList = document.querySelectorAll( '[data-bs-toggle="tooltip"]' );
+    const tooltipList = [ ...tooltipTriggerList ].map( tooltipTriggerEl => new bootstrap.Tooltip( tooltipTriggerEl ) );
 </script>
 </body>
 
