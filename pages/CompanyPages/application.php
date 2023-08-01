@@ -53,9 +53,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
         <div class="container">
             <div>
-                <a class="navbar-brand " href="#">Home</a>
+                <a class="navbar-brand " href="../../index.php">Home</a>
             </div>
-            <div class="c justify-content-center ">
+            <div class="justify-content-center ">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <!--logo-->
@@ -111,7 +111,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <!--large nav bar-->
                 <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white "
                     style="max-width: 20rem">
-                    <a href="#"
+                    <a href="../../index.php"
                         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                         <img src="../../img/logo.png" height="43px" alt="HireSpot" />
                         <span class="fs-4"> </span>
@@ -222,264 +222,33 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">A001</th>
-                        <td>Vacancy for Software Engineer</td>
-                        <td>31 Aug 2000</td>
-                        <td>R.W. Nimal Perera</td>
-                        <td>+94704470004</td>
-                        <td class="d-flex align-items-center p-1">
-                            <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                            <a href=""> <button class="btn btn-success mx-1 p-1">Accept</button> </a>
-                            <a href=""><button class="btn btn-danger mx-1 p-1">Reject</button> </a>
-                        </td>
-                    </tr>
+                    <?php
+                    for ($i = 0; $i < 20; $i++) { ?>
 
 
+                        <tr>
+                            <th scope="row">A001</th>
+                            <td>Vacancy for Software Engineer</td>
+                            <td>31 Aug 2000</td>
+                            <td>R.W. Nimal Perera</td>
+                            <td>+94704470004</td>
+                            <td class="d-flex align-items-center p-1">
+                                <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check btn-success" name="btnradio" id="btnradio1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-success" for="btnradio1">Accept</label>
 
+                                    <input type="radio" class="btn-check btn-danger" name="btnradio" id="btnradio2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio2">Reject</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <?php
+                    }
+                    ?>
                 </tbody>
             </table>
 

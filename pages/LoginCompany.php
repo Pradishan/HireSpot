@@ -224,7 +224,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         </p>
         <!--copyrights-->
         <div class="d-flex">
-          <a class=" " href="#"><img src="img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2" /></a>
+          <a class=" " href="#"><img src="../img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2" /></a>
           <p class="fs-7">&copy; 2023</p>
         </div>
       </div>

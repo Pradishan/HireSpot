@@ -98,36 +98,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         <li class="p-1">
                             <div class="d-flex justify-content-between">
                                 <h2>Notification</h2>
-                                <!-- icon -->
-                                <i class="fa-solid fa-ellipsis fs-4 bg-gray rounded-circle p-3" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"></i>
-                                <!-- icon dd -->
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-item d-flex align-items-center" type="button">
-                                        <i class="fa-solid fa-check me-3 text-muted"></i>
-                                        <p class="m-0">mark all as read</p>
-                                    </li>
-                                    <li class="dropdown-item d-flex align-items-center" type="button">
-                                        <i class="fa-solid fa-check me-3 text-muted"></i>
-                                        <p class="m-0">mark all as read</p>
-                                    </li>
-                                    <li class="dropdown-item d-flex align-items-center" type="button">
-                                        <i class="fa-solid fa-check me-3 text-muted"></i>
-                                        <p class="m-0">mark all as read</p>
-                                    </li>
+                            </div>
+                        </li>           
 
-                                </ul>
-                            </div>
-                            <div class="d-flex" type="button">
-                                <p class="rounded-pill bg-gray p-2">All</p>
-                                <p class="ms-2 rounded-pill bg-primary text-white p-2">Unread</p>
-                            </div>
-                        </li>
-                        <!-- news -->
-                        <div class="d-flex justify-content-between mx-2">
-                            <h5>News</h5>
-                            <a href="#" class="text-decoration-none">see all</a>
-                        </div>
                         <!-- n1 -->
                         <li class="my-1 p-2">
                             <a href="#"
@@ -146,149 +119,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                         </p>
                                         <span class="fs-7 text-primary">about an hour ago</span>
                                     </div>
-                                    <i class="fas fa-circle fs-7 text-primary px-1"></i>
                                 </div>
 
                             </a>
                         </li>
-                        <!-- n1 -->
-                        <li class="my-1 p-2">
-                            <a href="#"
-                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
-                                <div class="d-flex justify-content-evenly align-items-center">
-                                    <!-- avatar -->
-                                    <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 58px; height: 58px; object-fit: cover">
-                                    </div>
-                                    <!-- message -->
-                                    <div class="">
-                                        <p class="fs-7 m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, vitae?
-                                        </p>
-                                        <span class="fs-7 text-primary">about an hour ago</span>
-                                    </div>
-                                    <i class="fas fa-circle fs-7 text-primary px-1"></i>
-                                </div>
-
-                            </a>
-                        </li>
-                        <!-- n2 -->
-                        <li class="my-1 p-2">
-                            <a href="#"
-                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
-                                <div class="d-flex justify-content-evenly align-items-center">
-                                    <!-- avatar -->
-                                    <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 58px; height: 58px; object-fit: cover">
-                                    </div>
-                                    <!-- message -->
-                                    <div class="">
-                                        <p class="fs-7 m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, vitae?
-                                        </p>
-                                        <span class="fs-7 text-primary">about an hour ago</span>
-                                    </div>
-                                    <i class="fas fa-circle fs-7 text-primary px-1"></i>
-                                </div>
-
-                            </a>
-                        </li>
-                        <!-- n3 -->
-                        <li class="my-1 p-2">
-                            <a href="#"
-                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
-                                <div class="d-flex justify-content-evenly align-items-center">
-                                    <!-- avatar -->
-                                    <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 58px; height: 58px; object-fit: cover">
-                                    </div>
-                                    <!-- message -->
-                                    <div class="">
-                                        <p class="fs-7 m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, vitae?
-                                        </p>
-                                        <span class="fs-7 text-primary">about an hour ago</span>
-                                    </div>
-                                    <i class="fas fa-circle fs-7 text-primary px-1"></i>
-                                </div>
-
-                            </a>
-                        </li>
-                        <!-- n4 -->
-                        <li class="my-1 p-2">
-                            <a href="#"
-                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
-                                <div class="d-flex justify-content-evenly align-items-center">
-                                    <!-- avatar -->
-                                    <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 58px; height: 58px; object-fit: cover">
-                                    </div>
-                                    <!-- message -->
-                                    <div class="">
-                                        <p class="fs-7 m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, vitae?
-                                        </p>
-                                        <span class="fs-7 text-primary">about an hour ago</span>
-                                    </div>
-                                    <i class="fas fa-circle fs-7 text-primary px-1"></i>
-                                </div>
-
-                            </a>
-                        </li>
-                        <!-- n5 -->
-                        <li class="my-1 p-2">
-                            <a href="#"
-                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
-                                <div class="d-flex justify-content-evenly align-items-center">
-                                    <!-- avatar -->
-                                    <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 58px; height: 58px; object-fit: cover">
-                                    </div>
-                                    <!-- message -->
-                                    <div class="">
-                                        <p class="fs-7 m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, vitae?
-                                        </p>
-                                        <span class="fs-7 text-primary">about an hour ago</span>
-                                    </div>
-                                    <i class="fas fa-circle fs-7 text-primary px-1"></i>
-                                </div>
-
-                            </a>
-                        </li>
-                        <!-- n6 -->
-                        <li class="my-1 p-2">
-                            <a href="#"
-                                class="d-flex justify-content-evenly align-items-center text-decoration-none text-dark">
-                                <div class="d-flex justify-content-evenly align-items-center">
-                                    <!-- avatar -->
-                                    <div class="p-2">
-                                        <img src="https://source.unsplash.com/random/1" alt="avatar"
-                                            class="rounded-circle me-2"
-                                            style="width: 58px; height: 58px; object-fit: cover">
-                                    </div>
-                                    <!-- message -->
-                                    <div class="">
-                                        <p class="fs-7 m-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, vitae?
-                                        </p>
-                                        <span class="fs-7 text-primary">about an hour ago</span>
-                                    </div>
-                                    <i class="fas fa-circle fs-7 text-primary px-1"></i>
-                                </div>
-
-                            </a>
-                        </li>
+                       
 
                     </ul>
                 </div>
@@ -315,12 +150,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </div>
                         </a></li>
                     <!--settings-->
-                    <!-- <li><a class="dropdown-item" href="#">
+                    <li><a class="dropdown-item" href="#">
                                 <div class="d-flex align-items-center me-2">
                                     <i class="fas fa-cog justify-content-center fs-5"></i>
                                     <p class="m-0 ms-2">Settings</p>
                                 </div>
-                            </a></li> -->
+                            </a></li>
                     <hr>
                     <!--logout-->
                     <li><a class="dropdown-item" href="../pages/Login.php">
@@ -584,7 +419,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         </p>
                         <!--copyrights-->
                         <div class="d-flex">
-                            <a class=" " href="#"><img src="img/logo.png" width="58px" height="16px" alt="HireSpot"
+                            <a class=" " href="#"><img src="../img/logo.png" width="58px" height="16px" alt="HireSpot"
                                     class="mb-2" /></a>
                             <p class="fs-7">&copy; 2023</p>
                         </div>

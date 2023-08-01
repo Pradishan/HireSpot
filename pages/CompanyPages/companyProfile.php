@@ -53,9 +53,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
         <div class="container">
             <div>
-                <a class="navbar-brand " href="#">Home</a>
+                <a class="navbar-brand " href="../../index.php">Home</a>
             </div>
-            <div class="c justify-content-center ">
+            <div class="justify-content-center ">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <!--logo-->
@@ -110,7 +110,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <!--large nav bar-->
                 <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white "
                     style="max-width: 20rem">
-                    <a href="#"
+                    <a href="../../index.php"
                         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                         <img src="../../img/logo.png" height="43px" alt="HireSpot" />
                         <span class="fs-4"> </span>
@@ -303,7 +303,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     </p>
                     <!--copyrights-->
                     <div class="d-flex">
-                        <a class=" " href="#"><img src="./../img/logo.png" width="58px" height="16px" alt="HireSpot"
+                        <a class=" " href="#"><img src="../../img/logo.png" width="58px" height="16px" alt="HireSpot"
                                 class="mb-2" /></a>
                         <p class="fs-7">&copy; 2023</p>
                     </div>

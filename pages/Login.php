@@ -56,7 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
   <div class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5" style="padding-top: 10rem;">
     <!-- heading -->
     <div class="text-center text-lg-center mt-lg-5 pt-lg-5">
-      <img src="img/logo.png" width="688px" height="216px" alt="HireSpot" />
+      <img src="../img/logo.png" width="688px" height="216px" alt="HireSpot" />
       <p class="w-75 mx-auto ma-lg-0 fs-4">
         Unleash your potential, embrace the extraordinary! test
       </p>
@@ -80,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
           <!-- <button class="btn btn-primary my-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
             login
           </button> -->
-          <input type="submit" value="login" class="btn btn-primary my-3 w-100">
+         <a href="./feed.php"><input type="submit" value="login" class="btn btn-primary my-3 w-100"></a>
         </form>
         <a href="#" class="text-decoration-none text-center">
           <p>Forgotten password?</p>
@@ -291,7 +291,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         </p>
         <!--copyrights-->
         <div class="d-flex">
-          <a class=" " href="#"><img src="img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2" /></a>
+          <a class=" " href="#"><img src="../img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2" /></a>
           <p class="fs-7">&copy; 2023</p>
         </div>
       </div>
