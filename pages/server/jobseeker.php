@@ -3,14 +3,12 @@
 class JobSeeker{
 
     private $userID;
-
     private $username;
     private $firstname;
     private $lastname;
     private $email;
     private $phoneNo;
     private $gender;
-    
     private $address;
     private $education;
     private $description;
