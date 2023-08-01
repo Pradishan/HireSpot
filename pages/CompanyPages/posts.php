@@ -49,156 +49,154 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             background-color: #D9D9D9 !important;
         }
     </style>
-    <!--navbar-->
-    <nav class="navbar navbar-expand-lg bg-white fixed-top">
-        <div class="container">
-            <div>
-                <a class="navbar-brand " href="../../index.php">Home</a>
-            </div>
-            <div class="justify-content-center ">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <!--logo-->
-                        <img src="../../img/logo.png" width="137px" height="43px" alt="HireSpot" />
-                    </li>
-                </ul>
-            </div>
-            <div class="d-flex align-items-center">
-                <div class="d-flex ">
+              <!--navbar-->
+              <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <div class="container">
+                    <div>
+                        <a class="navbar-brand " href="../../index.php">Home</a>
+                    </div>
+                    <div class="justify-content-center ">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <!--logo-->
+                                <img src="../../img/logo.png" width="137px" height="43px" alt="HireSpot" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex ">
 
-                </div>
-                <!--profile-->
-                <div class="dropdown ">
-                    <dvi class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a class="navbar-brand  dropdown-toggle" href="#" type="button"> <img
-                                src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 "
-                                style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip"
-                                data-bs-title=" See your profile" data-bs-placement="bottom"
-                                data-bs-title="Tooltip on bottom" /></a>
-                    </dvi>
-                    <ul class="dropdown-menu border-0 shadow">
-                        <!--avatar-->
-                        <li><a class="dropdown-item" href="#">
-                                <div class="d-flex align-items-center">
-                                    <img src="https://source.unsplash.com/random/5" alt="avatar"
-                                        class="rounded-circle me-2 "
-                                        style="width: 48px; height: 48px; object-fit: cover" />
-                                    <div class="d-flex flex-column mt-3 p-0">
-                                        <span class="fw-bold fs-6">Name</span>
+                        </div>
+                        <!--profile-->
+                        <div class="dropdown ">
+                            <dvi class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="navbar-brand  dropdown-toggle" href="#" type="button"> <img
+                                        src="<?php echo $profil; ?>" alt="avatar" class="rounded-circle me-2 "
+                                        style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip"
+                                        data-bs-title=" click for more option" data-bs-placement="bottom"
+                                        data-bs-title="Tooltip on bottom" /></a>
+                            </dvi>
+                            <ul class="dropdown-menu border-0 shadow">
+                                <!--avatar-->
+                                <li>
+                                    <div class="d-flex align-items-center p-2">
+                                        <img src="<?php echo $profil; ?>" alt="avatar" width="32" height="32"
+                                            class="rounded-circle me-2" style="width: 48px; height: 48px; object-fit: cover">
+                                        <div class="d-flex flex-column mt-3 p-0">
+                                            <span class="fw-bold fs-6">
+                                                <?php echo $companyname; ?>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a></li>
-                        <hr>
-                        <!--logout-->
-                        <li><a class="dropdown-item" href="../LoginCompany.php">
-                                <div class="d-flex align-items-center me-2">
-                                    <i class="fa fa-sign-out justify-content-center fs-5"></i>
-                                    <p class="m-0 ms-2">Log out</p>
-                                </div>
-                            </a></li>
-                    </ul>
-                </div>
+                                </li>
+                                <hr>
+                                <!--settings-->
+                                <li><a class="dropdown-item" href="../LoginCompany.php" data-bs-toggle="tooltip"
+                                        data-bs-title="Edite your profile">
+                                        <div class="d-flex align-items-center me-2">
+                                            <i class="fa-solid fa-gear justify-content-center fs-5"></i>
+                                            <p class="m-0 ms-2">Settings</p>
+                                        </div>
+                                    </a></li>
+                                <!--logout-->
+                                <li><a class="dropdown-item" href="../LoginCompany.php" data-bs-toggle="tooltip"
+                                        data-bs-title="logout from this account">
+                                        <div class="d-flex align-items-center me-2">
+                                            <i class="fa fa-sign-out justify-content-center fs-5"></i>
+                                            <p class="m-0 ms-2">Log out</p>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </div>
 
-            </div>
-        </div>
-        </div>
-    </nav>
-
-    <div class="row">
-        <!--side nav bar-->
-        <div class="col-1 col-lg-2 d-block sidebar ">
-            <div class=" h-100 fixed-top overflow-hidden" style="padding-top: 56px;min-width: 20rem;z-index: 4">
-                <!--large nav bar-->
-                <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white "
-                    style="max-width: 20rem">
-                    <a href="../../index.php"
-                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                        <img src="../../img/logo.png" height="43px" alt="HireSpot" />
-                        <span class="fs-4"> </span>
-                    </a>
-                    <hr>
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a href="./companyProfile.php" class="nav-link link-body-emphasis">
-                                <i class="fa-solid fa-user"></i>
-                                Profile
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./posts.php" class="nav-link active" aria-current="page">
-                                <i class="fa-solid fa-building"></i>
-                                Posts
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./application.php" class="nav-link link-body-emphasis">
-                                <i class="fa-solid fa-address-card"></i>
-                                Applications
-                            </a>
-                        </li>
-                    </ul>
-                    <hr>
-                    <div class="dropdown fixed-bottom m-3">
-                        <a href="#"
-                            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://source.unsplash.com/random/5" alt="avatar" width="32" height="32"
-                                class="rounded-circle me-2">
-                            <strong>name</strong>
-                        </a>
-                        <ul class="dropdown-menu text-small shadow">
-                            <li><a class="dropdown-item" href="../LoginCompany.php"><i
-                                        class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
-                        </ul>
                     </div>
                 </div>
-                <!--small nav bar-->
-                <div class="d-flex flex-column flex-shrink-0 bg-white d-lg-none d-block  vh-100" style="width: 4.5rem;">
-                    <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
-                        data-bs-placement="right" data-bs-original-title="Icon-only">
-                        <img src="./../img/logo only.png" height="43px" alt="HireSpot" />
-                        <span class="visually-hidden">Icon-only</span>
-                    </a>
-                    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-                        <li class="nav-item">
-                            <a href="./adminUser.php" class="nav-link  py-3 border-bottom rounded-0"
-                                data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home"
-                                data-bs-original-title="Home">
-                                <i class="fa-solid fa-user"></i>
+                </div>
+            </nav>
+            <div class="row">
+                <!--side nav bar-->
+                <div class="col-1 col-lg-2 d-block sidebar ">
+                    <div class=" h-100 fixed-top overflow-hidden"
+                        style="padding-top: 56px;min-width: 10rem;max-width: 12rem;z-index: 4">
+                        <!--large nav bar-->
+                        <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white "
+                            style="max-width: 20rem">
+                            <a href="../../index.php"
+                                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                                <img src="../../img/logo.png" height="43px" alt="HireSpot" />
+                                <span class="fs-4"> </span>
                             </a>
-                        </li>
-                        <li>
-                            <a href="./adminPosts.php" class="nav-link active py-3 border-bottom rounded-0"
-                                aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right"
-                                aria-label="Dashboard" data-bs-original-title="Dashboard">
-                                <i class="fa-solid fa-building"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./adminPosts.php" class="nav-link py-3 border-bottom rounded-0"
-                                data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders"
-                                data-bs-original-title="Orders">
-                                <i class="fa-solid fa-address-card"></i>
-                            </a>
-                        </li>
-                    </ul>
+                            <hr>
+                            <ul class="nav nav-pills flex-column mb-auto">
+                                <li class="nav-item">
+                                    <a href="./companyProfile.php" class="nav-link link-body-emphasis" aria-current="page">
+                                        <i class="fa-solid fa-user"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./posts.php" class="nav-link active ">
+                                        <i class="fa-solid fa-building"></i>
+                                        Posts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./application.php" class="nav-link link-body-emphasis">
+                                        <i class="fa-solid fa-address-card"></i>
+                                        Applications
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./application.php" class="nav-link link-body-emphasis">
+                                        <i class="fa-solid fa-gear"></i>
+                                        Settings
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr>
 
-                    <div class="dropdown border-top">
-                        <a href="./../Admin.php"
-                            class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://source.unsplash.com/random/5" alt="avatar" width="32" height="32"
-                                class="rounded-circle me-2">
-                        </a>
-                        <ul class="dropdown-menu text-small shadow">
-                            <li><a class="dropdown-item" href="../LoginCompany.php"><i
-                                        class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
-                        </ul>
+                        </div>
+                        <!--small nav bar-->
+                        <div class="d-flex flex-column flex-shrink-0 bg-white d-lg-none d-block  vh-100" style="width: 4.5rem;">
+                            <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="HireSpot">
+                                <img src="../../img/logo only.png" height="43px" alt="HireSpot" />
+                                <span class="visually-hidden">Icon-only</span>
+                            </a>
+                            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                                <li class="nav-item">
+                                    <a href="adminUser.php" class="nav-link py-3 border-bottom rounded-0"
+                                        aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right"
+                                        aria-label="Profile" data-bs-original-title="Profile">
+                                        <i class="fa-solid fa-user"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./adminCompanies.php" class="nav-link active py-3 border-bottom rounded-0"
+                                        aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right"
+                                        aria-label="posts" data-bs-original-title="posts">
+                                        <i class="fa-solid fa-building"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./adminUser.php" class="nav-link py-3 border-bottom rounded-0" aria-current="page"
+                                        data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Applicatons"
+                                        data-bs-original-title="Applicatons">
+                                        <i class="fa-solid fa-address-card"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./admin.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
+                                        aria-current="page" data-bs-placement="right" aria-label="Settings"
+                                        data-bs-original-title="Settings">
+                                        <i class="fa-solid fa-gear"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
         <!--main content-->
         <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px; z-index:5">
             <nav aria-label="breadcrumb">
