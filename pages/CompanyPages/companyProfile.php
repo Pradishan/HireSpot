@@ -287,6 +287,24 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                                      </div>";
                         }
+                        if ($_GET['error'] == 6) {
+                            echo "      <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                         you can't leave <strong> Empty </strong>Fields!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
+                        if ($_GET['error'] == 7) {
+                            echo "      <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                         your <strong> Current Password </strong> is wrong!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
+                        if ($_GET['error'] == 8) {
+                            echo "      <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                         your <strong> New Password and Confirm Password</strong> are not maching!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
                     }
                     if (isset($_GET['success'])) {
                         if ($_GET['success'] == 1) {
@@ -307,6 +325,20 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             echo "
                                  <div class='alert alert-success alert-dismissible fade show' role='alert'>
                                         Cover pic <strong> successfully  </strong> changed!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
+                        if ($_GET['success'] == 4) {
+                            echo "
+                                 <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                        Profile <strong> successfully  </strong> updated!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
+                        if ($_GET['success'] == 5) {
+                            echo "
+                                 <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                        Password <strong> successfully  </strong> updated!
                                         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                                      </div>";
                         }
@@ -331,95 +363,105 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         height="200px" class="rounded-circle me-2 bg-white rounded-circle p-1"
                                         style="object-fit: cover;">
                                 </div>
-                                <div class="d-flex justify-content-between" style="margin-left: 16rem">
+                                <div class="d-flex justify-content-between w-100" style="margin-left: 16rem">
                                     <div class="mx-3">
                                         <h1>
                                             <?php echo $companyname; ?>
                                         </h1>
-                                        <p class="text-muted"><i class="fa-solid fa-location-dot me-2"></i>
-                                            <?php echo $address; ?>
-                                        </p>
-                                    </div>
-                                    <div class="">
-                                        <div data-bs-toggle="tooltip" data-bs-title="Post vacancies and hire jobseekers">
-                                            <button type="button" class="btn btn-outline-primary my-3" data-bs-toggle="modal"
-                                                data-bs-target="#postModal">Add post <i class="fa-sharp fa-solid fa-plus"></i>
-                                            </button>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-muted"><i class="fa-solid fa-location-dot me-2"></i>
+                                                <?php echo $address; ?>
+                                            </p>
+                                            <p class="text-primary p-0" style="margin-left: 3rem"><i
+                                                    class="fa-solid fa-envelope me-1"></i>
+                                                <?php echo $email; ?>
+                                            </p>
                                         </div>
-
-                                        <!-- Modal -->
-                                        <form action="../server/post.php" method="post" enctype="multipart/form-data">
-                                            <div class="modal fade shadow my-5" id="postModal" tabindex="-1"
-                                                aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Job post</h1>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                                aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <input class="form-control" type="hidden" name="companyID"
-                                                                value="<?php echo $companyID; ?>">
-                                                            <div class="form-floating my-3">
-                                                                <input type="text" name="jobTitle" class="form-control"
-                                                                    id="floatingInput">
-                                                                <label for="floatingInput">Job Title</label>
-                                                            </div>
-                                                            <div class="input-group mb-3">
-                                                                <label class="input-group-text" for="inputGroupSelect01">Job
-                                                                    category</label>
-                                                                <select class="form-select" id="inputGroupSelect01"
-                                                                    name="jobCategory">
-                                                                    <option selected>Choose...</option>
-                                                                    <option value="Information Technology (IT)">Information
-                                                                        Technology (IT)</option>
-                                                                    <option value="Healthcare">Healthcare</option>
-                                                                    <option value="Finance">Finance</option>
-                                                                    <option value="Education">Education</option>
-                                                                    <option value="Marketing and Sales">Marketing and Sales
-                                                                    </option>
-                                                                    <option value="Engineering">Engineering</option>
-                                                                    <option value="Hospitality and Tourism">Hospitality and
-                                                                        Tourism</option>
-                                                                    <option value="Creative Arts">Creative Arts</option>
-                                                                    <option value="Human Resources">Human Resources</option>
-                                                                    <option value="Construction and Trades">Construction and
-                                                                        Trades</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-floating">
-                                                                <textarea class="form-control" name="description"
-                                                                    placeholder="Leave a comment here" id="floatingTextarea2"
-                                                                    style="height: 100px"></textarea>
-                                                                <label for="floatingTextarea2">Description about the job</label>
-                                                            </div>
-                                                            <div class="mb-1">
-                                                                <label for="formFile" class="form-label fs-5 my-2">Upload your
-                                                                    Flyer</label>
-                                                                <input class="form-control" type="file" id="image"
-                                                                    accept="image/*" name="image">
-                                                                <img id="previewImage" src="" alt="Selected Image"
-                                                                    style="display: none; object-fit: cover"
-                                                                    class="img-fluid my-2">
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="submit" class="btn btn-primary w-100" value="Upload"
-                                                                name="submit">Post</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!--about-->
+                    <!--Add post-->
                     <div class="bg-white rounded p-3 " style="margin-top: 9rem">
+                        <div class="">
+                            <div class="text-center" data-bs-toggle="tooltip"
+                                data-bs-title="Post vacancies and hire jobseekers">
+                                <button type="button" class="btn btn-outline-primary w-75 my-3" data-bs-toggle="modal"
+                                    data-bs-target="#postModal">Add post <i class="fa-sharp fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+
+                            <!-- Modal -->
+                            <form action="../server/post.php" method="post" enctype="multipart/form-data">
+                                <div class="modal fade shadow my-5" id="postModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Job post</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input class="form-control" type="hidden" name="companyID"
+                                                    value="<?php echo $companyID; ?>">
+                                                <div class="form-floating my-3">
+                                                    <input type="text" name="jobTitle" class="form-control" id="floatingInput">
+                                                    <label for="floatingInput">Job Title</label>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <label class="input-group-text" for="inputGroupSelect01">Job
+                                                        category</label>
+                                                    <select class="form-select" id="inputGroupSelect01" name="jobCategory">
+                                                        <option selected>Choose...</option>
+                                                        <option value="Information Technology (IT)">Information
+                                                            Technology (IT)</option>
+                                                        <option value="Healthcare">Healthcare</option>
+                                                        <option value="Finance">Finance</option>
+                                                        <option value="Education">Education</option>
+                                                        <option value="Marketing and Sales">Marketing and Sales
+                                                        </option>
+                                                        <option value="Engineering">Engineering</option>
+                                                        <option value="Hospitality and Tourism">Hospitality and
+                                                            Tourism</option>
+                                                        <option value="Creative Arts">Creative Arts</option>
+                                                        <option value="Human Resources">Human Resources</option>
+                                                        <option value="Construction and Trades">Construction and
+                                                            Trades</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-floating">
+                                                    <textarea class="form-control" name="description"
+                                                        placeholder="Leave a comment here" id="floatingTextarea2"
+                                                        style="height: 100px"></textarea>
+                                                    <label for="floatingTextarea2">Description about the job</label>
+                                                </div>
+                                                <div class="mb-1">
+                                                    <label for="formFile" class="form-label fs-5 my-2">Upload your
+                                                        Flyer</label>
+                                                    <input class="form-control" type="file" id="image" accept="image/*"
+                                                        name="image">
+                                                    <img id="previewImage" src="" alt="Selected Image"
+                                                        style="display: none; object-fit: cover" class="img-fluid my-2">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary w-100" value="Upload"
+                                                    name="submit">Post</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!--about-->
+                    <div class="bg-white rounded p-3 mt-3">
                         <h2 class="mx-4">About</h2>
                         <p class="mx-4 text-muted">
                             <?php echo $description; ?>
@@ -445,7 +487,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Change profile picture
+                                    <i class="fa-regular fa-image me-2"></i>Change profile picture
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -477,7 +519,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Change cover picture
+                                    <i class="fa-solid fa-image me-2"></i>Change cover picture
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -506,18 +548,114 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Change password
+                                    <i class="fa-solid fa-pen-to-square me-2"></i>Edit profile details
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and hiding
-                                    via CSS transitions. You can modify any of this with custom CSS or overriding our
-                                    default variables. It's also worth noting that just about any HTML can go within the
-                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                <div class="accordion-body text-center">
+                                    <form action="../server/editeCompanyProfile.php" method="post">
+                                        <div class="modal-body">
+                                            <input class="form-control" type="hidden" name="companyID"
+                                                value="<?php echo $companyID; ?>">
+
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text" id="basic-addon1">Address</span>
+                                                <input type="text" name="address" class="form-control" placeholder="Address"
+                                                    id="" value="<?php echo $address; ?>" />
+                                            </div>
+
+
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text">About</span>
+                                                <textarea class="form-control" id="description" name="description"
+                                                    placeholder="Description" oninput="countWords()"
+                                                    maxlength="200"><?php echo $description; ?></textarea>
+                                            </div>
+
+
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text" id="basic-addon1">Number of employees</span>
+                                                <input type="text" name="employee" class="form-control"
+                                                    placeholder="Number of employee" id="" value="<?php echo $employee; ?>" />
+                                            </div>
+
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-outline-primary my-3 w-75"
+                                                data-bs-dismiss="modal">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fa-solid fa-shield-halved me-2"></i>Change password
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+                                <form action="../server/changeCompanyPassword.php" method="post"
+                                    onsubmit="return validateForm()">
+                                    <div class="accordion-body text-center">
+                                        <div class="d-md-flex p-2 justify-content-evenly">
+                                            <input class="form-control" type="hidden" id="companyID" name="companyID"
+                                                value="<?php echo $companyID; ?>">
+                                            <input class="form-control" type="hidden" name="dbPassword"
+                                                value="<?php echo $password; ?>">
+                                            <div class="form-floating w-25">
+                                                <input type="password" class="form-control" id="currentPassword"
+                                                    name="currentPassword" placeholder="Password">
+                                                <label for="currentPassword">Current Password</label>
+                                            </div>
+                                            <div class="form-floating w-25">
+                                                <input type="password" class="form-control" id="newPassword" name="newPassword"
+                                                    placeholder="Password">
+                                                <label for="newPassword">New Password</label>
+                                            </div>
+                                            <div class="form-floating w-25">
+                                                <input type="password" class="form-control" id="confirmPassword"
+                                                    name="confirmPassword" placeholder="Password">
+                                                <label for="confirmPassword">Confirm Password</label>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-outline-primary w-25" type="submit"
+                                            id="inputGroupFileAddon05">Change</button>
+                                    </div>
+                                </form>
+
+                                <script>
+                                    function validateForm ()
+                                    {
+                                        var currentPassword = document.getElementById( "currentPassword" ).value;
+                                        var newPassword = document.getElementById( "newPassword" ).value;
+                                        var confirmPassword = document.getElementById( "confirmPassword" ).value;
+                                        var companyID = document.getElementById( "companyID" ).value;
+
+                                        // Check if any field is empty
+                                        if ( currentPassword === "" || newPassword === "" || confirmPassword === "" )
+                                        {
+                                            window.location = `./companyProfile.php?id=${ companyID }&error=6`;
+                                            return false;
+                                        }
+
+                                        // Check if the new password and confirm password match
+                                        if ( newPassword !== confirmPassword )
+                                        {
+                                            window.location = `./companyProfile.php?id=${ companyID }&error=8`;
+                                            return false;
+                                        }
+
+                                        // You can also add additional validation, such as password strength requirements
+
+                                        return true;
+                                    }
+                                </script>
+
                             </div>
                         </div>
 
