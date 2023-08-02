@@ -296,6 +296,20 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                                      </div>";
                         }
+                        if ($_GET['success'] == 2) {
+                            echo "
+                                 <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                        Profile pic <strong> successfully  </strong> changed!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
+                        if ($_GET['success'] == 3) {
+                            echo "
+                                 <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                        Cover pic <strong> successfully  </strong> changed!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
                     }
                     ?>
 
@@ -307,13 +321,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             } else {
                                 echo $coverPic;
                             }
-                            ?>" alt="story post" srcset="" class="card-img-top"
-                                style="min-height: 125px;object-fit: cover;max-height: 200px;" />
+                            ?>" id="previewImage3" alt="story post" srcset="" class="card-img-top"
+                                style="min-height: 125px;object-fit: cover;max-height: 200px;" class="img-fluid" />
+
                             <div class="d-flex align-items-center justify-content-left position-relative "
                                 style="min-height: 65px;">
                                 <div class="position-absolute top-0 translate-middle" style="padding-left: 20rem">
-                                    <img src="<?php echo $profil; ?>" alt="avatar" width="200px" height="200px"
-                                        class="rounded-circle me-2 bg-white rounded-circle p-1">
+                                    <img id="previewImage2" src="<?php echo $profil; ?>" alt="avatar" width="200px"
+                                        height="200px" class="rounded-circle me-2 bg-white rounded-circle p-1"
+                                        style="object-fit: cover;">
                                 </div>
                                 <div class="d-flex justify-content-between" style="margin-left: 16rem">
                                     <div class="mx-3">
@@ -384,7 +400,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                                                 <input class="form-control" type="file" id="image"
                                                                     accept="image/*" name="image">
                                                                 <img id="previewImage" src="" alt="Selected Image"
-                                                                    style="display: none; object-fit: cover" class="img-fluid">
+                                                                    style="display: none; object-fit: cover"
+                                                                    class="img-fluid my-2">
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
@@ -395,27 +412,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                                 </div>
                                             </div>
                                         </form>
-
-                                        <!-- JavaScript for image preview -->
-                                        <script>
-                                            document.getElementById( "image" ).addEventListener( "change", function ()
-                                            {
-                                                var fileInput = this;
-                                                if ( fileInput.files && fileInput.files[ 0 ] )
-                                                {
-                                                    var reader = new FileReader();
-                                                    reader.onload = function ( e )
-                                                    {
-                                                        var previewImage = document.getElementById( "previewImage" );
-                                                        previewImage.src = e.target.result;
-                                                        previewImage.style.display = "block";
-                                                    };
-
-                                                    reader.readAsDataURL( fileInput.files[ 0 ] );
-                                                }
-                                            } );
-                                        </script>
-
                                     </div>
                                 </div>
                             </div>
@@ -437,6 +433,123 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <?php echo $employee; ?> employees
                         </h2>
                     </div>
+
+                    <!-- Settings -->
+                    <div class="p-3 mt-3">
+                        <h2 class="ms-2 mx-4">
+                            <i class="fa-solid fa-gear me-2"></i>Settings
+                        </h2>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Change profile picture
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <img id="previewImage2" src="" alt="Selected Image" style="display: none; object-fit: cover"
+                                        class="img-fluid my-2">
+                                    <form action="../server/changeComapanyProfile.php" method="POST"
+                                        enctype="multipart/form-data">
+                                        <label for="formFile" class="form-label fs-5 my-2">Change your
+                                            profile Picture here </label>
+                                        <input class="form-control" type="hidden" name="companyID"
+                                            value="<?php echo $companyID; ?>">
+                                        <input class="form-control" type="hidden" name="lodPic"
+                                            value="<?php echo $profilePic; ?>">
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" id="inputGroupFile04"
+                                                aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="image/*"
+                                                name="profile">
+
+                                            <button class="btn btn-outline-primary w-25" type="submit"
+                                                id="inputGroupFileAddon04">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Change cover picture
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <form action="../server/changeComapanyCover.php" method="POST"
+                                        enctype="multipart/form-data">
+                                        <label for="formFile" class="form-label fs-5 my-2">Change your
+                                            cover Picture here </label>
+                                        <input class="form-control" type="hidden" name="companyID"
+                                            value="<?php echo $companyID; ?>">
+                                        <input class="form-control" type="hidden" name="lodCover"
+                                            value="<?php echo $coverPic; ?>">
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" id="inputGroupFile05"
+                                                aria-describedby="inputGroupFileAddon05" aria-label="Upload" accept="image/*"
+                                                name="cover">
+                                            <button class="btn btn-outline-primary w-25" type="submit"
+                                                id="inputGroupFileAddon05">Save</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Change password
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and hiding
+                                    via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                    default variables. It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- JavaScript for image preview -->
+                    <script>
+                        // Calling the preview() function with correct input and previewImage IDs
+                        preview( "image", "previewImage" );
+                        preview( "inputGroupFile04", "previewImage2" );
+                        preview( "inputGroupFile05", "previewImage3" );
+
+                        function preview ( input, previewImage )
+                        {
+                            document.getElementById( input ).addEventListener( "change", function ()
+                            {
+                                var fileInput = this;
+                                if ( fileInput.files && fileInput.files[ 0 ] )
+                                {
+                                    var reader = new FileReader();
+                                    reader.onload = function ( e )
+                                    {
+                                        var previewImageElement = document.getElementById( previewImage );
+                                        previewImageElement.src = e.target.result;
+                                        previewImageElement.style.display = "block";
+                                    };
+
+                                    reader.readAsDataURL( fileInput.files[ 0 ] );
+                                }
+                            } );
+                        }
+                    </script>
+
 
                     <?php
     } catch (PDOException $exc) {
