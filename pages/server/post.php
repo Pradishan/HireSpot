@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                         // Insert the file path into the database table using a prepared statement
                         $imageFilePath = $targetFile;
-                        $sql = "INSERT INTO job (jobTitle,jobcateogoryID,companyID,date,content,filePath) VALUES (?,?,?,?,?,?)";
+                        $sql = "INSERT INTO job (jobTitle,jobcateogory,companyID,date,content,filePath) VALUES (?,?,?,?,?,?)";
                         $pstmt = $con->prepare($sql);
                         $pstmt->bindValue(1, $jobTitle);
                         $pstmt->bindValue(2, $jobCategory);
