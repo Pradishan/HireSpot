@@ -18,13 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $date = date("Y-m-d H:i:s");
             $content = htmlspecialchars($_POST['description']);
 
+            // File upload handling            
             $targetDir = "../../upload/post/"; // storing place
-            $targetFile = $targetDir . basename($_FILES["image"]["name"]);
-            $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+            $originalFileName = $_FILES["image"]["name"];
+            $extension = strtolower(pathinfo($originalFileName, PATHINFO_EXTENSION));
+            $imageFileName = $companyID . "_" . preg_replace('/\s+/', '', $originalFileName) . "." . $extension;
+            $targetFile = $targetDir . $imageFileName;
 
             // Check if the uploaded file is an image
             $allowedExtensions = array("jpg", "jpeg", "png");
-            if (in_array($imageFileType, $allowedExtensions)) {
+            if (in_array($extension, $allowedExtensions)) {
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
                     // Image uploaded successfully, now store the file path in the database
 
