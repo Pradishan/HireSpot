@@ -211,7 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px; z-index:5">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Company</a></li>
+                            <li class="breadcrumb-item">Company</li>
                             <li class="breadcrumb-item active" aria-current="page">Posts</li>
                         </ol>
                     </nav>

@@ -215,7 +215,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <div class="col-11 ml-sm-auto col-lg-10 px-4 " style="padding-top: 70px;z-index: 5;">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Company Dashboard</a></li>
+                            <li class="breadcrumb-item">Company</li>
                             <li class="breadcrumb-item active" aria-current="page">Profile</li>
                         </ol>
                     </nav>
@@ -440,7 +440,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <!--emloyee-->
                     <div class="bg-white rounded p-3 mt-3">
                         <h2 class="mx-4">
-                            <?php echo $employee; ?> employees
+                            <span data-bs-toggle="tooltip"
+                                data-bs-title="you can updated em counys in settings->Edit profile details"
+                                data-bs-placement="right" data-bs-title="Tooltip on right">
+                                <?php echo $employee; ?> employees
+                            </span>
                         </h2>
                     </div>
 
@@ -470,6 +474,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         enctype="multipart/form-data">
                                         <label for="formFile" class="form-label fs-5 my-2">Change your
                                             profile Picture here </label>
+                                        <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                                            <strong>Warning,</strong> your profile will not be updated until you
+                                            <strong>save</strong> it, you
+                                            will get a success
+                                            message after updating,
+                                            <button type='button' class='btn-close' data-bs-dismiss='alert'
+                                                aria-label='Close'></button>
+                                        </div>
                                         <input class="form-control" type="hidden" name="companyID"
                                             value="<?php echo $companyID; ?>">
                                         <input class="form-control" type="hidden" name="lodPic"
@@ -502,6 +514,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         enctype="multipart/form-data">
                                         <label for="formFile" class="form-label fs-5 my-2">Change your
                                             cover Picture here </label>
+                                        <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                                            <strong>Warning,</strong> your profile will not be updated until you
+                                            <strong>save</strong> it, you
+                                            will get a success
+                                            message after updating,
+                                            <button type='button' class='btn-close' data-bs-dismiss='alert'
+                                                aria-label='Close'></button>
+                                        </div>
                                         <input class="form-control" type="hidden" name="companyID"
                                             value="<?php echo $companyID; ?>">
                                         <input class="form-control" type="hidden" name="lodCover"
@@ -530,6 +550,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body text-center">
+                                    <label for="formFile" class="form-label fs-5 my-2">Change your
+                                        Profile details here </label>
+                                    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                                        <strong>Warning,</strong> your profile will not be updated until you
+                                        <strong>save</strong> it, you will
+                                        get a success
+                                        message after updating,
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert'
+                                            aria-label='Close'></button>
+                                    </div>
                                     <form action="../server/editeCompanyProfile.php" method="post">
                                         <div class="modal-body">
                                             <input class="form-control" type="hidden" name="companyID"
@@ -579,7 +609,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-
+                                <label for="formFile" class="form-label fs-5 my-2">Change your
+                                    Password here </label>
+                                <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                                    <strong>Warning,</strong> your profile will not be updated until you save it, you will get a
+                                    success
+                                    message after updating,
+                                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                </div>
                                 <form action="../server/changeCompanyPassword.php" method="post"
                                     onsubmit="return validateForm()">
                                     <div class="accordion-body text-center">
