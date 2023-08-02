@@ -107,43 +107,24 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         </ul>
                     </div>
                     <div class="d-flex align-items-center">
-                        <div class="d-flex ">
 
-                        </div>
                         <!--profile-->
                         <div class="dropdown ">
                             <dvi class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <a class="navbar-brand  dropdown-toggle" href="#" type="button"> <img
-                                        src="<?php echo $profil; ?>" alt="avatar" class="rounded-circle me-2 "
-                                        style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip"
-                                        data-bs-title=" click for more option" data-bs-placement="bottom"
-                                        data-bs-title="Tooltip on bottom" /></a>
+                                <a class="navbar-brand  dropdown-toggle" href="#" type="button" data-bs-toggle="tooltip"
+                                    data-bs-title=" click here to logout" data-bs-placement="left"
+                                    data-bs-title="Tooltip on left"> <img src="<?php echo $profil; ?>" alt="avatar"
+                                        class="rounded-circle me-2 " style="width: 38px; height: 38px; object-fit: cover" />
+                                    <span class="fw-bold fs-6">
+                                        <?php echo $companyname; ?>
+                                    </span>
+                                </a>
                             </dvi>
                             <ul class="dropdown-menu border-0 shadow">
-                                <!--avatar-->
-                                <li>
-                                    <div class="d-flex align-items-center p-2">
-                                        <img src="<?php echo $profil; ?>" alt="avatar" width="32" height="32"
-                                            class="rounded-circle me-2" style="width: 48px; height: 48px; object-fit: cover">
-                                        <div class="d-flex flex-column mt-3 p-0">
-                                            <span class="fw-bold fs-6">
-                                                <?php echo $companyname; ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <hr>
-                                <!--settings-->
-                                <li><a class="dropdown-item" href="../LoginCompany.php" data-bs-toggle="tooltip"
-                                        data-bs-title="Edite your profile">
-                                        <div class="d-flex align-items-center me-2">
-                                            <i class="fa-solid fa-gear justify-content-center fs-5"></i>
-                                            <p class="m-0 ms-2">Settings</p>
-                                        </div>
-                                    </a></li>
                                 <!--logout-->
                                 <li><a class="dropdown-item" href="../LoginCompany.php" data-bs-toggle="tooltip"
-                                        data-bs-title="logout from this account">
+                                        data-bs-title="logout from this account" data-bs-placement="left"
+                                        data-bs-title="Tooltip on left">
                                         <div class="d-flex align-items-center me-2">
                                             <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                             <p class="m-0 ms-2">Log out</p>
@@ -154,13 +135,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
                     </div>
                 </div>
-                </div>
+
             </nav>
             <div class="row">
                 <!--side nav bar-->
                 <div class="col-1 col-lg-2 d-block sidebar ">
-                    <div class=" h-100 fixed-top overflow-hidden"
-                        style="padding-top: 56px;min-width: 10rem;max-width: 12rem;z-index: 4">
+                    <div class=" h-100 fixed-top overflow-hidden" style="padding-top: 56px;min-width: 10rem;max-width: 12rem;">
                         <!--large nav bar-->
                         <div class="d-flex flex-column flex-shrink-0 p-3 d-none d-lg-block vh-100 bg-white "
                             style="max-width: 20rem">
@@ -190,51 +170,39 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         Applications
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="./application.php?id=<?php echo $companyID; ?>"
-                                        class="nav-link link-body-emphasis">
-                                        <i class="fa-solid fa-gear"></i>
-                                        Settings
-                                    </a>
-                                </li>
                             </ul>
                             <hr>
 
                         </div>
                         <!--small nav bar-->
                         <div class="d-flex flex-column flex-shrink-0 bg-white d-lg-none d-block  vh-100" style="width: 4.5rem;">
-                            <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
-                                data-bs-placement="right" data-bs-original-title="HireSpot">
+                            <a href="../../index.php" class="d-block p-3 link-body-emphasis text-decoration-none"
+                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="HireSpot">
                                 <img src="../../img/logo only.png" height="43px" alt="HireSpot" />
                                 <span class="visually-hidden">Icon-only</span>
                             </a>
                             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                                 <li class="nav-item">
-                                    <a href="adminUser.php" class="nav-link active py-3 border-bottom rounded-0"
-                                        aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right"
-                                        aria-label="Profile" data-bs-original-title="Profile">
+                                    <div class="nav-link active py-3 border-bottom rounded-0" aria-current="page"
+                                        data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Profile"
+                                        data-bs-original-title="Profile" style="cursor: pointer;">
                                         <i class="fa-solid fa-user"></i>
-                                    </a>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./adminCompanies.php" class="nav-link  py-3 border-bottom rounded-0"
-                                        aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right"
-                                        aria-label="posts" data-bs-original-title="posts">
+                                    <a href="./posts.php?id=<?php echo $companyID; ?> "
+                                        class="nav-link  py-3 border-bottom rounded-0" aria-current="page"
+                                        data-bs-toggle="tooltip" data-bs-placement="right" aria-label="posts"
+                                        data-bs-original-title="posts">
                                         <i class="fa-solid fa-building"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./adminUser.php" class="nav-link py-3 border-bottom rounded-0" aria-current="page"
+                                    <a href="./application.php?id=<?php echo $companyID; ?>"
+                                        class="nav-link py-3 border-bottom rounded-0" aria-current="page"
                                         data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Applicatons"
                                         data-bs-original-title="Applicatons">
                                         <i class="fa-solid fa-address-card"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./admin.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
-                                        aria-current="page" data-bs-placement="right" aria-label="Settings"
-                                        data-bs-original-title="Settings">
-                                        <i class="fa-solid fa-gear"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -479,7 +447,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <!-- Settings -->
                     <div class="p-3 mt-3">
                         <h2 class="ms-2 mx-4">
-                            <i class="fa-solid fa-gear me-2"></i>Settings
+                            <span data-bs-toggle="tooltip" data-bs-title="account settings"><i
+                                    class="fa-solid fa-gear me-2"></i>Settings</span>
                         </h2>
                     </div>
                     <div class="accordion" id="accordionExample">
@@ -487,7 +456,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    <i class="fa-regular fa-image me-2"></i>Change profile picture
+                                    <span data-bs-toggle="tooltip" data-bs-title=" Choose deferent profile picture"
+                                        data-bs-placement="right" data-bs-title="Tooltip on right"><i
+                                            class="fa-regular fa-image me-2"></i>Change profile picture</span>
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -519,7 +490,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <i class="fa-solid fa-image me-2"></i>Change cover picture
+                                    <span data-bs-toggle="tooltip" data-bs-title=" Choose deferent cover picture"
+                                        data-bs-placement="right" data-bs-title="Tooltip on right"><i
+                                            class="fa-solid fa-image me-2"></i>Change cover picture</span>
+
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -548,7 +522,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="fa-solid fa-pen-to-square me-2"></i>Edit profile details
+                                    <span data-bs-toggle="tooltip" data-bs-title="Edit Address,About,Number of employees"
+                                        data-bs-placement="right" data-bs-title="Tooltip on right"><i
+                                            class="fa-solid fa-pen-to-square me-2"></i>Edit profile details</span>
+
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -594,7 +571,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <i class="fa-solid fa-shield-halved me-2"></i>Change password
+                                    <span data-bs-toggle="tooltip" data-bs-title="set new password" data-bs-placement="right"
+                                        data-bs-title="Tooltip on right">
+                                        <i class="fa-solid fa-shield-halved me-2">
+                                        </i>Change password</span>
+
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">

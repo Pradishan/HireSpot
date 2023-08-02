@@ -103,43 +103,23 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         </ul>
                     </div>
                     <div class="d-flex align-items-center">
-                        <div class="d-flex ">
-
-                        </div>
                         <!--profile-->
                         <div class="dropdown ">
                             <dvi class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <a class="navbar-brand  dropdown-toggle" href="#" type="button"> <img
-                                        src="<?php echo $profil; ?>" alt="avatar" class="rounded-circle me-2 "
-                                        style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip"
-                                        data-bs-title=" click for more option" data-bs-placement="bottom"
-                                        data-bs-title="Tooltip on bottom" /></a>
+                                <a class="navbar-brand  dropdown-toggle" href="#" type="button" data-bs-toggle="tooltip"
+                                    data-bs-title=" click here to logout" data-bs-placement="left"
+                                    data-bs-title="Tooltip on left"> <img src="<?php echo $profil; ?>" alt="avatar"
+                                        class="rounded-circle me-2 " style="width: 38px; height: 38px; object-fit: cover" />
+                                    <span class="fw-bold fs-6">
+                                        <?php echo $companyname1; ?>
+                                    </span>
+                                </a>
                             </dvi>
                             <ul class="dropdown-menu border-0 shadow">
-                                <!--avatar-->
-                                <li>
-                                    <div class="d-flex align-items-center p-2">
-                                        <img src="<?php echo $profil; ?>" alt="avatar" width="32" height="32"
-                                            class="rounded-circle me-2" style="width: 48px; height: 48px; object-fit: cover">
-                                        <div class="d-flex flex-column mt-3 p-0">
-                                            <span class="fw-bold fs-6">
-                                                <?php echo $companyname1; ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <hr>
-                                <!--settings-->
-                                <li><a class="dropdown-item" href="../LoginCompany.php" data-bs-toggle="tooltip"
-                                        data-bs-title="Edite your profile">
-                                        <div class="d-flex align-items-center me-2">
-                                            <i class="fa-solid fa-gear justify-content-center fs-5"></i>
-                                            <p class="m-0 ms-2">Settings</p>
-                                        </div>
-                                    </a></li>
                                 <!--logout-->
                                 <li><a class="dropdown-item" href="../LoginCompany.php" data-bs-toggle="tooltip"
-                                        data-bs-title="logout from this account">
+                                        data-bs-title="logout from this account" data-bs-placement="left"
+                                        data-bs-title="Tooltip on left">
                                         <div class="d-flex align-items-center me-2">
                                             <i class="fa fa-sign-out justify-content-center fs-5"></i>
                                             <p class="m-0 ms-2">Log out</p>
@@ -150,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
                     </div>
                 </div>
-                </div>
+
             </nav>
             <div class="row">
                 <!--side nav bar-->
@@ -175,10 +155,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./posts.php" class="nav-link active ">
+                                    <div class="nav-link active" aria-current="page" style="cursor: pointer;">
                                         <i class="fa-solid fa-building"></i>
                                         Posts
-                                    </a>
+                                    </div>
                                 </li>
                                 <li>
                                     <a href="./application.php?id=<?php echo $companyID1; ?> "
@@ -187,51 +167,39 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         Applications
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="./application.php?id=<?php echo $companyID1; ?> "
-                                        class="nav-link link-body-emphasis">
-                                        <i class="fa-solid fa-gear"></i>
-                                        Settings
-                                    </a>
-                                </li>
                             </ul>
                             <hr>
 
                         </div>
                         <!--small nav bar-->
                         <div class="d-flex flex-column flex-shrink-0 bg-white d-lg-none d-block  vh-100" style="width: 4.5rem;">
-                            <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
-                                data-bs-placement="right" data-bs-original-title="HireSpot">
+                            <a href="../../index.php" class="d-block p-3 link-body-emphasis text-decoration-none"
+                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="HireSpot">
                                 <img src="../../img/logo only.png" height="43px" alt="HireSpot" />
                                 <span class="visually-hidden">Icon-only</span>
                             </a>
                             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                                 <li class="nav-item">
-                                    <a href="adminUser.php" class="nav-link py-3 border-bottom rounded-0" aria-current="page"
+                                    <a href="./companyProfile.php?id=<?php echo $companyID1; ?>"
+                                        class="nav-link py-3 border-bottom rounded-0" aria-current="page"
                                         data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Profile"
                                         data-bs-original-title="Profile">
                                         <i class="fa-solid fa-user"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./adminCompanies.php" class="nav-link active py-3 border-bottom rounded-0"
-                                        aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right"
-                                        aria-label="posts" data-bs-original-title="posts">
+                                    <div class="nav-link active py-3 border-bottom rounded-0" aria-current="page"
+                                        data-bs-toggle="tooltip" data-bs-placement="right" ria-label="posts"
+                                        data-bs-original-title="posts" style="cursor: pointer;">
                                         <i class="fa-solid fa-building"></i>
-                                    </a>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./adminUser.php" class="nav-link py-3 border-bottom rounded-0" aria-current="page"
+                                    <a href="./application.php?id=<?php echo $companyID1; ?> "
+                                        class="nav-link py-3 border-bottom rounded-0" aria-current="page"
                                         data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Applicatons"
                                         data-bs-original-title="Applicatons">
                                         <i class="fa-solid fa-address-card"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./admin.php" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
-                                        aria-current="page" data-bs-placement="right" aria-label="Settings"
-                                        data-bs-original-title="Settings">
-                                        <i class="fa-solid fa-gear"></i>
                                     </a>
                                 </li>
                             </ul>
