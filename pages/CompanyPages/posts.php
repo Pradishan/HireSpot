@@ -259,12 +259,33 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                                      </div>";
                         }
+                        if ($_GET['error'] == 2) {
+                            echo "
+                                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                        <strong> Error  </strong>in data sending!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
+                        if ($_GET['error'] == 3) {
+                            echo "
+                                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                        you can't leave a <strong> empty </strong>feeld!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                        }
                     }
                     if (isset($_GET['success'])) {
                         if ($_GET['success'] == 1) {
                             echo "
             <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                 Record <strong>deleted </strong> successfully
+                 Post <strong>deleted </strong> successfully
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+                        }
+                        if ($_GET['success'] == 2) {
+                            echo "
+            <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                 Post <strong>changed </strong> successfully
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
             </div>";
                         }
@@ -328,7 +349,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                     <td class="text-center">
                                         <div data-bs-toggle="tooltip" data-bs-title="Edit your post">
                                             <button type="button" class="btn btn-outline-success m-0" data-bs-toggle="modal"
-                                                data-bs-target="#postModal<?php echo $jobID; ?>">Edit post <i class="fa-solid fa-pen-to-square"></i>
+                                                data-bs-target="#postModal<?php echo $jobID; ?>">Edit post <i
+                                                    class="fa-solid fa-pen-to-square"></i>
                                             </button>
                                         </div>
                                     </td>
@@ -338,70 +360,76 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                                     class="fa-solid fa-trash ms-1"></i></button>
                                         </a>
                                     </td>
-                               
 
-                                <!-- Modal -->
-                                <form action="../server/editePost.php" method="post" enctype="multipart/form-data">
-                                    <div class="modal fade shadow my-5" id="postModal<?php echo $jobID; ?>" tabindex="-1"
-                                         aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Job post</h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <input class="form-control" type="hidden" name="companyID"
-                                                        value="<?php echo $companyID; ?>">
-                                                    <div class="form-floating my-3">
-                                                        <input type="text" name="jobTitle" class="form-control" id="floatingInput"
-                                                            value="<?php echo $jobTitle; ?>">
-                                                        <label for="floatingInput">Job Title</label>
-                                                    </div>
-                                                    <div class="input-group mb-3">
-                                                        <label class="input-group-text" for="inputGroupSelect01">Job
-                                                            category</label>
-                                                        <select class="form-select" id="inputGroupSelect01" name="jobCategory">
-                                                            <option selected>
-                                                                <?php echo $jobCategory; ?>
-                                                            </option>
-                                                            <option value="Information Technology (IT)">Information Technology (IT)
-                                                            </option>
-                                                            <option value="Healthcare">Healthcare</option>
-                                                            <option value="Finance">Finance</option>
-                                                            <option value="Education">Education</option>
-                                                            <option value="Marketing and Sales">Marketing and Sales</option>
-                                                            <option value="Engineering">Engineering</option>
-                                                            <option value="Hospitality and Tourism">Hospitality and Tourism</option>
-                                                            <option value="Creative Arts">Creative Arts</option>
-                                                            <option value="Human Resources">Human Resources</option>
-                                                            <option value="Construction and Trades">Construction and Trades</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-floating">
-                                                        <textarea class="form-control" name="description"
-                                                            placeholder="Leave a comment here" id="floatingTextarea2"
-                                                            style="height: 100px" value="<?php echo $content; ?>"></textarea>
-                                                        <label for="floatingTextarea2">Description about the job</label>
-                                                    </div>
-                                                    <div class="mb-1">
-                                                        <label for="formFile" class="form-label fs-5 my-2">Uploaded
-                                                            Flyer</label>
 
-                                                        <img id="previewImage" src="<?php echo $imageFilePath; ?>"
-                                                            alt="Selected Image" style="object-fit: cover" class="img-fluid">
+                                    <!-- Modal -->
+                                    <form action="../server/editePost.php" method="post" enctype="multipart/form-data">
+                                        <div class="modal fade shadow my-5" id="postModal<?php echo $jobID; ?>" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Job post</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
                                                     </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-primary w-100" value="Upload"
-                                                        name="submit">Change</button>
+                                                    <div class="modal-body">
+                                                        <input class="form-control" type="hidden" name="jobID"
+                                                            value="<?php echo $jobID; ?>">
+                                                        <input class="form-control" type="hidden" name="companyID"
+                                                            value="<?php echo $companyID; ?>">
+                                                        <div class="form-floating my-3">
+                                                            <input type="text" name="jobTitle" class="form-control"
+                                                                id="floatingInput" value="<?php echo $jobTitle; ?>">
+                                                            <label for="floatingInput">Job Title</label>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                            <label class="input-group-text" for="inputGroupSelect01">Job
+                                                                category</label>
+                                                            <select class="form-select" id="inputGroupSelect01" name="jobCategory">
+                                                                <option selected>
+                                                                    <?php echo $jobCategory; ?>
+                                                                </option>
+                                                                <option value="Information Technology (IT)">Information Technology
+                                                                    (IT)
+                                                                </option>
+                                                                <option value="Healthcare">Healthcare</option>
+                                                                <option value="Finance">Finance</option>
+                                                                <option value="Education">Education</option>
+                                                                <option value="Marketing and Sales">Marketing and Sales</option>
+                                                                <option value="Engineering">Engineering</option>
+                                                                <option value="Hospitality and Tourism">Hospitality and Tourism
+                                                                </option>
+                                                                <option value="Creative Arts">Creative Arts</option>
+                                                                <option value="Human Resources">Human Resources</option>
+                                                                <option value="Construction and Trades">Construction and Trades
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-floating">
+                                                            <textarea class="form-control" name="description"
+                                                                placeholder="Leave a comment here" id="floatingTextarea2"
+                                                                style="height: 100px"><?php echo $content; ?></textarea>
+                                                            <label for="floatingTextarea2">Description about the job</label>
+                                                        </div>
+                                                        <div class="mb-1">
+                                                            <label for="formFile" class="form-label fs-5 my-2">Uploaded
+                                                                Flyer</label>
+
+                                                            <img id="previewImage" src="<?php echo $imageFilePath; ?>"
+                                                                alt="Selected Image" style="object-fit: cover"
+                                                                class="img-fluid my-2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-primary w-100" value="Upload"
+                                                            name="submit">Change</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </form>
- </tr>
+                                    </form>
+                                </tr>
                                 <?php
                             }
                             if (empty($rs)) {
