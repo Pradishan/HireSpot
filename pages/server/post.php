@@ -7,17 +7,18 @@ use server\DbConnector;
 $dbcon = new DbConnector();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_POST['jobTitle']) && !empty($_POST['jobTitle'])&&isset($_POST['jobCategory']) && !empty($_POST['jobCategory']) && isset($_POST['companyID']) && !empty($_POST['companyID']) && isset($_POST['description']) && !empty($_POST['description'])) {
+    if (isset($_POST['jobTitle']) && !empty($_POST['jobTitle']) && isset($_POST['jobCategory']) && !empty($_POST['jobCategory']) && isset($_POST['companyID']) && !empty($_POST['companyID']) && isset($_POST['description']) && !empty($_POST['description'])) {
 
         if (isset($_FILES["image"]) && $_FILES["image"]["error"] === 0) {
 
-            $jobTitle = $_POST['jobTitle'];
-            $jobCategory = $_POST['jobCategory'];
-            $companyID = $_POST['companyID'];
+            // Sanitize user input to prevent SQL injection and XSS attacks
+            $jobTitle = htmlspecialchars($_POST['jobTitle']);
+            $jobCategory = htmlspecialchars($_POST['jobCategory']);
+            $companyID = htmlspecialchars($_POST['companyID']);
             $date = date("Y-m-d H:i:s");
-            $content = $_POST['description'];
+            $content = htmlspecialchars($_POST['description']);
 
-            $targetDir = "../../upload/post/"; // stoting place
+            $targetDir = "../../upload/post/"; // storing place
             $targetFile = $targetDir . basename($_FILES["image"]["name"]);
             $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
@@ -33,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                         // Insert the file path into the database table using a prepared statement
                         $imageFilePath = $targetFile;
-                        $sql = "INSERT INTO job (jobTitle,jobcateogory,companyID,date,content,filePath) VALUES (?,?,?,?,?,?)";
+                        $sql = "INSERT INTO job (jobTitle, jobcateogory, companyID, date, content, filePath) VALUES (?, ?, ?, ?, ?, ?)";
                         $pstmt = $con->prepare($sql);
                         $pstmt->bindValue(1, $jobTitle);
                         $pstmt->bindValue(2, $jobCategory);
@@ -43,8 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         $pstmt->bindValue(6, $imageFilePath);
 
                         if ($pstmt->execute()) {
-//                            echo "Image uploaded and stored in the database successfully.";
-                              header("Location: ../CompanyPages/companyProfile.php?id=$companyID&success=1");
+                            // Redirect to the company profile page with success message
+                            header("Location: ../CompanyPages/companyProfile.php?id=$companyID&success=1");
+                            exit();
                         } else {
                             echo "Error: Unable to insert image path into the database.";
                         }
@@ -54,23 +56,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         die("Connection failed: " . $e->getMessage());
                     }
                 } else {
-//                    echo "Sorry, there was an error uploading your file.";
-                      header("Location: ../CompanyPages/companyProfile.php?id=".$_POST['companyID']."&error=5");
+                    // Redirect to the company profile page with error message for file upload failure
+                    header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=5");
+                    exit();
                 }
             } else {
-//                echo "Only JPG, JPEG, and PNG files are allowed.";
-                 header("Location: ../CompanyPages/companyProfile.php?id=".$_POST['companyID']."&error=4");
+                // Redirect to the company profile page with error message for invalid file type
+                header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=4");
+                exit();
             }
         } else {
-//            echo "Please select an image to upload. image error";
-              header("Location: ../CompanyPages/companyProfile.php?id=".$_POST['companyID']."&error=3");
+            // Redirect to the company profile page with error message for no file selected
+            header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=3");
+            exit();
         }
     } else {
-//        echo "data empty";
-          header("Location: ../CompanyPages/companyProfile.php?id=".$_POST['companyID']."&error=2");
+        // Redirect to the company profile page with error message for missing form data
+        header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=2");
+        exit();
     }
 } else {
-//    echo "Please select an image to upload. post";
-      header("Location: ../CompanyPages/companyProfile.php?id=".$_POST['companyID']."&error=1");
+    // Redirect to the company profile page with error message for invalid request method
+    header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=1");
+    exit();
 }
 ?>
+
+
