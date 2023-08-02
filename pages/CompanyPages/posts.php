@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                                  class="rounded-circle me-2" style="width: 48px; height: 48px; object-fit: cover">
                                             <div class="d-flex flex-column mt-3 p-0">
                                                 <span class="fw-bold fs-6">
-                                                    <?php echo $companyname; ?>
+                                                    <?php echo $companyname1; ?>
                                                 </span>
                                             </div>
                                         </div>
