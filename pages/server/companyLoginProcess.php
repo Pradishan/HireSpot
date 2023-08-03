@@ -5,6 +5,9 @@ require_once './company.php';
 
 use server\DbConnector;
 
+// Start the session
+session_start();
+
 $dbcon = new DbConnector();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -38,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dbpassword = $row['password'];
 
         if (password_verify($password, $dbpassword)) {
-            // Password matches, start the session and redirect to company profile
-            session_start();
-            $_SESSION["company"] = $companyname;
-            header("Location: ../CompanyPages/companyProfile.php?id=$dbcompanyID");
+            // Password matches, store company details in the session and redirect to company profile
+            $_SESSION["companyID"] = $dbcompanyID;
+            $_SESSION["companyname"] = $companyname;
+            header("Location: ../CompanyPages/companyProfile.php");
             exit;
         } else {
             // Password does not match, redirect to the login page with an error message
@@ -54,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 } else {
-    // Redirect to the login page with an error message for invalid request method
+    // Redirect to the login page with an error message for an invalid request method
     header("Location: ../LoginCompany.php?error=1");
     exit;
 }
