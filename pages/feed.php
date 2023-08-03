@@ -3,11 +3,11 @@
 require_once './server/jobseeker.php';
 session_start();
 if (isset($_SESSION["seeker"])) {
-  // User is logged in, retrieve the user object
-  $seeker = $_SESSION["seeker"];
-  
+    // User is logged in, retrieve the user object
+    $seeker = $_SESSION["seeker"];
+
 } else {
-  // Redirect the user to login.php if not logged in
+    // Redirect the user to login.php if not logged in
 //   header("Location: ./login.php?error=3");
 //  exit();
 }
@@ -17,6 +17,8 @@ if (isset($_SESSION["seeker"])) {
 <head>
     <meta charset="UTF-8">
     <title>HireSpot</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../img/logo only.png" type="image/x-icon">
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -59,7 +61,8 @@ if (isset($_SESSION["seeker"])) {
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand " href="../index.php"><img src="../img/logo.png" width="137px" height="43px" alt="HireSpot" /></a>
+            <a class="navbar-brand " href="../index.php"><img src="../img/logo.png" width="137px" height="43px"
+                    alt="HireSpot" /></a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
 
@@ -105,7 +108,7 @@ if (isset($_SESSION["seeker"])) {
                             <div class="d-flex justify-content-between">
                                 <h2>Notification</h2>
                             </div>
-                        </li>           
+                        </li>
 
                         <!-- n1 -->
                         <li class="my-1 p-2">
@@ -129,7 +132,7 @@ if (isset($_SESSION["seeker"])) {
 
                             </a>
                         </li>
-                       
+
 
                     </ul>
                 </div>
@@ -141,7 +144,9 @@ if (isset($_SESSION["seeker"])) {
                             alt="avatar" class="rounded-circle me-2 "
                             style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip"
                             data-bs-title=" See your profile" data-bs-placement="bottom"
-                            data-bs-title="Tooltip on bottom" /></a>
+                            data-bs-title="Tooltip on bottom" /> <span class="fw-bold fs-6">
+                            <?php echo $seeker->getUsername() ?>
+                        </span></a>
                 </dvi>
                 <ul class="dropdown-menu border-0 shadow">
                     <!--avatar-->
@@ -150,19 +155,13 @@ if (isset($_SESSION["seeker"])) {
                                 <img src="https://source.unsplash.com/random/5" alt="avatar"
                                     class="rounded-circle me-2 " style="width: 48px; height: 48px; object-fit: cover" />
                                 <div class="d-flex flex-column mt-3 p-0">
-                                    <span class="fw-bold fs-6"> <?php echo $seeker->getUsername() ?></span>
+                                    <span class="fw-bold fs-6">
+                                        <?php echo $seeker->getUsername() ?>
+                                    </span>
                                     <p class="text-muted fs-7">see your profile</p>
                                 </div>
                             </div>
                         </a></li>
-                    <!--settings-->
-                    <li><a class="dropdown-item" href="#">
-                                <div class="d-flex align-items-center me-2">
-                                    <i class="fas fa-cog justify-content-center fs-5"></i>
-                                    <p class="m-0 ms-2">Settings</p>
-                                </div>
-                            </a></li>
-                    <hr>
                     <!--logout-->
                     <li><a class="dropdown-item" href="./server/logout.php">
                             <div class="d-flex align-items-center me-2">
@@ -196,14 +195,18 @@ if (isset($_SESSION["seeker"])) {
                             <!--profile content-->
 
                             <!--name-->
-                            <h3 class="text-center m-0"><?php echo $seeker->getUsername() ?></h3>
+                            <h3 class="text-center m-0">
+                                <?php echo $seeker->getUsername() ?>
+                            </h3>
                             <!--discription-->
                             <p class="text-muted text-center m-0">Tech enthusiast | Graphic Designer | Web Designer |
                                 Developer</p>
                             <!--conatact details-->
                             <div class="d-flex justify-content-center align-items-center">
                                 <i class="fa fa-envelope fs-7 me-1 mb-3 "></i>
-                                <p class=""><?php echo $seeker->getEmail() ?></p>
+                                <p class="">
+                                    <?php echo $seeker->getEmail() ?>
+                                </p>
                             </div>
                         </div>
                         <!--preview profile-->
@@ -278,25 +281,17 @@ if (isset($_SESSION["seeker"])) {
                                         <span class="text-muted fs-7">June 14 at 1:02PM</span>
                                     </div>
                                 </div>
-                                <!-- edit -->
-                                <i class="fas fa-ellipsis-h" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                                    id="post1meun"></i>
-                                <!-- edit menu -->
-                                <ul class="dropdown-menu border-0 shadow" aria-labelledby="post1meun">
-                                    <li class="d-flex align-items-center">
-                                        <a href="#"
-                                            class="dropdown-item d-flex align-items-center justify-content-around fs-7">Edit
-                                            Post</a>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                        <a href="#"
-                                            class="dropdown-item d-flex align-items-center justify-content-around fs-7">Delete
-                                            Post</a>
-                                    </li>
-                                </ul>
+                                <!-- jobcatagary -->
+                                <div class="d-flex">
+                                    <p class="fw-bold me-2">developer</p>|
+                                    <span class="text-muted fs-7 mt-1 ms-2 m-0">Information Technology (IT)</span>
+                                </div>
+
                             </div>
 
                             <div class=" p-2 ">
+                                <!-- job title  -->
+                                <p class="fw-bold me-2 mb-0">developer</p>
                                 <!--content-->
                                 <div class="pt-2">
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, voluptates ea aliquam
@@ -309,8 +304,70 @@ if (isset($_SESSION["seeker"])) {
                                     class="img-fluid" style="object-fit: cover">
                                 <!--apply btn-->
                                 <div class="d-flex justify-content-center pt-3">
-                                    <input type="submit" value="Apply now" class="btn btn-outline-primary w-100" />
+                                    <button type="button" class="btn btn-primary w-100 my-3" data-bs-toggle="modal"
+                                        data-bs-target="#applymodal<?php echo $i; ?>"> Apply now
+                                    </button>
                                 </div>
+
+                                <!-- Modal -->
+                                <form action="../server/post.php" method="post" enctype="multipart/form-data">
+                                    <div class="modal fade shadow my-5" id="applymodal<?php echo $i; ?>" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">apply to this Job
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+
+                                                    <!--company-->
+                                                    <!-- autor -->
+                                                    <div class="d-flex justify-content-between p-2">
+                                                        <!-- avatar -->
+                                                        <div class="d-flex">
+                                                            <img src="https://source.unsplash.com/random/<?php echo $i; ?>4"
+                                                                alt="avatar" srcset="" class="rounded-circle me-3"
+                                                                style="width: 38px; height: 38px; object-fit: cover" />
+                                                            <div>
+                                                                <p class="m-0 fw-bold">Sharoon</p>
+                                                                <span class="text-muted fs-7">June 14 at 1:02PM</span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- jobcatagary -->
+                                                        <div class="d-flex">
+                                                            <p class="fw-bold me-2">developer</p>|
+                                                            <span class="text-muted fs-7 mt-1 ms-2 m-0">Information
+                                                                Technology (IT)</span>
+                                                        </div>
+
+                                                    </div>
+                                                    <input class="form-control" type="hidden" name="companyID"
+                                                        value="<?php echo $companyID; ?>">
+
+
+                                                    <div class="mb-1">
+                                                        <label for="formFile" class="form-label fs-5 my-2">Upload your CV
+                                                            here
+                                                        </label>
+                                                        <input class="form-control" type="file" id="image" accept="image/*"
+                                                            name="image">
+                                                        <img id="previewImage" src="" alt="Selected Image"
+                                                            style="display: none; object-fit: cover" class="img-fluid my-2">
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary w-100" value="Upload"
+                                                        name="submit">Apply</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+
                             </div>
                         </div>
                         <?php
@@ -416,17 +473,17 @@ if (isset($_SESSION["seeker"])) {
                     <div class="d-flex flex-column align-items-center justify-content-cente ">
                         <!--quick link-->
                         <p class="mb-0 fs-7 ">
-                            <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
-                            <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
-                            <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a>
+                            <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
+                            <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
+                            <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a>
                             |
-                            <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
-                            <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
+                            <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
+                            <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
                         </p>
                         <!--copyrights-->
                         <div class="d-flex">
-                            <a class=" " href="#"><img src="../img/logo.png" width="58px" height="16px" alt="HireSpot"
-                                    class="mb-2" /></a>
+                            <a class=" " href="../index.php"><img src="../img/logo.png" width="58px" height="16px"
+                                    alt="HireSpot" class="mb-2" /></a>
                             <p class="fs-7">&copy; 2023</p>
                         </div>
                     </div>

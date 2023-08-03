@@ -5,10 +5,15 @@
 <head>
   <meta charset="UTF-8">
   <title>HireSpot | login</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../img/logo only.png" type="image/x-icon">
   <!--bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <!--fontawesom-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--main css-->
   <link rel="stylesheet" href="../css/maincss.css" />
 
@@ -59,18 +64,20 @@
         <h1 class="text-center">Log in</h1>
         <form action="./server/userLoginProcess.php" method="POST">
           <div class="form-floating my-3">
-            <input type="email" name ="Email" class="form-control" id="floatingInput" placeholder="name@example.com" style="background-color: #F4F4F4">
+            <input type="email" name="Email" class="form-control" id="floatingInput" placeholder="name@example.com"
+              style="background-color: #F4F4F4">
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating my-3">
-            <input type="password" name="Password"  class="form-control" id="floatingPassword" placeholder="Password" style="background-color: #F4F4F4">
+            <input type="password" name="Password" class="form-control" id="floatingPassword" placeholder="Password"
+              style="background-color: #F4F4F4">
             <label for="floatingPassword">Password</label>
           </div>
 
           <!-- <button class="btn btn-primary my-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
             login
           </button> -->
-         <a href="./feed.php"><input type="submit" value="login" class="btn btn-primary my-3 w-100"></a>
+          <a href="./feed.php"><input type="submit" value="login" class="btn btn-primary my-3 w-100"></a>
         </form>
         <a href="#" class="text-decoration-none text-center">
           <p>Forgotten password?</p>
@@ -103,7 +110,7 @@
                   <input type="text" name="UserName" class="form-control my-3" placeholder="Username" id="" />
                   <input type="email" name="Email" class="form-control my-3" placeholder="Email" id="" />
 
-                  <input type="tel" name="Phone" class="form-control my-3" placeholder="Phone No"  id="" />
+                  <input type="tel" name="Phone" class="form-control my-3" placeholder="Phone No" id="" />
 
                   <input type="password" name="Password" class="form-control my-3" placeholder="password" id="" />
 
@@ -111,21 +118,24 @@
                   <input type="text" name="Education" class="form-control my-3" placeholder="Education" id="" />
 
 
-                  <textarea class="form-control my-3" id="description" name="Description" placeholder="About me" oninput="countWords()" maxlength="200"></textarea>
+                  <textarea class="form-control my-3" id="description" name="Description" placeholder="About me"
+                    oninput="countWords()" maxlength="200"></textarea>
 
 
 
                   <div class="row my-3 jus">
                     <span class="text-muted fs-7">
                       Gender
-                      <i type="button" class="fa-solid fa-circle-question" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover"></i>
+                      <i type="button" class="fa-solid fa-circle-question" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover"></i>
                     </span>
                     <div class="col">
                       <div class="">
                         <label class="form-check-label" for="flexRadioDefault1">
                           Male
                         </label>
-                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault1" value="Male" checked />
+                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault1" value="Male"
+                          checked />
                       </div>
                     </div>
                     <div class="col">
@@ -133,7 +143,8 @@
                         <label class="form-check-label" for="flexRadioDefault2">
                           Female
                         </label>
-                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault2" value="Female" />
+                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault2"
+                          value="Female" />
                       </div>
                     </div>
                     <div class="col">
@@ -141,7 +152,8 @@
                         <label class="form-check-label" for="flexRadioDefault3">
                           Coustom
                         </label>
-                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault3" value="Custom" />
+                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault3"
+                          value="Custom" />
                       </div>
                     </div>
                   </div>
@@ -170,7 +182,7 @@
           Stay focused, stay motivated, and conquer your dream job.
         </p>
         <?php
-        if (isset($_GET['error'])  ) {
+        if (isset($_GET['error'])) {
           if ($_GET['error'] == 1) {
             echo "<b><p style='color: red;'> Please Fill All Fields!</p></b>";
           }
@@ -180,12 +192,12 @@
           if ($_GET['error'] == 3) {
             echo "<b><p style='color: red;'> First You Need to Login Your Account to Preview your Profile.</p></b>";
           }
-        } 
-        if (isset($_GET['success']) ) {
+        }
+        if (isset($_GET['success'])) {
           if ($_GET['success'] == 1) {
             echo "<b><p style='color: green;'> You have successfully registered! Please Log In</p></b>";
           }
-        } 
+        }
         ?>
 
 
@@ -202,27 +214,30 @@
       <div class="d-flex flex-column align-items-center justify-content-cente mt-3">
         <!--quick link-->
         <p class="mb-0 fs-7 ">
-          <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
-          <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
-          <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a> |
-          <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
-          <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
+          <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
+          <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
+          <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a> |
+          <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
+          <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
         </p>
         <!--copyrights-->
         <div class="d-flex">
-          <a class=" " href="#"><img src="../img/logo.png" width="58px" height="16px" alt="HireSpot" class="mb-2" /></a>
+          <a class=" " href="../index.php"><img src="../img/logo.png" width="58px" height="16px" alt="HireSpot"
+              class="mb-2" /></a>
           <p class="fs-7">&copy; 2023</p>
         </div>
       </div>
     </div>
   </footer>
   <!--bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
   <!--main js-->
   <script src="mainjs.js"></script>
   <script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    const tooltipTriggerList = document.querySelectorAll( '[data-bs-toggle="tooltip"]' );
+    const tooltipList = [ ...tooltipTriggerList ].map( tooltipTriggerEl => new bootstrap.Tooltip( tooltipTriggerEl ) );
   </script>
 </body>
 

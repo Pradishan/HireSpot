@@ -720,16 +720,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <div class="d-flex flex-column align-items-center justify-content-cente mt-3">
                     <!--quick link-->
                     <p class="mb-0 fs-7 ">
-                        <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
-                        <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
-                        <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a> |
-                        <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
-                        <a href="#" class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
+                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Privacy </a> |
+                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a> |
+                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Advertising </a> |
+                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses </a> |
+                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Cookies </a>
                     </p>
                     <!--copyrights-->
                     <div class="d-flex">
-                        <a class=" " href="#"><img src="../../img/logo.png" width="58px" height="16px" alt="HireSpot"
-                                class="mb-2" /></a>
+                        <a class=" " href="../../index.php"><img src="../../img/logo.png" width="58px" height="16px"
+                                alt="HireSpot" class="mb-2" /></a>
                         <p class="fs-7">&copy; 2023</p>
                     </div>
                 </div>
