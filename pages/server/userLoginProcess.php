@@ -1,62 +1,66 @@
 <?php
+
 require_once './DBConnector.php';
 require_once './jobseeker.php';
 
 use server\DbConnector;
 
+// Start the session
+session_start();
+
 $dbcon = new DbConnector();
-?>
 
-<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"] ?? '';
+    $password = $_POST["Password"] ?? '';
 
-    $email = $_POST["Email"];
- 
-    $password = $_POST["Password"];
+    // Validate input
+    if (empty($email) || empty($password)) {
+        header("Location: ../Login.php?error=5");
+        exit;
+    }
 
-
+    // Sanitize input
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+    $password = $_POST["Password"]; // Password should not be sanitized
 
     try {
         $con = $dbcon->getConnection();
-        $query = "SELECT * FROM jobseeker WHERE email = ? ";
+        $query = "SELECT useID, username, email, password FROM jobseeker WHERE email = ?";
         $pstmt = $con->prepare($query);
-        $pstmt->bindValue(1, $email);
-       
-        $pstmt->execute();
+        $pstmt->execute([$email]);
+        $row = $pstmt->fetch(PDO::FETCH_ASSOC);
 
-        $rs = $pstmt->fetchAll(PDO::FETCH_OBJ);
-
-        foreach($rs as $row){
-            $dbpassword = $row->password;
-            $dbFirstName = $row->firstname;
-            $dbLastName = $row->lastname;
-            $dbEmail = $row->email;
-            $dbPhoneNo = $row->phoneNo;
-            $dbuserName = $row->username;
-            $dbGender = $row->gender;
-            $dbid = $row->userID;
-            $dbaddress = $row->address;
-            $dbEducation = $row->education;
-            $dbDescription = $row->description;
-        }
-       ;
-        if (password_verify($password, $dbpassword)) {
-           
-            $seeker = new JobSeeker($dbid, $dbuserName, $dbFirstName,$dbLastName,$dbEmail,$dbPhoneNo,$dbaddress,$dbEducation,$dbDescription,$dbGender,$dbpassword);
-            session_start();
-            $_SESSION["seeker"] = $seeker;
-            header("Location: ../feed.php");
-        exit;
-        }else{
-            
-            header("Location: ../login.php?error=2");
+        if (!$row) {
+            header("Location: ../Login.php?error=4");
             exit;
         }
 
+        $dbuseID = $row['useID'];
+        $dbusername = $row['username'];
+        $dbemail = $row['email'];
+        $dbpassword = $row['password'];
+
+        if (password_verify($password, $dbpassword)) {
+            // Password matches, store company details in the session and redirect to company profile
+            $_SESSION["useID"] = $dbuseID;
+            $_SESSION["username"] = $dbusername;
+            $_SESSION["email"] = $dbemail;
+            header("Location: ../feed.php");
+            exit;
+        } else {
+            // Password does not match, redirect to the login page with an error message
+            header("Location: ../Login.php?error=2");
+            exit;
+        }
     } catch (PDOException $exc) {
-        echo $exc->getMessage();
+        // Log the error or show a generic error message
+        header("Location: ../Login.php?error=6");
+        exit;
     }
-
+} else {
+    // Redirect to the login page with an error message for an invalid request method
+    header("Location: ../Login.php?error=1");
+    exit;
 }
-
 ?>

@@ -1,14 +1,14 @@
 <?php
-// Start the session
 session_start();
 
-// Unset all session variables
-$_SESSION = array();
+// Unset company-specific session variables
+unset($_SESSION["useID"]);
+unset($_SESSION["username"]);
+unset($_SESSION["email"]);
 
 // Destroy the session
 session_destroy();
 
-// Redirect the user to the login page after logging out
-header("Location: ../../index.php");
-exit();
-?>
+// Redirect to the login page with an error message
+header("Location: ../Login.php");
+exit;

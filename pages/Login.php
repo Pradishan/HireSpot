@@ -60,11 +60,54 @@
     </div>
     <!-- form  -->
     <div style="max-width: 28rem; width: 100%">
+      <?php
+      if (isset($_GET['error'])) {
+        if ($_GET['error'] == 1) {
+          echo "
+            <div class='alert alert-danger py-2' role='alert'>
+            Please Fill All Fields to Register!
+            </div> ";
+        }
+        if ($_GET['error'] == 2) {
+          echo "
+          <div class='alert alert-danger py-2' role='alert'>
+          Your Email or Password Incorrect!
+          </div> ";
+        }
+        if ($_GET['error'] == 3) {
+          echo "
+          <div class='alert alert-danger py-2' role='alert'>
+          First You Need to Login Your Account to Preview your Profile.
+          </div> ";
+        }
+        if ($_GET['error'] == 4) {
+          echo "
+          <div class='alert alert-danger py-2' role='alert'>
+          user not found create an account.
+          </div> ";
+        }
+        if ($_GET['error'] == 5) {
+          echo "
+          <div class='alert alert-danger py-2' role='alert'>
+          Please Fill All Fields to login!
+          </div> ";
+        }
+      }
+
+      if (isset($_GET['success'])) {
+        if ($_GET['success'] == 1) {
+          echo "
+          <div class='alert alert-success py-2' role='alert'>
+          You have successfully registered! Please Log In
+          </div> ";
+        }
+      }
+      ?>
       <div class="bg-white shadow rounded p-3 input-group-lg">
-        <h1 class="text-center">Log in</h1>
-        <form action="./server/userLoginProcess.php" method="POST">
+        <form action="./server/userLoginProcess.php" method="post">
+          <h1 class="text-center">Log in</h1>
           <div class="form-floating my-3">
-            <input type="email" name="Email" class="form-control" id="floatingInput" placeholder="name@example.com"
+            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com"
               style="background-color: #F4F4F4">
             <label for="floatingInput">Email address</label>
           </div>
@@ -73,11 +116,10 @@
               style="background-color: #F4F4F4">
             <label for="floatingPassword">Password</label>
           </div>
-
-          <!-- <button class="btn btn-primary my-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="submit" class="btn btn-primary my-3 w-100">
             login
-          </button> -->
-          <a href="./feed.php"><input type="submit" value="login" class="btn btn-primary my-3 w-100"></a>
+          </button>
+
         </form>
         <a href="#" class="text-decoration-none text-center">
           <p>Forgotten password?</p>
@@ -118,10 +160,11 @@
                   <input type="text" name="Education" class="form-control my-3" placeholder="Education" id="" />
 
 
-                  <textarea class="form-control my-3" id="description" name="Description" placeholder="About me"
+                  <textarea class="form-control my-3" id="description" name="Description"
+                    placeholder="Bio eg:-tech enthusiast" oninput="countWords()" maxlength="200"></textarea>
+
+                  <textarea class="form-control my-3" id="description" name="about" placeholder="About me"
                     oninput="countWords()" maxlength="200"></textarea>
-
-
 
                   <div class="row my-3 jus">
                     <span class="text-muted fs-7">
@@ -181,26 +224,6 @@
         <p>
           Stay focused, stay motivated, and conquer your dream job.
         </p>
-        <?php
-        if (isset($_GET['error'])) {
-          if ($_GET['error'] == 1) {
-            echo "<b><p style='color: red;'> Please Fill All Fields!</p></b>";
-          }
-          if ($_GET['error'] == 2) {
-            echo "<b><p style='color: red;'> Your Email or Password Incorrect!</p></b>";
-          }
-          if ($_GET['error'] == 3) {
-            echo "<b><p style='color: red;'> First You Need to Login Your Account to Preview your Profile.</p></b>";
-          }
-        }
-        if (isset($_GET['success'])) {
-          if ($_GET['success'] == 1) {
-            echo "<b><p style='color: green;'> You have successfully registered! Please Log In</p></b>";
-          }
-        }
-        ?>
-
-
       </div>
     </div>
   </div>
