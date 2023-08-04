@@ -227,7 +227,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         <td>SimCentric Technologies</td>
                         <td>31 Aug 2022</td>
                         <td>09:38:04</td>
-                        <td class="d-flex align-items-center p-1">
+                        <td >
                             <a href=""> <button class="btn btn-primary mx-1 p-1">View</button> </a>
                             <a href=""><button class="btn btn-danger mx-1 p-1">Delete</button> </a>
                         </td>
