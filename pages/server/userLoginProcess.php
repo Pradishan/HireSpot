@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $con = $dbcon->getConnection();
-        $query = "SELECT useID, username, email, password FROM jobseeker WHERE email = ?";
+        $query = "SELECT userID, username, email, password FROM jobseeker WHERE email = ?";
         $pstmt = $con->prepare($query);
         $pstmt->execute([$email]);
         $row = $pstmt->fetch(PDO::FETCH_ASSOC);
@@ -36,17 +36,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
         }
 
-        $dbuseID = $row['useID'];
+        $dbuserID = $row['userID'];
         $dbusername = $row['username'];
         $dbemail = $row['email'];
         $dbpassword = $row['password'];
 
         if (password_verify($password, $dbpassword)) {
             // Password matches, store company details in the session and redirect to company profile
-            $_SESSION["useID"] = $dbuseID;
+            $_SESSION["userID"] = $dbuserID;
             $_SESSION["username"] = $dbusername;
             $_SESSION["email"] = $dbemail;
-            header("Location: ../feed.php");
+            header("Location: ../jobseeker/feed.php");
             exit;
         } else {
             // Password does not match, redirect to the login page with an error message

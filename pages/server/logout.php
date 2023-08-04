@@ -2,7 +2,7 @@
 session_start();
 
 // Unset company-specific session variables
-unset($_SESSION["useID"]);
+unset($_SESSION["userID"]);
 unset($_SESSION["username"]);
 unset($_SESSION["email"]);
 

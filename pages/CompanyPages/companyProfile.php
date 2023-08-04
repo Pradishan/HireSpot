@@ -656,19 +656,18 @@ try {
                                     var currentPassword = document.getElementById( "currentPassword" ).value;
                                     var newPassword = document.getElementById( "newPassword" ).value;
                                     var confirmPassword = document.getElementById( "confirmPassword" ).value;
-                                    var companyID = document.getElementById( "companyID" ).value;
 
                                     // Check if any field is empty
                                     if ( currentPassword === "" || newPassword === "" || confirmPassword === "" )
                                     {
-                                        window.location = `./companyProfile.php?id=${ companyID }&error=6`;
+                                        window.location = `./companyProfile.php?error=6`;
                                         return false;
                                     }
 
                                     // Check if the new password and confirm password match
                                     if ( newPassword !== confirmPassword )
                                     {
-                                        window.location = `./companyProfile.php?id=${ companyID }&error=8`;
+                                        window.location = `./companyProfile.php?error=8`;
                                         return false;
                                     }
 

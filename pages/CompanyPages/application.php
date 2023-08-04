@@ -17,6 +17,39 @@ if (!isset($_SESSION['companyID']) || !isset($_SESSION['companyname'])) {
 $id = $_SESSION['companyID'];
 $companyname = $_SESSION['companyname'];
 
+function profilepath($path)
+{
+    if ($path === null) {
+        echo '../../img/userDefault.jpg';
+    } else {
+        echo $path;
+    }
+}
+
+function formatDateTime($datetimeStr)
+{
+    // Create a DateTime object from the provided string
+    $datetime = new DateTime($datetimeStr);
+
+    // Format the DateTime object to the desired format
+    return $datetime->format("M jS g.i A");
+}
+
+function statusdisplay($status)
+{
+    switch ($status) {
+        case 'Waiting':
+            echo '<div class="alert alert-primary m-0 p-1 ms-1 text-center " role="alert"> Waiting </div>';
+            break;
+        case 'Reject':
+            echo '<div class="alert alert-danger m-0 p-1 ms-1 text-center " role="alert"> Rejected </div>';
+            break;
+        case 'Accept':
+            echo '<div class="alert alert-success m-0 p-1 ms-1 text-center " role="alert"> Selected </div>';
+            break;
+    }
+}
+
 try {
     $con = $dbcon->getConnection();
     $query = "SELECT companyID,companyname,profilePic FROM company WHERE companyID = ? ";
@@ -114,7 +147,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <!--profile-->
                     <div class="dropdown ">
                         <dvi class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a class="navbar-brand  dropdown-toggle" href="#" type="button" data-bs-toggle="tooltip"
+                            <a class="navbar-brand  dropdown-toggle" href="" type="button" data-bs-toggle="tooltip"
                                 data-bs-title=" click here to logout" data-bs-placement="left"
                                 data-bs-title="Tooltip on left"> <img src="<?php echo $profil; ?>" alt="avatar"
                                     class="rounded-circle me-2 " style="width: 38px; height: 38px; object-fit: cover" />
@@ -222,51 +255,349 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 </nav>
 
                 <h1>Applications</h1>
+                <?php
+                if (isset($_GET['error'])) {
+                    if ($_GET['error'] == 1) {
+                        echo "
+                                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                        <strong> Error  </strong>in deletion!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                    }
+                    if ($_GET['error'] == 2) {
+                        echo "
+                                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                        <strong> Error  </strong>in data sending!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                    }
+                    if ($_GET['error'] == 3) {
+                        echo "
+                                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                        you can't leave a <strong> empty </strong>feeld!
+                                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                     </div>";
+                    }
+                }
+                if (isset($_GET['success'])) {
+                    if ($_GET['success'] == 1) {
+                        echo "
+            <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                 <strong>status </strong> successfully changed
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+                    }
+                }
+                ?>
 
                 <table class="table table-hover bg-white rounded">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Post Title</th>
                             <th scope="col">Date</th>
-                            <th scope="col">Applicant Name</th>
-                            <th scope="col">Applicant Contact Number</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Job</th>
+                            <th scope="col">Jobseeker</th>
+                            <th scope="col">Application</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        for ($i = 0; $i < 20; $i++) { ?>
+
+
+                        $query = "SELECT * FROM application JOIN jobseeker ON application.userID = jobseeker.userID JOIN job ON application.jobID = job.jobID WHERE application.companyID = ?;";
+                        $pstmt1 = $con->prepare($query);
+                        $pstmt1->bindValue(1, $id);
+
+                        $pstmt1->execute();
+
+                        $rs = $pstmt1->fetchAll(PDO::FETCH_OBJ);
+
+                        foreach ($rs as $row) {
+
+                            $applicationID = $row->applicationID;
+                            $userID = $row->userID;
+                            $jobID = $row->jobID;
+                            $companyID = $row->companyID;
+                            $cv = $row->cv;
+                            $status = $row->status;
+                            $date = $row->date;
+                            $username = $row->username;
+                            $firstname = $row->firstname;
+                            $lastname = $row->lastname;
+                            $email = $row->email;
+                            $phoneNo = $row->phoneNo;
+                            $dateofbirth = $row->dateofbirth;
+                            $address = $row->address;
+                            $education = $row->education;
+                            $description = $row->description;
+                            $about = $row->about;
+                            $profilePic = $row->profilePic;
+                            $gender = $row->gender;
+                            $jobTitle = $row->jobTitle;
+                            $jobcateogory = $row->jobcateogory;
+                            $postdate = $row->date;
+                            $content = $row->content;
+                            $postfilePath = $row->filePath;
+
+                            ?>
 
 
                             <tr>
-                                <th scope="row">A001</th>
-                                <td>Vacancy for Software Engineer</td>
-                                <td>31 Aug 2000</td>
-                                <td>R.W. Nimal Perera</td>
-                                <td>+94704470004</td>
-                                <td class="d-flex align-items-center p-1">
-                                    <a href=""> <button class="btn btn-primary mx-1 p-1">Download CV</button> </a>
-                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                        <input type="radio" class="btn-check btn-success" name="btnradio" id="btnradio1"
-                                            autocomplete="off">
-                                        <label class="btn btn-outline-success" for="btnradio1">Accept</label>
+                                <th scope="row">
+                                    <?php echo $applicationID; ?>
+                                </th>
+                                <td>
+                                    <?php echo formatDateTime($date); ?>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postmodal<?php echo $applicationID;
+                                    ?>"> View post
+                                    </button>
+                                </td>
+                                <td>
+                                    <img src="<?php echo profilepath($profilePic); ?>" alt="avatar" class="rounded-circle me-2 "
+                                        style="width: 38px; height: 38px; object-fit: cover" />
+                                    <span class="fw-bold fs-6">
+                                        <?php echo $username; ?>
+                                    </span>
 
-                                        <input type="radio" class="btn-check btn-danger" name="btnradio" id="btnradio2"
-                                            autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="btnradio2">Reject</label>
-                                    </div>
+                                </td>
+                                <td>
+
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#approvemodal<?php echo $applicationID;
+                                    ?>">View application
+                                    </button>
+
+                                </td>
+                                <td>
+
+                                    <?php statusdisplay($status); ?>
+
                                 </td>
                             </tr>
 
-                            <?php
+                            <!-- post view modal  -->
+                            <div class="modal fade shadow my-5" id="postmodal<?php echo $applicationID;
+                            ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                data-bs-backdrop="false">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Post
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="d-flex justify-content-between p-2">
+                                                <!-- avatar -->
+                                                <div class="d-flex">
+                                                    <img src="<?php profilepath($profilePic1);
+                                                    ?>" alt="avatar" srcset="" class="rounded-circle me-3"
+                                                        style="width: 38px; height: 38px; object-fit: cover" />
+                                                    <div>
+                                                        <p class="m-0 fw-bold">
+                                                            <?php echo $companyname1; ?>
+                                                        </p>
+                                                        <span class="text-muted fs-7">
+                                                            <?php echo formatDateTime($postdate); ?>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- jobcatagary -->
+                                                <div class="d-flex">
+                                                    <p class="fw-bold me-2">
+                                                        <?php echo $jobTitle; ?>
+                                                    </p>|
+                                                    <span class="text-muted fs-7 mt-1 ms-2 m-0">
+                                                        <?php echo $jobcateogory; ?>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+
+                                            <div class=" p-2 ">
+                                                <!-- job title  -->
+                                                <p class="fw-bold me-2 mb-0">
+                                                    <?php echo $jobTitle; ?>
+                                                </p>
+                                                <!--content-->
+                                                <div class="pt-2">
+                                                    <p>
+                                                        <?php echo $content; ?>
+                                                    </p>
+                                                </div>
+                                                <!--post image-->
+                                                <img src="<?php echo $postfilePath; ?>" alt="post" class="img-fluid"
+                                                    style="object-fit: cover">
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary w-100" type="button" data-bs-dismiss="modal"
+                                                    aria-label="Close">Ok</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- approve reject Modal -->
+                            <form action="../server/approve.php" method="post" enctype="multipart/form-data">
+                                <div class="modal fade shadow my-5" id="approvemodal<?php echo $applicationID;
+                                ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                    data-bs-backdrop="false">
+                                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Approve or Reject the
+                                                    application
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <div class="row">
+                                                    <div class="col-4">
+
+                                                        <div
+                                                            class=" d-flex flex-column align-items-center justify-content-cente ">
+                                                            <!--avatar-->
+                                                            <dvi class="p-3 ">
+                                                                <img src="<?php profilepath($profilePic); ?>" alt="avatar"
+                                                                    class="rounded-circle me-2 "
+                                                                    style="width: 150px; height: 150px; object-fit: cover" />
+                                                            </dvi>
+                                                            <!--profile content-->
+
+                                                            <!--name-->
+                                                            <h3 class="text-center m-0">
+                                                                <?php echo $username; ?>
+                                                            </h3>
+                                                            <!--discription-->
+                                                            <p class="text-muted text-center m-0">
+                                                                <?php echo $description; ?>
+                                                            </p>
+                                                            <!--conatact details-->
+                                                            <div class="d-flex justify-content-center align-items-center">
+                                                                <i class="fa fa-envelope fs-7 me-1 mb-3 "></i>
+                                                                <p class="">
+                                                                    <?php echo $email; ?>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <!--Age-->
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="fw-bold m-0">Age</p>
+                                                                <p class="ms-3 m-0">
+                                                                    23
+                                                                </p>
+                                                            </div>
+                                                            <!--Gender-->
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="fw-bold m-0">Gender</p>
+                                                                <p class="ms-3 m-0">
+                                                                    male
+                                                                </p>
+                                                            </div>
+                                                            <!--Phone-->
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="fw-bold m-0">Phone</p>
+                                                                <p class="ms-3 m-0">
+                                                                    0774057922
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-8">
+
+                                                        <!--Education-->
+                                                        <div class="d-flex flex-column ">
+                                                            <h5>Education</h5>
+                                                            <p class="fw-bold m-0">
+                                                                <?php echo $education; ?>
+                                                            </p>
+                                                        </div>
+
+                                                        <hr>
+                                                        <!--About-->
+                                                        <div class="d-flex flex-column ">
+                                                            <h5>About</h5>
+                                                            <p class="m-0">
+                                                                <?php echo $about; ?>
+                                                            </p>
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <!-- Display the name of the selected file and provide a link to download the file -->
+                                                        <?php if (!empty($cv)): ?>
+                                                            <p>
+                                                                <strong>Selected CV</strong>:
+                                                                <?php echo basename($cv); ?>
+                                                            </p>
+                                                            <a href="<?php echo $cv; ?>" target="_blank"
+                                                                rel="noopener noreferrer"><button type="button"
+                                                                    class="btn btn-primary">Download or View the
+                                                                    CV</button></a>
+                                                        <?php endif; ?>
+
+                                                        <hr>
+                                                        <?php statusdisplay($status); ?>
+                                                        <div class="btn-group w-100 mt-2" role="group"
+                                                            aria-label="Basic radio toggle button group">
+                                                            <input type="radio" class="btn-check btn-success" name="status"
+                                                                id="btnradio1" autocomplete="off" value="Accept">
+                                                            <label class="btn btn-outline-success"
+                                                                for="btnradio1">Accept</label>
+
+                                                            <input type="radio" class="btn-check btn-danger" name="status"
+                                                                id="btnradio2" autocomplete="off" value="Reject">
+                                                            <label class="btn btn-outline-danger" for="btnradio2">Reject</label>
+                                                        </div>
+                                                        <input class="form-control" type="hidden" name="applicationID" value="<?php echo $applicationID;
+                                                        ?>">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-evenly">
+                                                <button type="submit" class="btn btn-primary w-100" value="Upload"
+                                                    name="submit">Confirm</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                </div>
+
+                </form>
+
+
+                <?php
+                        }
+                        if (empty($rs)) {
+                            //            header("Location:./posts.php?id=".$companyID1."&error=4");
+                            echo "
+          <div class='alert alert-warning py-2' role='alert'>
+          No post available.
+          </div> ";
                         }
                         ?>
-                    </tbody>
-                </table>
 
-            </div>
+            </tbody>
+            </table>
+
         </div>
+        </div>
+
     </body>
     <?php
 } catch (PDOException $exc) {
@@ -280,6 +611,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     crossorigin="anonymous"></script>
 <!--main js-->
 <script src="mainjs.js"></script>
+
 <script>
     const tooltipTriggerList = document.querySelectorAll( '[data-bs-toggle="tooltip"]' );
     const tooltipList = [ ...tooltipTriggerList ].map( tooltipTriggerEl => new bootstrap.Tooltip( tooltipTriggerEl ) );
