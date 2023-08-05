@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                         if ($pstmt->execute()) {
                             // Redirect to the company profile page with success message
-                            header("Location: ../CompanyPages/companyProfile.php?id=$companyID&success=1");
+                            header("Location: ../CompanyPages/companyProfile.php?success=1");
                             exit();
                         } else {
                             echo "Error: Unable to insert image path into the database.";
@@ -60,27 +60,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     }
                 } else {
                     // Redirect to the company profile page with error message for file upload failure
-                    header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=5");
+                    header("Location: ../CompanyPages/companyProfile.php?error=5");
                     exit();
                 }
             } else {
                 // Redirect to the company profile page with error message for invalid file type
-                header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=4");
+                header("Location: ../CompanyPages/companyProfile.php?error=4");
                 exit();
             }
         } else {
             // Redirect to the company profile page with error message for no file selected
-            header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=3");
+            header("Location: ../CompanyPages/companyProfile.php?error=3");
             exit();
         }
     } else {
         // Redirect to the company profile page with error message for missing form data
-        header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=2");
+        header("Location: ../CompanyPages/companyProfile.php?error=2");
         exit();
     }
 } else {
     // Redirect to the company profile page with error message for invalid request method
-    header("Location: ../CompanyPages/companyProfile.php?id=$companyID&error=1");
+    header("Location: ../CompanyPages/companyProfile.php?error=1");
     exit();
 }
 ?>

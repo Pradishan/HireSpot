@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             if ($pstmt->execute()) {
                 // Redirect to the posts page with success message
-                header("Location: ../CompanyPages/companyProfile.php?id=$companyID&success=4");
+                header("Location: ../CompanyPages/companyProfile.php?success=4");
                 exit();
             } else {
                 echo "Error: Unable to update job information in the database.";
@@ -42,12 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     } else {
         // Redirect to the posts page with error message for missing form data
-        header("Location: ../CompanyPages/companyProfile.php?id=".$_POST['companyID']."&error=6");
+        header("Location: ../CompanyPages/companyProfile.php?error=6");
         exit();
     }
 } else {
     // Redirect to the posts page with error message for invalid request method
-    header("Location: ../CompanyPages/companyProfile.php?id=".$_POST['companyID']."&error=1");
+    header("Location: ../CompanyPages/companyProfile.php?error=1");
     exit();
 }
 ?>

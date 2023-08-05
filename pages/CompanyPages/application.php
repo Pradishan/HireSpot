@@ -444,7 +444,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </div>
 
                             <!-- approve reject Modal -->
-                            <form action="../server/approve.php" method="post" enctype="multipart/form-data">
+                            <form action="../server/approve.php" method="post">
                                 <div class="modal fade shadow my-5" id="approvemodal<?php echo $applicationID;
                                 ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
                                     data-bs-backdrop="false">
@@ -552,14 +552,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                                         <?php statusdisplay($status); ?>
                                                         <div class="btn-group w-100 mt-2" role="group"
                                                             aria-label="Basic radio toggle button group">
-                                                            <input type="radio" class="btn-check btn-success" name="status"
-                                                                id="btnradio1" autocomplete="off" value="Accept">
-                                                            <label class="btn btn-outline-success"
-                                                                for="btnradio1">Accept</label>
+                                                            <input type="radio" class="btn-check btn-success" name="status" id="btnradio1<?php echo $applicationID;
+                                                            ?>" autocomplete="off" value="Accept">
+                                                            <label class="btn btn-outline-success" for="btnradio1<?php echo $applicationID;
+                                                            ?>">Accept</label>
 
-                                                            <input type="radio" class="btn-check btn-danger" name="status"
-                                                                id="btnradio2" autocomplete="off" value="Reject">
-                                                            <label class="btn btn-outline-danger" for="btnradio2">Reject</label>
+                                                            <input type="radio" class="btn-check btn-danger" name="status" id="btnradio2<?php echo $applicationID;
+                                                            ?>" autocomplete="off" value="Reject">
+                                                            <label class="btn btn-outline-danger" for="btnradio2<?php echo $applicationID;
+                                                            ?>">Reject</label>
                                                         </div>
                                                         <input class="form-control" type="hidden" name="applicationID" value="<?php echo $applicationID;
                                                         ?>">
@@ -584,7 +585,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <?php
                         }
                         if (empty($rs)) {
-                            //            header("Location:./posts.php?id=".$companyID1."&error=4");
+                          
                             echo "
           <div class='alert alert-warning py-2' role='alert'>
           No post available.
