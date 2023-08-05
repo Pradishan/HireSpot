@@ -57,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </div>
     </div>
     </div>
-  </nav <!-- login -->
+  </nav> <!-- login -->
   <div class="container d-flex flex-column flex-lg-row justify-content-evenly mt-3" style="padding-top: 10rem">
     <!-- heading -->
     <div class="text-center text-lg-center mt-lg-5 pt-lg-5">

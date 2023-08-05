@@ -58,7 +58,8 @@ try {
         <link rel="shortcut icon" href="../../img/logo only.png" type="image/x-icon">
         <title>HireSpot | Company </title>
         <!--bootstrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <!--fontawesom-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -312,10 +313,13 @@ try {
                                     <?php echo $jobCategory; ?>
                                 </td>
                                 <td class="text-center">
-                                    <a href="./application.php"> <button class="btn btn-primary mx-1 p-1"
-                                            data-bs-toggle="tooltip"
+                                    <form action="./application.php" method="post">
+                                        <input class="form-control" type="hidden" id="userID" name="id"
+                                            value="<?php echo $jobID; ?>">
+                                        <button type="submit" class="btn btn-primary mx-1 p-1" data-bs-toggle="tooltip"
                                             data-bs-title="View curresponded applications for this post">View
-                                            Applications</button> </a>
+                                            Applications</button>
+                                    </form>
                                 </td>
                                 <td class="text-center">
                                     <div data-bs-toggle="tooltip" data-bs-title="Edit your post">

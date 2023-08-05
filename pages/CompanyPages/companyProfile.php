@@ -359,12 +359,24 @@ try {
                 <!--Add post-->
                 <div class="bg-white rounded p-3 " style="margin-top: 9rem">
                     <div class="">
-                        <div class="text-center" data-bs-toggle="tooltip"
-                            data-bs-title="Post vacancies and hire jobseekers">
-                            <button type="button" class="btn btn-outline-primary w-75 my-3" data-bs-toggle="modal"
-                                data-bs-target="#postModal">Add post <i class="fa-sharp fa-solid fa-plus"></i>
-                            </button>
+                        <div class="text-center p-3" data-bs-toggle="tooltip"
+                            data-bs-title="click here to Post new vacancies and hire jobseekers">
+                            <div class="d-flex justify-content-center" type="button" data-bs-toggle="modal"
+                                data-bs-target="#postModal">
+                                <div class="p-1">
+                                    <img src="<?php echo $profil; ?>" alt="avatar" srcset="" class="rounded-circle me-2"
+                                        style="width: 50px; height: 50px; object-fit: cover" />
+                                </div>
+
+                                <input class="form-control bg-gray rounded-pill w-75 border-0" size="100"
+                                    placeholder="Add new post and hire jobseekers <?php echo $companyname; ?>.." disabled>
+                                <div class="rounded-pill border shadow" style="background-color: #F1F0F0;">
+                                    <i class="fa-sharp fa-solid fa-plus fs-4 text text-muted p-4"></i>
+                                </div>
+
+                            </div>
                         </div>
+
 
                         <!-- Modal -->
                         <form action="../server/post.php" method="post" enctype="multipart/form-data">
