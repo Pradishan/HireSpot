@@ -50,6 +50,14 @@ function statusdisplay($status)
     }
 }
 
+function calculateAge($dateOfBirth)
+{
+    $dob = new DateTime($dateOfBirth);
+    $today = new DateTime('today');
+    $age = $dob->diff($today)->y;
+    return $age;
+}
+
 try {
     $con = $dbcon->getConnection();
     $query = "SELECT companyID,companyname,profilePic FROM company WHERE companyID = ? ";
@@ -254,7 +262,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     </ol>
                 </nav>
 
-                <h1>Applications</h1>
+                <h1>Applications
+                    <?php if (isset($_POST['id']) && !empty($_POST['id'])) {
+                        echo " for postID : " . $_POST['id'];
+                    } else {
+                        echo " for All";
+                    } ?>
+                </h1>
                 <?php
                 if (isset($_GET['error'])) {
                     if ($_GET['error'] == 1) {
@@ -304,10 +318,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <tbody>
                         <?php
 
+                        if (isset($_POST['id']) && !empty($_POST['id'])) {
+                            $query = "SELECT * FROM application JOIN jobseeker ON application.userID = jobseeker.userID JOIN job ON application.jobID = job.jobID WHERE application.companyID = ? AND job.jobID = ? ";
+                            $pstmt1 = $con->prepare($query);
+                            $pstmt1->bindValue(1, $id);
+                            $pstmt1->bindValue(2, $_POST['id']);
+                        } else {
+                            $query = "SELECT * FROM application JOIN jobseeker ON application.userID = jobseeker.userID JOIN job ON application.jobID = job.jobID WHERE application.companyID = ?;";
+                            $pstmt1 = $con->prepare($query);
+                            $pstmt1->bindValue(1, $id);
+                        }
 
-                        $query = "SELECT * FROM application JOIN jobseeker ON application.userID = jobseeker.userID JOIN job ON application.jobID = job.jobID WHERE application.companyID = ?;";
-                        $pstmt1 = $con->prepare($query);
-                        $pstmt1->bindValue(1, $id);
+
+
 
                         $pstmt1->execute();
 
@@ -444,7 +467,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             </div>
 
                             <!-- approve reject Modal -->
-                            <form action="../server/approve.php" method="post" enctype="multipart/form-data">
+                            <form action="../server/approve.php" method="post">
                                 <div class="modal fade shadow my-5" id="approvemodal<?php echo $applicationID;
                                 ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
                                     data-bs-backdrop="false">
@@ -494,21 +517,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                                             <div class="d-flex justify-content-between">
                                                                 <p class="fw-bold m-0">Age</p>
                                                                 <p class="ms-3 m-0">
-                                                                    23
+                                                                    <?php echo calculateAge($dateofbirth); ?>
                                                                 </p>
                                                             </div>
                                                             <!--Gender-->
                                                             <div class="d-flex justify-content-between">
                                                                 <p class="fw-bold m-0">Gender</p>
                                                                 <p class="ms-3 m-0">
-                                                                    male
+                                                                    <?php echo $gender; ?>
                                                                 </p>
                                                             </div>
                                                             <!--Phone-->
                                                             <div class="d-flex justify-content-between">
                                                                 <p class="fw-bold m-0">Phone</p>
                                                                 <p class="ms-3 m-0">
-                                                                    0774057922
+                                                                    <?php echo $phoneNo; ?>
                                                                 </p>
                                                             </div>
 
@@ -552,14 +575,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                                         <?php statusdisplay($status); ?>
                                                         <div class="btn-group w-100 mt-2" role="group"
                                                             aria-label="Basic radio toggle button group">
-                                                            <input type="radio" class="btn-check btn-success" name="status"
-                                                                id="btnradio1" autocomplete="off" value="Accept">
-                                                            <label class="btn btn-outline-success"
-                                                                for="btnradio1">Accept</label>
+                                                            <input type="radio" class="btn-check btn-success" name="status" id="btnradio1<?php echo $applicationID;
+                                                            ?>" autocomplete="off" value="Accept">
+                                                            <label class="btn btn-outline-success" for="btnradio1<?php echo $applicationID;
+                                                            ?>">Accept</label>
 
-                                                            <input type="radio" class="btn-check btn-danger" name="status"
-                                                                id="btnradio2" autocomplete="off" value="Reject">
-                                                            <label class="btn btn-outline-danger" for="btnradio2">Reject</label>
+                                                            <input type="radio" class="btn-check btn-danger" name="status" id="btnradio2<?php echo $applicationID;
+                                                            ?>" autocomplete="off" value="Reject">
+                                                            <label class="btn btn-outline-danger" for="btnradio2<?php echo $applicationID;
+                                                            ?>">Reject</label>
                                                         </div>
                                                         <input class="form-control" type="hidden" name="applicationID" value="<?php echo $applicationID;
                                                         ?>">
@@ -576,15 +600,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                         </div>
                                     </div>
                                 </div>
-                </div>
-
-                </form>
 
 
-                <?php
+                            </form>
+
+
+                            <?php
                         }
                         if (empty($rs)) {
-                            //            header("Location:./posts.php?id=".$companyID1."&error=4");
+
                             echo "
           <div class='alert alert-warning py-2' role='alert'>
           No post available.
@@ -592,10 +616,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         }
                         ?>
 
-            </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-        </div>
+            </div>
         </div>
 
     </body>

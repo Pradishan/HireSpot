@@ -48,7 +48,7 @@
     </div>
     </div>
     </div>
-  </nav <!--main content-->
+  </nav> <!--main content-->
   <!-- login  -->
   <div class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5" style="padding-top: 10rem;">
     <!-- heading -->
@@ -102,6 +102,12 @@
           </div> ";
         }
       }
+      if (isset($_GET['message'])) {
+        echo "
+          <div class='alert alert-danger py-2' role='alert'>
+          " . $_GET['message'] . "
+          </div> ";
+      }
       ?>
       <div class="bg-white shadow rounded p-3 input-group-lg">
         <form action="./server/userLoginProcess.php" method="post">
@@ -152,6 +158,40 @@
                   <input type="text" name="UserName" class="form-control my-3" placeholder="Username" id="" />
                   <input type="email" name="Email" class="form-control my-3" placeholder="Email" id="" />
 
+                  <div class="row">
+                    <div class="col">
+
+                      <div class="">
+                        <span class="text-muted fs-7">
+                          Gender
+                        </span>
+                        <div class="d-flex justify-content-evenly mt-2">
+                          <div class="">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Male
+                            </label>
+                            <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault1"
+                              value="Male" checked />
+                          </div>
+                          <div class="">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Female
+                            </label>
+                            <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault2"
+                              value="Female" />
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col">
+                      <span class="text-muted fs-7">
+                        Date Of Birth
+                      </span>
+                      <input type="date" name="dateofbirth" class="form-control" id="" />
+                    </div>
+                  </div>
+
                   <input type="tel" name="Phone" class="form-control my-3" placeholder="Phone No" id="" />
 
                   <input type="password" name="Password" class="form-control my-3" placeholder="password" id="" />
@@ -166,40 +206,6 @@
                   <textarea class="form-control my-3" id="description" name="about" placeholder="About me"
                     oninput="countWords()" maxlength="200"></textarea>
 
-                  <div class="row my-3 jus">
-                    <span class="text-muted fs-7">
-                      Gender
-                      <i type="button" class="fa-solid fa-circle-question" data-bs-container="body"
-                        data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover"></i>
-                    </span>
-                    <div class="col">
-                      <div class="">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Male
-                        </label>
-                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault1" value="Male"
-                          checked />
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Female
-                        </label>
-                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault2"
-                          value="Female" />
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="">
-                        <label class="form-check-label" for="flexRadioDefault3">
-                          Coustom
-                        </label>
-                        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault3"
-                          value="Custom" />
-                      </div>
-                    </div>
-                  </div>
 
 
                   <div class="text-center">

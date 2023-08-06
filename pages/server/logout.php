@@ -7,7 +7,7 @@ unset($_SESSION["username"]);
 unset($_SESSION["email"]);
 
 // Destroy the session
-session_destroy();
+//session_destroy();
 
 // Redirect to the login page with an error message
 header("Location: ../Login.php");

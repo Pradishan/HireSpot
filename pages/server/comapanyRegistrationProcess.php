@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } catch (PDOException $exc) {
         // Log the error or show a generic error message
-        header("Location: ../LoginCompany.php?error=3");
+        header("Location: ../LoginCompany.php?message=" . $exc->getMessage());
         exit;
     }
 } else {

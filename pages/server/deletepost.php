@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if (!$row) {
-                header("Location: ../CompanyPages/posts.php?id=$companyId&error=2");
+                header("Location: ../CompanyPages/posts.php?error=2");
                 exit;
             }
 
@@ -46,10 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             $rowCount = $stmt->rowCount();
 
             if ($rowCount > 0) {
-                header("Location: ../CompanyPages/posts.php?id=$companyId&success=1");
+                header("Location: ../CompanyPages/posts.php?success=1");
                 exit;
             } else {
-                header("Location: ../CompanyPages/posts.php?id=$companyId&error=1");
+                header("Location: ../CompanyPages/posts.php?error=1");
                 exit;
             }
         } catch (PDOException $e) {

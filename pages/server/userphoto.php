@@ -6,34 +6,34 @@ use server\DbConnector;
 $dbcon = new DbConnector();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_POST['companyID']) && !empty($_POST['companyID']) && isset($_FILES["cover"]) && $_FILES["cover"]["error"] === 0) {
+    if (isset($_POST['userID']) && !empty($_POST['userID']) && isset($_FILES["userprofile"]) && $_FILES["userprofile"]["error"] === 0) {
         // Sanitize user input to prevent SQL injection and XSS attacks
-        $companyID = htmlspecialchars($_POST['companyID']);
+        $userID = htmlspecialchars($_POST['userID']);
 
         // Get the current image path if available
-        $currentImagePath = isset($_POST['lodCover']) ? htmlspecialchars($_POST['lodCover']) : null;
+        $currentImagePath = isset($_POST['lodPic']) ? htmlspecialchars($_POST['lodPic']) : null;
 
         if (!empty($currentImagePath)) {
             unlink($currentImagePath); // Delete the file from the server
         }
 
         // File upload handling
-        $targetDir = "../../upload/cover/";
-        $imageFileName = $companyID . "." . strtolower(pathinfo($_FILES["cover"]["name"], PATHINFO_EXTENSION));
+        $targetDir = "../../upload/userprofile/";
+        $imageFileName = $userID . "." . strtolower(pathinfo($_FILES["userprofile"]["name"], PATHINFO_EXTENSION));
         $targetFile = $targetDir . $imageFileName;
 
         $allowedExtensions = array("jpg", "jpeg", "png");
         if (in_array(strtolower(pathinfo($imageFileName, PATHINFO_EXTENSION)), $allowedExtensions)) {
-            if (move_uploaded_file($_FILES["cover"]["tmp_name"], $targetFile)) {
+            if (move_uploaded_file($_FILES["userprofile"]["tmp_name"], $targetFile)) {
                 $imageFilePath = $targetFile;
             } else {
                 // Redirect to the company profile page with error message for file upload failure
-                header("Location: ../CompanyPages/companyProfile.php?error=5");
+                header("Location: ../jobseeker/userProfile.php?error=3");
                 exit();
             }
         } else {
             // Redirect to the company profile page with error message for invalid file type
-            header("Location: ../CompanyPages/companyProfile.php?error=4");
+            header("Location: ../jobseeker/userProfile.php?error=4");
             exit();
         }
 
@@ -42,14 +42,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Update the company information in the database table using a prepared statement
-            $sql = "UPDATE company SET coverPic=? WHERE companyID=?";
+            $sql = "UPDATE jobseeker SET profilePic=? WHERE userID=?";
             $pstmt = $con->prepare($sql);
             $pstmt->bindValue(1, $imageFilePath);
-            $pstmt->bindValue(2, $companyID);
+            $pstmt->bindValue(2, $userID);
 
             if ($pstmt->execute()) {
                 // Redirect to the company profile page with success message
-                header("Location: ../CompanyPages/companyProfile.php?success=3");
+                header("Location: ../jobseeker/userProfile.php?success=1");
                 exit();
             } else {
                 echo "Error: Unable to update company information in the database.";
@@ -61,12 +61,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     } else {
         // Return an error if the file is not selected
-        header("Location: ../CompanyPages/companyProfile.php?error=3");
+        header("Location: ../jobseeker/userProfile.php?error=5");
         exit();
     }
 } else {
     // Redirect to the company profile page with error message for invalid request method
-    header("Location: ../CompanyPages/companyProfile.php?error=1");
+    header("Location: ../jobseeker/userProfile.php?error=1");
     exit();
 }
 ?>

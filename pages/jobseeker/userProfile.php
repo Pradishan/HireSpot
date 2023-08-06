@@ -153,7 +153,7 @@ try {
                         </li>
                         <li class="nav-item">
                             <!--search-->
-                            <form class="d-flex" role="search" method="post">
+                            <form class="d-flex" role="search" action="./feed.php" method="post">
                                 <select class="form-control me-2 border-0" id="inputGroupSelect01" name="searchjobCategory"
                                     style="border-radius: 50px;background-color: #F4F4F4;max-width: 20rem;">
                                     <option disabled selected class="text-muted">
@@ -313,7 +313,7 @@ try {
                     </dvi>
                     <ul class="dropdown-menu border-0 shadow">
                         <!--avatar-->
-                        <li><a class="dropdown-item" href="./userProfile.php">
+                        <li><a class="dropdown-item" href="./feed.php">
                                 <div class="d-flex align-items-center">
                                     <img src="<?php profilepath($profilePic); ?>" alt="avatar" class="rounded-circle me-2 "
                                         style="width: 48px; height: 48px; object-fit: cover" />
@@ -347,13 +347,21 @@ try {
                         <div class="bg-white rounded mx-4 px-4">
                             <div class=" d-flex flex-column align-items-center justify-content-cente ">
                                 <!--avatar-->
-                                <dvi class="mt-4 p-3 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <a class="navbar-brand " href="" type="button"> <img
-                                            src="<?php profilepath($profilePic); ?>" alt="avatar"
-                                            class="rounded-circle me-2 "
+                                <dvi class="mt-4 p-3 rounded-circle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <a class="p-0 rounded-circle position-relative" href="" type="button"
+                                        data-bs-toggle="modal" data-bs-target="#profilModal"> <img
+                                            src="<?php profilepath($profilePic); ?>" alt="avatar" class="rounded-circle"
                                             style="width: 200px; height: 200px; object-fit: cover" data-bs-toggle="tooltip"
-                                            data-bs-title=" See your profile" data-bs-placement="bottom"
-                                            data-bs-title="Tooltip on bottom" /></a>
+                                            data-bs-title=" change profile" data-bs-placement="bottom"
+                                            data-bs-title="Tooltip on bottom" />
+
+                                        <button type="button"
+                                            class="btn btn-primary position-absolute translate-middle badge rounded-circle py-2"
+                                            data-bs-toggle="modal" data-bs-target="#profilModal"
+                                            style=" bottom: 10px;left: 170px;"> <i class="fa-regular fa-image"></i>
+                                        </button>
+                                    </a>
                                 </dvi>
                                 <!--profile content-->
 
@@ -373,10 +381,6 @@ try {
                                     </p>
                                 </div>
                             </div>
-                            <!--preview profile-->
-                            <a href="./userProfile.php"> <button type="button"
-                                    class="btn btn-outline-primary mb-3 w-100">Preview Profile
-                                </button></a>
 
                             <div class="px-2">
                                 <!--Age-->
@@ -421,6 +425,9 @@ try {
                             </div>
 
                             <hr>
+                            <a href="./feed.php"> <button type="button" class="btn btn-outline-primary mb-3 w-100">go to
+                                    feed
+                                </button></a>
 
                         </div>
 
@@ -431,12 +438,10 @@ try {
                 <!--main time line-->
                 <div class="col-12 col-lg-6 pb-5">
 
-                    <div class="d-flex justify-content-center flex-column w-100 mx-auto mt-3"
+                    <div class="d-flex justify-content-center flex-column w-100 mx-auto "
                         style="padding-top: 56px;max-width: 680px;">
                         <?php
-                        if (isset($_POST['searchjobCategory']) && !empty($_POST['searchjobCategory'])) {
-                            echo "<h3 class = 'mt-2'>" . $searchjobCategory . '</h3>';
-                        }
+
                         if (isset($_GET['error'])) {
                             if ($_GET['error'] == 1) {
                                 echo "
@@ -453,400 +458,307 @@ try {
                             }
                             if ($_GET['error'] == 3) {
                                 echo "
-                    <div class='alert alert-danger alert-dismissible fade show mt-2' role='alert'>
-                        Please select an pdf to upload.<strong> error in pdf selection!  </strong>
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                     </div>";
+                                            <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                <strong> Sorry,  </strong> there was an error uploading your file!
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
                             }
                             if ($_GET['error'] == 4) {
                                 echo "
-                      <div class='alert alert-danger alert-dismissible fade show mt-2' role='alert'>
-                        Only<strong> pdf </strong>file allowed.
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                     </div>";
+                                              <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                Only<strong>  JPG, JPEG, and PNG  </strong>files are allowed.
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
                             }
                             if ($_GET['error'] == 5) {
                                 echo "
-                    <div class='alert alert-danger alert-dismissible fade show mt-2' role='alert'>
-                        <strong> Sorry,  </strong> there was an error uploading your file!
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                     </div>";
+                                              <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                please select a<strong>  JPG, JPEG, and PNG  </strong>to change.
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
                             }
                             if ($_GET['error'] == 6) {
-                                echo "      <div class='alert alert-danger alert-dismissible fade show mt-2' role='alert'>
-                         you can't leave <strong> Empty </strong>Fields!
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                     </div>";
+                                echo "
+                                              <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                you can't leave<strong> empty </strong>feald.
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
                             }
                             if ($_GET['error'] == 7) {
-                                echo "      <div class='alert alert-danger alert-dismissible fade show mt-2' role='alert'>
-                         your <strong> Current Password </strong> is wrong!
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                     </div>";
+                                echo "      <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                 your <strong> Current Password </strong> is wrong!
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
                             }
                             if ($_GET['error'] == 8) {
-                                echo "      <div class='alert alert-danger alert-dismissible fade show mt-2' role='alert'>
-                         your <strong> New Password and Confirm Password</strong> are not maching!
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                     </div>";
+                                echo "      <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                 your <strong> New Password and Confirm Password</strong> are not maching!
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
                             }
+
                         }
                         if (isset($_GET['success'])) {
                             if ($_GET['success'] == 1) {
                                 echo "
                  <div class='alert alert-success alert-dismissible fade show mt-2' role='alert'>
-                        Your application <strong> successfully  </strong> posted!
+                        Your prfile <strong> successfully  </strong> changed!
                         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                      </div>";
                             }
-                        }
-
-                        try {
-                            $conpost = $dbcon->getConnection();
-                            if (isset($_POST['searchjobCategory']) && !empty($_POST['searchjobCategory'])) {
-                                ;
-
-                                $querypost = " SELECT job.*, company.companyID, company.companyname, company.email, company.address, company.description, company.profilePic, company.coverPic, company.employee FROM job JOIN company ON job.companyID = company.companyID WHERE NOT EXISTS (SELECT 1 FROM application WHERE application.jobID = job.jobID AND application.userID = ?)AND job.jobcateogory = ? ORDER BY job.date DESC";
-                                $pstmtpost = $conpost->prepare($querypost);
-                                $pstmtpost->bindValue(1, $id);
-                                $pstmtpost->bindValue(2, $searchjobCategory);
-                            } else {
-                                $querypost = "SELECT job.*,company.companyID,company.companyname,company.email,company.address,company.description,company.profilePic,company.coverPic,company.employee FROM job JOIN company ON job.companyID = company.companyID WHERE NOT EXISTS (SELECT 1 FROM application WHERE application.jobID = job.jobID AND application.userID = ?)ORDER BY job.date DESC";
-                                $pstmtpost = $conpost->prepare($querypost);
-                                $pstmtpost->bindValue(1, $id);
+                            if ($_GET['success'] == 2) {
+                                echo "
+                 <div class='alert alert-success alert-dismissible fade show mt-2' role='alert'>
+                        Your prfile <strong> successfully  </strong> updated!
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                     </div>";
                             }
+                            if ($_GET['success'] == 3) {
+                                echo "
+                                         <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                                Password <strong> successfully  </strong> updated!
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
+                            }
+                        } ?>
+                        <!-- content -->
+                        <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                            <strong>Warning,</strong> your profile will not be updated until you
+                            <strong>save</strong> it, you
+                            will get a success
+                            message after updating,
+                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>
+                        <!-- Settings -->
+                        <div class="p-3">
+                            <h2 class="ms-2 mx-4">
+                                <span data-bs-toggle="tooltip" data-bs-title="account settings"><i
+                                        class="fa-solid fa-gear me-2"></i>Settings</span>
+                            </h2>
+                        </div>
 
-                            $pstmtpost->execute();
+                        <!-- profilModal -->
+                        <form action="../server/userphoto.php" method="post" enctype="multipart/form-data">
+                            <div class="modal fade shadow my-5" id="profilModal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">profile picture</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input class="form-control" type="hidden" name="userID"
+                                                value="<?php echo $userID; ?>">
 
-                            $posts = $pstmtpost->fetchAll(PDO::FETCH_OBJ);
-
-                            foreach ($posts as $post) {
-
-                                $jobID = $post->jobID;
-                                $jobTitle = $post->jobTitle;
-                                $jobcateogory = $post->jobcateogory;
-                                $companyID = $post->companyID;
-                                $date = $post->date;
-                                $content = $post->content;
-                                $postfilepath = $post->filePath;
-                                $companyname = $post->companyname;
-                                $comemail = $post->email;
-                                $address = $post->address;
-                                $description = $post->description;
-                                $companyprofilePic = $post->profilePic;
-                                $companycoverPic = $post->coverPic;
-                                $companydescription = $post->description;
-                                $employee = $post->employee;
-                                ?>
-                                <!--post 1-->
-                                <div class="bg-white shadow rounded mt-3 p-3" sy>
-                                    <!--company-->
-                                    <!-- autor -->
-                                    <div class="d-flex justify-content-between p-2">
-                                        <!-- avatar -->
-                                        <div class="d-flex" type="button">
-                                            <div class="" data-bs-toggle="modal" data-bs-target="#companymodal<?php echo $jobID;
-                                            ?>">
-                                                <img src="<?php profilepath($companyprofilePic);
-                                                ?>" alt="avatar" srcset="" class="rounded-circle me-3"
-                                                    style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip"
-                                                    data-bs-title=" click here to see the <?php echo $companyname; ?>'s prifile" />
-                                            </div>
-                                            <div>
-                                                <p class="m-0 fw-bold">
-                                                    <?php echo $companyname; ?>
-                                                </p>
-                                                <span class="text-muted fs-7">
-                                                    <?php echo formatDateTime($date); ?>
+                                            <label for="formFile" class="form-label fs-5">Change your
+                                                profile Picture here </label>
+                                            <div class="d-flex justify-content-cente ms-5">
+                                                <span class="ms-4">
+                                                    <img id="previewImage" src="" alt="Selected Image"
+                                                        style="display: none; object-fit: cover;width: 200px; height: 200px"
+                                                        class="img-fluid rounded-circle my-2 ms-5">
                                                 </span>
                                             </div>
+
+
+                                            <input class="form-control" type="hidden" name="lodPic"
+                                                value="<?php echo $profilePic; ?>">
+
                                         </div>
-                                        <!-- jobcatagary -->
-                                        <div class="d-flex">
-                                            <p class="fw-bold me-2">
-                                                <?php echo $jobTitle; ?>
-                                            </p>|
-                                            <span class="text-muted fs-7 mt-1 ms-2 m-0">
-                                                <?php echo $jobcateogory; ?>
-                                            </span>
-                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="input-group">
+                                                <input type="file" class="form-control" id="image"
+                                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload"
+                                                    accept="image/*" name="userprofile">
 
-                                    </div>
-
-                                    <div class=" p-2 ">
-                                        <!-- job title  -->
-                                        <p class="fw-bold me-2 mb-0">
-                                            <?php echo $jobTitle; ?>
-                                        </p>
-                                        <!--content-->
-                                        <div class="pt-2">
-                                            <p>
-                                                <?php echo $content; ?>
-                                            </p>
-                                        </div>
-                                        <!--post image-->
-                                        <img src="<?php echo $postfilepath; ?>" alt="post" class="img-fluid"
-                                            style="object-fit: cover">
-                                        <!--apply btn-->
-                                        <div class="d-flex justify-content-center pt-3">
-                                            <button type="button" class="btn btn-primary w-100 my-3" data-bs-toggle="modal"
-                                                data-bs-target="#applymodal<?php echo $jobID;
-                                                ?>"> Apply now
-                                            </button>
-                                        </div>
-
-                                        <!-- company -->
-
-                                        <div class="modal fade shadow my-5" id="companymodal<?php echo $jobID;
-                                        ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-                                            data-bs-backdrop="true">
-                                            <div class="modal-dialog modal-lg modal-dialog-centered">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <div class="d-flex justify-content-between p-2">
-                                                            <!-- avatar -->
-                                                            <div class="d-flex">
-                                                                <img src="<?php profilepath($companyprofilePic);
-                                                                ?>" alt="avatar" srcset="" class="rounded-circle me-3"
-                                                                    style="width: 38px; height: 38px; object-fit: cover" />
-                                                                <div>
-                                                                    <p class="m-0 fw-bold">
-                                                                        <?php echo $companyname; ?>
-                                                                    </p>
-                                                                    <span class="text-muted fs-7">
-                                                                        <?php echo formatDateTime($date); ?>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <!-- jobcatagary -->
-                                                            <div class="d-flex">
-                                                                <p class="fw-bold me-2">
-                                                                    <?php echo $jobTitle; ?>
-                                                                </p>|
-                                                                <span class="text-muted fs-7 mt-1 ms-2 m-0">
-                                                                    <?php echo $jobcateogory; ?>
-                                                                </span>
-                                                            </div>
-
-                                                        </div>
-                                                        <button type="button" class="btn-close me-3" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="mx-1 bg-white rounded ">
-                                                            <div class="bg-white rounded p-3">
-                                                                <img src="<?php
-                                                                if ($companycoverPic === null) {
-                                                                    echo '../../img/coverDefault.jpg';
-                                                                } else {
-                                                                    echo $companycoverPic;
-                                                                }
-                                                                ?>" id="previewImage3" alt="story post" srcset=""
-                                                                    class="card-img-top"
-                                                                    style="min-height: 125px;object-fit: cover;max-height: 200px;"
-                                                                    class="img-fluid" />
-
-                                                                <div class="d-flex align-items-center justify-content-left position-relative "
-                                                                    style="min-height: 65px;">
-                                                                    <div class="position-absolute top-0 translate-middle"
-                                                                        style="padding-left: 20rem">
-                                                                        <img id="previewImage2"
-                                                                            src="<?php profilepath($companyprofilePic); ?>"
-                                                                            alt="avatar" width="200px" height="200px"
-                                                                            class="rounded-circle me-2 bg-white rounded-circle p-1"
-                                                                            style="object-fit: cover;">
-                                                                    </div>
-                                                                    <div class="d-flex justify-content-between w-100"
-                                                                        style="margin-left: 16rem">
-                                                                        <div class="mx-3">
-                                                                            <h1>
-                                                                                <?php echo $companyname; ?>
-                                                                            </h1>
-                                                                            <div class="d-flex justify-content-between">
-                                                                                <p class="text-muted"><i
-                                                                                        class="fa-solid fa-location-dot me-2"></i>
-                                                                                    <?php echo $address; ?>
-                                                                                </p>
-                                                                                <p class="text-primary p-0"
-                                                                                    style="margin-left: 3rem"><i
-                                                                                        class="fa-solid fa-envelope me-1"></i>
-                                                                                    <?php echo $comemail; ?>
-                                                                                </p>
-
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <!--about-->
-                                                        <div class="bg-white rounded p-3 mt-3">
-                                                            <h2 class="mx-4">About</h2>
-                                                            <p class="mx-4 text-muted">
-                                                                <?php echo $companydescription; ?>
-                                                            </p>
-
-                                                        </div>
-
-                                                        <!--emloyee-->
-                                                        <div class="bg-white rounded p-3 mt-3">
-                                                            <h2 class="mx-4">
-                                                                <span data-bs-toggle="tooltip"
-                                                                    data-bs-title="you can updated em counys in settings->Edit profile details"
-                                                                    data-bs-placement="right" data-bs-title="Tooltip on right">
-                                                                    <?php echo $employee; ?> employees
-                                                                </span>
-                                                            </h2>
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
+                                                <button class="btn btn-outline-primary w-25" type="submit"
+                                                    id="inputGroupFileAddon04">Save</button>
                                             </div>
                                         </div>
-
-                                        <!-- applyModal -->
-                                        <form action="../server/ApplicationSending.php" method="post" enctype="multipart/form-data">
-                                            <div class="modal fade shadow my-5" id="applymodal<?php echo $jobID;
-                                            ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-                                                data-bs-backdrop="true">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">apply to this Job
-                                                            </h1>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                                aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-
-                                                            <!--company-->
-                                                            <!-- autor -->
-                                                            <div class="d-flex justify-content-between p-2">
-                                                                <!-- avatar -->
-                                                                <div class="d-flex">
-                                                                    <img src="<?php profilepath($companyprofilePic);
-                                                                    ?>" alt="avatar" srcset=""
-                                                                        class="rounded-circle me-3"
-                                                                        style="width: 38px; height: 38px; object-fit: cover" />
-                                                                    <div>
-                                                                        <p class="m-0 fw-bold">
-                                                                            <?php echo $companyname; ?>
-                                                                        </p>
-                                                                        <span class="text-muted fs-7">
-                                                                            <?php echo formatDateTime($date); ?>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- jobcatagary -->
-                                                                <div class="d-flex">
-                                                                    <p class="fw-bold me-2">
-                                                                        <?php echo $jobTitle; ?>
-                                                                    </p>|
-                                                                    <span class="text-muted fs-7 mt-1 ms-2 m-0">
-                                                                        <?php echo $jobcateogory; ?>
-                                                                    </span>
-                                                                </div>
-
-                                                            </div>
-
-                                                            <input class="form-control" type="hidden" name="userID" value="<?php echo $id;
-                                                            ?>">
-                                                            <input class="form-control" type="hidden" name="jobID" value="<?php echo $jobID;
-                                                            ?>">
-                                                            <input class="form-control" type="hidden" name="companyID" value="<?php echo $companyID;
-                                                            ?>">
-
-
-                                                            <div class="mb-1">
-                                                                <label for="formFile" class="form-label fs-5 my-2">Upload your CV
-                                                                    here
-                                                                </label>
-                                                                <input class="form-control" type="file" id="cv" name="cv">
-                                                            </div>
-                                                            <!-- this show the PDF preview -->
-                                                            <div id="pdfPreviewContainer" class="scrollable-pdf-preview"></div>
-
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="submit" class="btn btn-primary w-100" value="Upload"
-                                                                name="submit">Apply</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <script>
-                                                // Function to preview the selected PDF and pdf file validation
-                                                function previewPDF ()
-                                                {
-                                                    const fileInput = document.getElementById( 'cv' );
-                                                    const pdfPreviewContainer = document.getElementById( 'pdfPreviewContainer' );
-                                                    const allowedTypes = [ 'application/pdf' ];
-
-                                                    if ( fileInput.files.length > 0 )
-                                                    {
-                                                        const file = fileInput.files[ 0 ];
-
-                                                        // Check if the selected file type is allowed (PDF)
-                                                        if ( allowedTypes.includes( file.type ) )
-                                                        {
-                                                            const reader = new FileReader();
-
-                                                            // Load the selected file into the FileReader
-                                                            reader.readAsDataURL( file );
-
-                                                            // When the file is loaded, display the PDF in the container
-                                                            reader.onload = function ( event )
-                                                            {
-                                                                const pdfData = event.target.result;
-                                                                const pdfObject = '<object data="' + pdfData + '" type="application/pdf" width="100%" height="600px"></object>';
-                                                                pdfPreviewContainer.innerHTML = pdfObject;
-                                                            };
-                                                        } else
-                                                        {
-                                                            // Display an alert for invalid file type
-                                                            window.location = `./feed.php?error=4`;
-
-                                                            // Clear the file input
-                                                            fileInput.value = '';
-                                                            // Clear the preview container
-                                                            pdfPreviewContainer.innerHTML = '';
-                                                        }
-                                                    } else
-                                                    {
-                                                        // Clear the preview container if no file is selected
-                                                        pdfPreviewContainer.innerHTML = '';
-                                                    }
-                                                }
-
-                                                // Attach an event listener to the file input to trigger the preview
-                                                document.getElementById( 'cv' ).addEventListener( 'change', previewPDF );
-                                            </script>
-
-
-                                        </form>
-
-
                                     </div>
                                 </div>
-                                <?php
+                            </div>
+                        </form>
+
+
+                        <div class="bg-white rounded p-3">
+
+                            <h4 class="pt-3">
+                                <span data-bs-toggle="tooltip" data-bs-title="Edit Address,About,Number of employees"
+                                    data-bs-placement="right" data-bs-title="Tooltip on right"><i
+                                        class="fa-solid fa-pen-to-square me-2"></i>Edit profile details</span>
+
+                            </h4>
+
+                            <label for="formFile" class="form-label fs-5">Change your
+                                Profile details here </label>
+
+                            <form action="../server/editeUserProfile.php" method="post">
+                                <div class="modal-body">
+                                    <input class="form-control" type="hidden" name="userID" value="<?php echo $userID; ?>">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text" id="basic-addon1">First Name</span>
+                                                <input type="text" name="fistname" class="form-control"
+                                                    placeholder="Address" id="" value="<?php echo $firstname; ?>"
+                                                    disabled />
+                                            </div>
+                                            <div class="col">
+                                                <div class="input-group p-2">
+                                                    <span class="input-group-text" id="basic-addon1">Last Name</span>
+                                                    <input type="text" name="lastname" class="form-control"
+                                                        placeholder="Address" id="" value="<?php echo $lastname; ?>"
+                                                        disabled />
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text" id="basic-addon1">Phone Number</span>
+                                                <input type="text" name="phoneNo" class="form-control"
+                                                    placeholder="Phone Number" id="" value="<?php echo $phoneNo; ?>" />
+                                            </div>
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text" id="basic-addon1">Address</span>
+                                                <input type="text" name="address" class="form-control" placeholder="Address"
+                                                    id="" value="<?php echo $address; ?>" />
+                                            </div>
+
+
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text">Education</span>
+                                                <textarea class="form-control" id="education" name="education"
+                                                    placeholder="Bsc in Computer Science"
+                                                    maxlength="200"><?php echo $education; ?></textarea>
+                                            </div>
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text">Bio</span>
+                                                <textarea class="form-control" id="description" name="description"
+                                                    placeholder="eg: tech enthusiasit" oninput="countWords()"
+                                                    maxlength="200"><?php echo $description; ?></textarea>
+                                            </div>
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text">About</span>
+                                                <textarea class="form-control" id="description" name="about"
+                                                    placeholder="About me" oninput="countWords()"
+                                                    maxlength="200"><?php echo $about; ?></textarea>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-outline-primary my-3 w-75"
+                                                data-bs-dismiss="modal">
+                                                Save
+                                            </button>
+                                        </div>
+                            </form>
+                        </div>
+                        <div class="accordion mt-3" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <span data-bs-toggle="tooltip" data-bs-title="set new password"
+                                            data-bs-placement="right" data-bs-title="Tooltip on right">
+                                            <i class="fa-solid fa-shield-halved me-2">
+                                            </i>Change password</span>
+
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <label for="formFile" class="form-label fs-5 m-2">Change your
+                                        Password here </label>
+                                    <form action="../server/changeUserPassword.php" method="post"
+                                        onsubmit="return validateForm()">
+                                        <div class="accordion-body text-center">
+                                            <div class="p-2 text-center">
+                                                <input class="form-control" type="hidden" id="userID" name="userID"
+                                                    value="<?php echo $userID; ?>">
+                                                <input class="form-control" type="hidden" name="dbPassword"
+                                                    value="<?php echo $password; ?>">
+                                                <div class="form-floating my-2 w-100">
+                                                    <input type="password" class="form-control" id="currentPassword"
+                                                        name="currentPassword" placeholder="Password">
+                                                    <label for="currentPassword">Current Password</label>
+                                                </div>
+                                                <div class="form-floating my-2 w-100">
+                                                    <input type="password" class="form-control" id="newPassword"
+                                                        name="newPassword" placeholder="Password">
+                                                    <label for="newPassword">New Password</label>
+                                                </div>
+                                                <div class="form-floating my-2 w-100">
+                                                    <input type="password" class="form-control" id="confirmPassword"
+                                                        name="confirmPassword" placeholder="Password">
+                                                    <label for="confirmPassword">Confirm Password</label>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-outline-primary w-25" type="submit"
+                                                id="inputGroupFileAddon05">Change</button>
+                                        </div>
+                                    </form>
+
+                                    <script>
+                                        function validateForm ()
+                                        {
+                                            var currentPassword = document.getElementById( "currentPassword" ).value;
+                                            var newPassword = document.getElementById( "newPassword" ).value;
+                                            var confirmPassword = document.getElementById( "confirmPassword" ).value;
+
+                                            // Check if any field is empty
+                                            if ( currentPassword === "" || newPassword === "" || confirmPassword === "" )
+                                            {
+                                                window.location = `./userProfile.php?error=6`;
+                                                return false;
+                                            }
+
+                                            // Check if the new password and confirm password match
+                                            if ( newPassword !== confirmPassword )
+                                            {
+                                                window.location = `./userProfile.php?error=8`;
+                                                return false;
+                                            }
+
+                                            // You can also add additional validation, such as password strength requirements
+
+                                            return true;
+                                        }
+                                    </script>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- JavaScript for image preview -->
+                        <script>
+                            // Calling the preview() function with correct input and previewImage IDs
+                            preview( "image", "previewImage" );
+
+                            function preview ( input, previewImage )
+                            {
+                                document.getElementById( input ).addEventListener( "change", function ()
+                                {
+                                    var fileInput = this;
+                                    if ( fileInput.files && fileInput.files[ 0 ] )
+                                    {
+                                        var reader = new FileReader();
+                                        reader.onload = function ( e )
+                                        {
+                                            var previewImageElement = document.getElementById( previewImage );
+                                            previewImageElement.src = e.target.result;
+                                            previewImageElement.style.display = "block";
+                                        };
+
+                                        reader.readAsDataURL( fileInput.files[ 0 ] );
+                                    }
+                                } );
                             }
-                            ;
-                            if (empty($posts)) {
-                                // if no post availabe 
-                                echo "
-                                <div class='alert alert-warning py-2' role='alert'>
-                                No vacancies available yet.
-                                </div> ";
-                            }
-                        } catch (PDOException $exc) {
-                            echo $exc->getMessage();
-                        }
-                        ?>
+                        </script>
+
                     </div>
                 </div>
                 <!--right side-->

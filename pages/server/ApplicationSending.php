@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                         if ($pstmt->execute()) {
                             // Redirect to the company profile page with success message
-                            header("Location: ../jobseeker/feed.php?id=$companyID&success=1");
+                            header("Location: ../jobseeker/feed.php?success=1");
                             exit();
                         } else {
                             echo "Error: Unable to insert image path into the database.";
@@ -59,27 +59,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     }
                 } else {
                     // Redirect to the company profile page with error message for file upload failure
-                    header("Location: ../jobseeker/feed.php?id=$companyID&error=5");
+                    header("Location: ../jobseeker/feed.php?error=5");
                     exit();
                 }
             } else {
                 // Redirect to the company profile page with error message for invalid file type
-                header("Location: ../jobseeker/feed.php?id=$companyID&error=4");
+                header("Location: ../jobseeker/feed.php?error=4");
                 exit();
+
             }
+
         } else {
             // Redirect to the company profile page with error message for no file selected
-            header("Location: ../jobseeker/feed.php?id=$companyID&error=3");
+            header("Location: ../jobseeker/feed.php?error=3");
             exit();
         }
     } else {
         // Redirect to the company profile page with error message for missing form data
-        header("Location: ../jobseeker/feed.php?id=$companyID&error=2");
+        header("Location: ../jobseeker/feed.php?error=2");
         exit();
     }
 } else {
     // Redirect to the company profile page with error message for invalid request method
-    header("Location: ../jobseeker/feed.php?id=$companyID&error=1");
+    header("Location: ../jobseeker/feed.php?error=1");
     exit();
 }
 ?>

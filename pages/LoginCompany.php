@@ -47,7 +47,7 @@
         </div>
         </div>
         </div>
-    </nav <!--main content-->
+    </nav> <!--main content-->
     <!-- login  -->
     <div class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5" style="padding-top: 10rem;">
         <!-- heading -->
@@ -72,7 +72,7 @@
                 if ($_GET['error'] == 2) {
                     echo "
           <div class='alert alert-danger py-2' role='alert'>
-          Your Email or Password Incorrect!
+          Your compan yname or Password Incorrect!
           </div> ";
                 }
                 if ($_GET['error'] == 3) {
@@ -93,6 +93,12 @@
           Please Fill All Fields to login!
           </div> ";
                 }
+                if ($_GET['error'] == 6) {
+                    echo "
+          <div class='alert alert-danger py-2' role='alert'>
+         Error in registration!
+          </div> ";
+                }
             }
 
             if (isset($_GET['success'])) {
@@ -102,6 +108,12 @@
           You have successfully registered! Please Log In
           </div> ";
                 }
+            }
+            if (isset($_GET['message'])) {
+                echo "
+                  <div class='alert alert-danger py-2' role='alert'>
+                  " . $_GET['message'] . "
+                  </div> ";
             }
             ?>
 
