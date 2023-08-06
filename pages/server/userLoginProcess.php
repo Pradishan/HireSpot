@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dbpassword = $row['password'];
 
         if (password_verify($password, $dbpassword)) {
-            // Password matches, store company details in the session and redirect to company profile
+            // Password matches, store jobseeker details in the session and redirect to company profile
             $_SESSION["userID"] = $dbuserID;
             $_SESSION["username"] = $dbusername;
             $_SESSION["email"] = $dbemail;
