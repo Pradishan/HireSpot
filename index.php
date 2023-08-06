@@ -115,7 +115,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <div class="carousel-caption text-left" tyle="color: blue;">
                         <h1><img class="img-fluid mt-3" src="img/logo.png" height="400px" alt="HireSpot" /></h1>
                         <h1 class="text-dark">Empowering Your Career Journey</h1>
-                        <a class="btn btn-outline-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#" role="button">Sign up today</a>
+                        <a class="btn btn-outline-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" href="./pages/Login.php" role="button">Sign up today</a>
                         <!-- create from modal -->
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
