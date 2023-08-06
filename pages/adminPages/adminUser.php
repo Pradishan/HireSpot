@@ -7,6 +7,53 @@ use server\DbConnector;
 
 $dbcon = new DbConnector();
 ?>
+<?php
+function calculateAge($dateOfBirth)
+{
+  $dob1 = new DateTime($dateOfBirth);
+  $today = new DateTime('today');
+  $age = $dob1->diff($today)->y;
+  return $age;
+}
+function profilepath($path)
+{
+  if ($path === null) {
+    echo '../../img/userDefault.jpg';
+  } else {
+    echo $path;
+  }
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST["id"])) {
+    $id = ($_POST["id"]);
+
+
+    try {
+      // $dbcon = new DbConnector();
+      $con = $dbcon->getConnection();
+
+      $query = "DELETE FROM jobseeker WHERE userID = :user_id";
+      $pstmt = $con->prepare($query);
+      $pstmt->bindParam(':user_id', $id, PDO::PARAM_INT);
+      $a = $pstmt->execute();
+
+      if ($a > 0) {
+
+        header("Location: ./adminUser.php?success=1");
+        exit;
+      } else {
+        header("Location: ./adminUser.php?error=1");
+        exit;
+      }
+    } catch (PDOException $exc) {
+      echo $exc->getMessage();
+    }
+  }
+}
+
+?>
 <html>
 
 <head>
@@ -72,9 +119,9 @@ $dbcon = new DbConnector();
         </div>
         <!--profile-->
         <div class="dropdown ">
-          <dvi class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <a class="navbar-brand  dropdown-toggle" href="#" type="button"> <img src="https://source.unsplash.com/random/5" alt="avatar" class="rounded-circle me-2 " style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip" data-bs-title=" See your profile" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" /></a>
-          </dvi>
+          </div>
           <ul class="dropdown-menu border-0 shadow">
             <!--avatar-->
             <li><a class="dropdown-item" href="#">
@@ -189,6 +236,26 @@ $dbcon = new DbConnector();
       </nav>
 
       <h1>Users</h1>
+      <?php
+      if (isset($_GET['error'])) {
+        if ($_GET['error'] == 1) {
+          echo "
+                                <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                    <strong> Error  </strong>in deletion!
+                                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                 </div>";
+        }
+      }
+      if (isset($_GET['success'])) {
+        if ($_GET['success'] == 1) {
+          echo "
+                <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                    User <strong>deleted </strong> successfully
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>";
+        }
+      }
+      ?>
       <table class="table table-hover bg-white rounded">
         <thead>
           <tr>
@@ -196,7 +263,7 @@ $dbcon = new DbConnector();
             <th scope="col">Name</th>
             <th scope="col">Username</th>
             <th scope="col">Email</th>
-            <!-- <th scope="col">D.O.B</th> -->
+            <th scope="col">D.O.B</th>
             <th scope="col">Phone number</th>
             <th scope="col">Action</th>
           </tr>
@@ -219,23 +286,259 @@ $dbcon = new DbConnector();
               $rs = $pstmt->fetchAll(PDO::FETCH_OBJ);
 
               foreach ($rs as $jobseeker) {
-                // Display user details as before
+                $userID = $jobseeker->userID;
+                $username = $jobseeker->username;
+                $firstname = $jobseeker->firstname;
+                $lastname = $jobseeker->lastname;
+                $email = $jobseeker->email;
+                $phone = $jobseeker->phoneNo;
+                $dob = $jobseeker->dateofbirth;
+                $address = $jobseeker->address;
+                $education = $jobseeker->education;
+                $description = $jobseeker->description;
+                $about = $jobseeker->about;
+                $propic = $jobseeker->profilePic;
+                $gender = $jobseeker->gender;
             ?>
 
-          
-            <th scope="row"><?php echo "U" . $jobseeker->useID; ?></th>
-            <td><?php echo $jobseeker->firstname; ?></td>
-            <td><?php echo $jobseeker->username; ?></td>
-            <td><?php echo $jobseeker->email; ?></td>
-            <td><?php echo $jobseeker->phoneNo; ?></td>
-            <td class="d-flex align-items-center p-1">
-              <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1">View</button> </a>
-              <a href=""><button class="btn btn-danger mx-1 p-1">Delete</button> </a>
 
 
-            </td>
+
+                <th scope="row"><?php echo "U" . $userID; ?></th>
+                <td><?php echo $firstname; ?></td>
+                <td><?php echo $username; ?></td>
+                <td><?php echo $email; ?></td>
+                <td><?php echo $dob; ?></td>
+                <td><?php echo $phone; ?></td>
+                <td class="d-flex align-items-center p-1">
+                  <!-- <a href="./../userProfile.php"> <button class="btn btn-primary mx-1 p-1">View</button> </a> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewmodal1<?php echo $userID; ?>">View </button>
+                  <!-- <a href=""><button class="btn btn-danger mx-1 p-1">Delete</button> </a> -->
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodel<?php echo $userID; ?>">Delete </button>
+
+
+                </td>
+
+
 
           </tr>
+
+
+          <div class="modal fade shadow my-5" id="viewmodal1<?php echo $userID; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel"> <?php echo $firstname . " " . $lastname . "'s Details" ?>
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="row">
+                    <div class="col-4">
+
+                      <div class=" d-flex flex-column align-items-center justify-content-cente ">
+                        <!--avatar-->
+                        <div class="p-3 ">
+                          <img src="<?php profilepath($propic); ?>" alt="avatar" class="rounded-circle me-2 " style="width: 150px; height: 150px; object-fit: cover" />
+                        </div>
+                        <!--profile content-->
+
+                        <!--name-->
+                        <h3 class="text-center m-0">
+                          <?php echo $username; ?>
+                        </h3>
+                        <!--discription-->
+                        <p class="text-muted text-center m-0">
+                          <?php echo $description; ?>
+                        </p>
+                        <!--conatact details-->
+                        <div class="d-flex justify-content-center align-items-center">
+                          <i class="fa fa-envelope fs-7 me-1 mb-3 "></i>
+                          <p class="">
+                            <?php echo $email; ?>
+                          </p>
+                        </div>
+                        
+                      </div>
+                      <div class="modal-footer">
+                                                <button class="btn btn-primary w-100" type="button" data-bs-dismiss="modal" aria-label="Close">Ok</button>
+                                            </div>
+
+                    </div>
+                    <div class="col-8">
+
+                      <!--Education-->
+                      <div class="d-flex flex-column ">
+                        <h5>Education</h5>
+                        <p class="fw-bold m-0">
+                          <?php echo $education; ?>
+                        </p>
+                      </div>
+
+                      <hr>
+                      <!--About-->
+                      <div class="d-flex flex-column ">
+                        <h5>About</h5>
+                        <p class="m-0">
+                          <?php echo $about; ?>
+                        </p>
+                      </div>
+                      <hr>
+
+                      <div class="d-flex flex-column ">
+                        <h5>Other</h5>
+                        <div class="px-2">
+
+                          <!--Age-->
+                          <div class="d-flex justify-content-between">
+                            <p class="fw-bold m-0">Age</p>
+                            <p class="ms-3 m-0">
+                              <?php echo calculateAge($dob); ?>
+                            </p>
+                          </div>
+
+                          <!--Gender-->
+                          <div class="d-flex justify-content-between">
+                            <p class="fw-bold m-0">Gender</p>
+                            <p class="ms-3 m-0">
+                              <?php echo $gender; ?>
+                            </p>
+                          </div>
+                          <!--Phone-->
+                          <div class="d-flex justify-content-between">
+                            <p class="fw-bold m-0">Phone</p>
+                            <p class="ms-3 m-0">
+                              <?php echo $phone; ?>
+                            </p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+            <div class="modal fade shadow my-5" id="deletemodel<?php echo $userID; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> <?php echo "Confirm to Delete " . $firstname . " " . $lastname . "'s Details" ?>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <div class="row">
+                      <div class="col-4">
+
+                        <div class=" d-flex flex-column align-items-center justify-content-cente ">
+                          <!--avatar-->
+                          <div class="p-3 ">
+                            <img src="<?php profilepath($propic); ?>" alt="avatar" class="rounded-circle me-2 " style="width: 150px; height: 150px; object-fit: cover" />
+                          </div>
+                          <!--profile content-->
+
+                          <!--name-->
+                          <h3 class="text-center m-0">
+                            <?php echo $username; ?>
+                          </h3>
+                          <!--discription-->
+                          <p class="text-muted text-center m-0">
+                            <?php echo $description; ?>
+                          </p>
+                          <!--conatact details-->
+                          <div class="d-flex justify-content-center align-items-center">
+                            <i class="fa fa-envelope fs-7 me-1 mb-3 "></i>
+                            <p class="">
+                              <?php echo $email; ?>
+                            </p>
+                          </div>
+                        </div>
+
+
+                      </div>
+                      <div class="col-8">
+
+                        <!--Education-->
+                        <div class="d-flex flex-column ">
+                          <h5>Education</h5>
+                          <p class="fw-bold m-0">
+                            <?php echo $education; ?>
+                          </p>
+                        </div>
+
+                        <hr>
+                        <!--About-->
+                        <div class="d-flex flex-column ">
+                          <h5>About</h5>
+                          <p class="m-0">
+                            <?php echo $about; ?>
+                          </p>
+                        </div>
+                        <hr>
+
+                        <div class="d-flex flex-column ">
+                          <h5>Other</h5>
+                          <div class="px-2">
+
+                            <!--Age-->
+                            <div class="d-flex justify-content-between">
+                              <p class="fw-bold m-0">Age</p>
+                              <p class="ms-3 m-0">
+                                <?php echo calculateAge($dob); ?>
+                              </p>
+                            </div>
+
+                            <!--Gender-->
+                            <div class="d-flex justify-content-between">
+                              <p class="fw-bold m-0">Gender</p>
+                              <p class="ms-3 m-0">
+                                <?php echo $gender; ?>
+                              </p>
+                            </div>
+                            <!--Phone-->
+                            <div class="d-flex justify-content-between">
+                              <p class="fw-bold m-0">Phone</p>
+                              <p class="ms-3 m-0">
+                                <?php echo $phone; ?>
+                              </p>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer d-flex justify-content-evenly">
+                    <input type="hidden" name="id" value="<?php echo $userID; ?> ">
+                    <button type="submit" class="btn btn-danger w-100" value="Upload" name="submit">Confirm</button>
+
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+
+
+
+
       <?php
               }
               // Calculate the total number of rows in the 'users' table (if not already calculated)
@@ -253,41 +556,41 @@ $dbcon = new DbConnector();
               echo $exc->getMessage();
             }
       ?>
-    
+
         </tbody>
       </table>
 
       <div class="row">
-                            <div class="col-md-6 align-self-center">
-                                <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">
-                                    Showing <?php echo min($total_rows, $start + 1) . ' to ' . min($total_rows, $start + $rows_per_page); ?> of <?php echo $total_rows; ?>
-                                </p>
-                            </div>
+        <div class="col-md-6 align-self-center">
+          <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">
+            Showing <?php echo min($total_rows, $start + 1) . ' to ' . min($total_rows, $start + $rows_per_page); ?> of <?php echo $total_rows; ?>
+          </p>
+        </div>
 
-                            <div class="col-md-6">
-                                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                    <ul class="pagination">
-                                        <?php
-                                        if ($start > 0) {
-                                            echo '<li class="page-item"><a class="page-link" href="?start=' . ($start - $rows_per_page) . '">Previous</a></li>';
-                                        } else {
-                                            echo '<li class="page-item disabled"><span class="page-link">Previous</span></li>';
-                                        }
+        <div class="col-md-6">
+          <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+            <ul class="pagination">
+              <?php
+              if ($start > 0) {
+                echo '<li class="page-item"><a class="page-link" href="?start=' . ($start - $rows_per_page) . '">Previous</a></li>';
+              } else {
+                echo '<li class="page-item disabled"><span class="page-link">Previous</span></li>';
+              }
 
-                                        for ($i = 1; $i <= $pages; $i++) {
-                                            echo '<li class="page-item' . (($start / $rows_per_page + 1) == $i ? ' active' : '') . '"><a class="page-link" href="?start=' . (($i - 1) * $rows_per_page) . '">' . $i . '</a></li>';
-                                        }
+              for ($i = 1; $i <= $pages; $i++) {
+                echo '<li class="page-item' . (($start / $rows_per_page + 1) == $i ? ' active' : '') . '"><a class="page-link" href="?start=' . (($i - 1) * $rows_per_page) . '">' . $i . '</a></li>';
+              }
 
-                                        if ($start < ($pages - 1) * $rows_per_page) {
-                                            echo '<li class="page-item"><a class="page-link" href="?start=' . ($start + $rows_per_page) . '">Next</a></li>';
-                                        } else {
-                                            echo '<li class="page-item disabled"><span class="page-link">Next</span></li>';
-                                        }
-                                        ?>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
+              if ($start < ($pages - 1) * $rows_per_page) {
+                echo '<li class="page-item"><a class="page-link" href="?start=' . ($start + $rows_per_page) . '">Next</a></li>';
+              } else {
+                echo '<li class="page-item disabled"><span class="page-link">Next</span></li>';
+              }
+              ?>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
 
 
