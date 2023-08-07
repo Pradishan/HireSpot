@@ -358,7 +358,8 @@ try {
                                         <button type="button"
                                             class="btn btn-primary position-absolute translate-middle badge rounded-circle py-2"
                                             data-bs-toggle="modal" data-bs-target="#profilModal"
-                                            style=" bottom: 10px;left: 170px;"> <i class="fa-regular fa-image"></i>
+                                            style=" bottom: 10px;left: 170px;"><i class="fa-solid fa-pen-to-square"></i>
+
                                         </button>
                                     </a>
                                 </dvi>
@@ -433,7 +434,8 @@ try {
 
                                 <div class="d-flex justify-content-between mb-3">
                                     <h4>Skills</h4>
-                                    <button class="btn btn-primary p-1 " data-bs-toggle="modal" data-bs-target="#skillModal">add
+                                    <button class="btn btn-primary p-1 " data-bs-toggle="modal"
+                                        data-bs-target="#skillModal">add
                                         skill <i class="fa-sharp fa-solid fa-plus text text-muted ms-1"></i></button>
                                 </div>
                                 <?php

@@ -334,6 +334,13 @@ try {
                                 <img id="previewImage2" src="<?php echo $profil; ?>" alt="avatar" width="200px"
                                     height="200px" class="rounded-circle me-2 bg-white rounded-circle p-1"
                                     style="object-fit: cover;">
+                                <button type="button"
+                                    class="btn btn-primary position-absolute translate-middle badge rounded-circle py-2"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne" style="bottom: 10px;left: 500px;"><i
+                                        class="fa-solid fa-pen-to-square"></i>
+
+                                </button>
                             </div>
                             <div class="d-flex justify-content-between w-100" style="margin-left: 16rem">
                                 <div class="mx-3">
