@@ -347,14 +347,15 @@ try {
                         <div class="bg-white rounded mx-4 px-4">
                             <div class=" d-flex flex-column align-items-center justify-content-cente ">
                                 <!--avatar-->
-                                <dvi class="mt-4 p-3 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <a class="navbar-brand " href="" type="button"> <img
+                                <dvi class="mt-4 p-3 " type="button">
+                                    <a href="./userProfile.php" class="" type="button"> <img
                                             src="<?php profilepath($profilePic); ?>" alt="avatar"
                                             class="rounded-circle me-2 "
                                             style="width: 200px; height: 200px; object-fit: cover" data-bs-toggle="tooltip"
                                             data-bs-title=" See your profile" data-bs-placement="bottom"
                                             data-bs-title="Tooltip on bottom" /></a>
                                 </dvi>
+
                                 <!--profile content-->
 
                                 <!--name-->
@@ -421,6 +422,71 @@ try {
                             </div>
 
                             <hr>
+                            <!--Skills-->
+                            <div class="d-flex flex-column ">
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h4>Skills</h4>
+                                </div>
+                                <?php
+                                $conskill = $dbcon->getConnection();
+
+                                $queryskill = "SELECT * FROM skill WHERE userID = ? ;";
+
+                                $pstmtskill = $conskill->prepare($queryskill);
+                                $pstmtskill->bindValue(1, $id);
+
+                                $pstmtskill->execute();
+
+                                $skills = $pstmtskill->fetchAll(PDO::FETCH_OBJ);
+
+                                foreach ($skills as $skill) {
+
+                                    $skillID = $skill->skillId;
+                                    $skillname = $skill->skillName;
+                                    $skillrange = $skill->skillLevel;
+                                    ?>
+
+                                    <div class="m-0">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="m-0">
+                                                <?php echo $skillname; ?>
+                                            </p>
+                                        </div>
+                                        <div class="progress" role="progressbar" aria-label="Example " aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                            <div class="progress-bar" style="width: <?php echo $skillrange . "%"; ?>"></div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ;
+                                ?>
+                                <!--footer-->
+                                <div class="d-flex flex-column align-items-center justify-content-cente mt-4">
+                                    <!--quick link-->
+                                    <p class="mb-0 fs-7 text-center">
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Privacy
+                                        </a> |
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a>
+                                        |
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7">
+                                            Advertising
+                                        </a>
+                                        |
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses
+                                        </a> |
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Cookies
+                                        </a>
+                                    </p>
+                                    <!--copyrights-->
+                                    <div class="d-flex">
+                                        <a class=" " href="../../index.php"><img src="../../img/logo.png" width="58px"
+                                                height="16px" alt="HireSpot" class="mb-2" /></a>
+                                        <p class="fs-7">&copy; 2023</p>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -544,21 +610,23 @@ try {
                                     <!-- autor -->
                                     <div class="d-flex justify-content-between p-2">
                                         <!-- avatar -->
-                                        <div class="d-flex" type="button">
-                                            <div class="" data-bs-toggle="modal" data-bs-target="#companymodal<?php echo $jobID;
-                                            ?>">
-                                                <img src="<?php profilepath($companyprofilePic);
-                                                ?>" alt="avatar" srcset="" class="rounded-circle me-3"
-                                                    style="width: 38px; height: 38px; object-fit: cover" data-bs-toggle="tooltip"
-                                                    data-bs-title=" click here to see the <?php echo $companyname; ?>'s prifile" />
-                                            </div>
-                                            <div>
-                                                <p class="m-0 fw-bold">
-                                                    <?php echo $companyname; ?>
-                                                </p>
-                                                <span class="text-muted fs-7">
-                                                    <?php echo formatDateTime($date); ?>
-                                                </span>
+                                        <div class="" type="button" data-bs-toggle="modal" data-bs-target="#companymodal<?php echo $jobID;
+                                        ?>">
+                                            <div class="d-flex" data-bs-toggle="tooltip"
+                                                data-bs-title=" click here to see the <?php echo $companyname; ?>'s prifile">
+                                                <div class="">
+                                                    <img src="<?php profilepath($companyprofilePic);
+                                                    ?>" alt="avatar" srcset="" class="rounded-circle me-3"
+                                                        style="width: 38px; height: 38px; object-fit: cover" />
+                                                </div>
+                                                <div>
+                                                    <p class="m-0 fw-bold">
+                                                        <?php echo $companyname; ?>
+                                                    </p>
+                                                    <span class="text-muted fs-7">
+                                                        <?php echo formatDateTime($date); ?>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- jobcatagary -->
@@ -996,7 +1064,11 @@ try {
                              </div>";
                             }
 } catch (PDOException $exc) {
-    echo $exc->getMessage();
+    echo "
+    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+    " . $exc->getMessage() . "
+    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+ </div>";
 }
 ?>
                 </div>

@@ -365,7 +365,7 @@ try {
                                 data-bs-target="#postModal">
                                 <div class="p-1">
                                     <img src="<?php echo $profil; ?>" alt="avatar" srcset="" class="rounded-circle me-2"
-                                        style="width: 50px; height: 50px; object-fit: cover" />
+                                        style="width: 65px; height: 65px; object-fit: cover" />
                                 </div>
 
                                 <input class="form-control bg-gray rounded-pill w-75 border-0" size="100"

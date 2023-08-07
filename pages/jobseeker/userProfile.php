@@ -344,11 +344,10 @@ try {
                 <div class="col-12 col-lg-3 ">
                     <div class="d-none scrallbar d-xxl-block h-100 fixed-top ms-4 mt-4"
                         style="max-width: 360px;width: 100%;z-index: 4;padding-top: 56px;">
-                        <div class="bg-white rounded mx-4 px-4">
+                        <div class="bg-white rounded mx-4 px-4 mb-5">
                             <div class=" d-flex flex-column align-items-center justify-content-cente ">
                                 <!--avatar-->
-                                <dvi class="mt-4 p-3 rounded-circle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <dvi class="mt-4 p-3 rounded-circle" type="button">
                                     <a class="p-0 rounded-circle position-relative" href="" type="button"
                                         data-bs-toggle="modal" data-bs-target="#profilModal"> <img
                                             src="<?php profilepath($profilePic); ?>" alt="avatar" class="rounded-circle"
@@ -429,14 +428,127 @@ try {
                                     feed
                                 </button></a>
 
+                            <!--Skills-->
+                            <div class="d-flex flex-column ">
+
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h4>Skills</h4>
+                                    <button class="btn btn-primary p-1 " data-bs-toggle="modal" data-bs-target="#skillModal">add
+                                        skill <i class="fa-sharp fa-solid fa-plus text text-muted ms-1"></i></button>
+                                </div>
+                                <?php
+                                $conskill = $dbcon->getConnection();
+
+                                $queryskill = "SELECT * FROM skill WHERE userID = ? ;";
+
+                                $pstmtskill = $conskill->prepare($queryskill);
+                                $pstmtskill->bindValue(1, $id);
+
+                                $pstmtskill->execute();
+
+                                $skills = $pstmtskill->fetchAll(PDO::FETCH_OBJ);
+
+                                foreach ($skills as $skill) {
+
+                                    $skillID = $skill->skillId;
+                                    $skillname = $skill->skillName;
+                                    $skillrange = $skill->skillLevel;
+                                    ?>
+
+                                    <div class="m-0">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="m-0">
+                                                <?php echo $skillname; ?>
+                                            </p>
+                                            <form method="post" action="../server/deleteskill.php">
+                                                <input type="hidden" name="skillID" value="<?php echo $skillID; ?>">
+                                                <button type="submit" class="text-danger bg-white border-0">delete<i
+                                                        class="fa-solid fa-trash text-danger ms-1"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="progress" role="progressbar" aria-label="Example " aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                            <div class="progress-bar" style="width: <?php echo $skillrange . "%"; ?>"></div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ;
+                                ?>
+                                <!--footer-->
+                                <div class="d-flex flex-column align-items-center justify-content-cente mt-4">
+                                    <!--quick link-->
+                                    <p class="mb-0 fs-7 text-center">
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Privacy
+                                        </a> |
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Terms </a>
+                                        |
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7">
+                                            Advertising
+                                        </a>
+                                        |
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Ad Chooses
+                                        </a> |
+                                        <a href="" class="text-decoration-none text-muted active-quicklink fs-7"> Cookies
+                                        </a>
+                                    </p>
+                                    <!--copyrights-->
+                                    <div class="d-flex">
+                                        <a class=" " href="../../index.php"><img src="../../img/logo.png" width="58px"
+                                                height="16px" alt="HireSpot" class="mb-2" /></a>
+                                        <p class="fs-7">&copy; 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                         </div>
 
                     </div>
 
                 </div>
 
+
                 <!--main time line-->
                 <div class="col-12 col-lg-6 pb-5">
+                    <!-- SkillsModal -->
+                    <form action="../server/addskill.php" method="post" enctype="multipart/form-data">
+                        <div class="modal fade shadow my-5" id="skillModal" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="ture">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add new Skill</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="form-control" type="hidden" name="userID"
+                                            value="<?php echo $userID; ?>">
+
+                                        <label for="formFile" class="form-label fs-5">Add new skills here </label>
+                                        <div class="input-group p-2">
+                                            <span class="input-group-text" id="basic-addon1">Skill</span>
+                                            <input type="text" name="skillname" class="form-control"
+                                                placeholder="Skill name" id="" value="" />
+
+                                        </div>
+                                        <div class="container mt-2">
+                                            <input name="skillrange" type="range" class="form-control-range w-100"
+                                                id="rangeInput" min="1" max="100">
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary w-100" type="submit"
+                                            id="inputGroupFileAddon04">Add</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
 
                     <div class="d-flex justify-content-center flex-column w-100 mx-auto "
                         style="padding-top: 56px;max-width: 680px;">
@@ -496,6 +608,12 @@ try {
                                                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                                              </div>";
                             }
+                            if ($_GET['error'] == 9) {
+                                echo "      <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                 <strong>Erro</strong> in add skill!
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
+                            }
 
                         }
                         if (isset($_GET['success'])) {
@@ -509,7 +627,7 @@ try {
                             if ($_GET['success'] == 2) {
                                 echo "
                  <div class='alert alert-success alert-dismissible fade show mt-2' role='alert'>
-                        Your prfile <strong> successfully  </strong> updated!
+                        Your profile <strong> successfully  </strong> updated!
                         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                      </div>";
                             }
@@ -517,6 +635,13 @@ try {
                                 echo "
                                          <div class='alert alert-success alert-dismissible fade show' role='alert'>
                                                 Password <strong> successfully  </strong> updated!
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                             </div>";
+                            }
+                            if ($_GET['success'] == 4) {
+                                echo "
+                                         <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                                Skill <strong> successfully  </strong> added!
                                                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                                              </div>";
                             }
