@@ -169,7 +169,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                                                 </span>
                                                                 <div class="d-flex justify-content-evenly mt-2">
                                                                     <div class="">
-                                                                        <label class="form-check-label"
+                                                                        <label class="form-check-label text-dark"
                                                                             for="flexRadioDefault1">
                                                                             Male
                                                                         </label>
@@ -178,7 +178,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                                                             value="Male" checked />
                                                                     </div>
                                                                     <div class="">
-                                                                        <label class="form-check-label"
+                                                                        <label class="form-check-label text-dark"
                                                                             for="flexRadioDefault2">
                                                                             Female
                                                                         </label>

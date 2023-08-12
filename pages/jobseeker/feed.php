@@ -173,7 +173,7 @@ try {
                                     <option value="Education">Education</option>
                                     <option value="Marketing and Sales">Marketing and Sales</option>
                                     <option value="Engineering">Engineering</option>
-                                    <option value="Hospitality and Tourism">Hospitality and Tourism
+                                    <option value="Hospitality and Tourism">Hospiotitality and Tourism
                                     </option>
                                     <option value="Creative Arts">Creative Arts</option>
                                     <option value="Human Resources">Human Resources</option>
